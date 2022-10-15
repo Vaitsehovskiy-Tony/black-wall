@@ -1,0 +1,57 @@
+@import url('./vendor/normalize.css');
+@import url('./components/Header/Header.css');
+@import url('./components/Hero/Hero.css');
+@import url('./components/Slider/Slider.css');
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:root {
+  --primary-font-family: 'Montserrat', sans-serif, Arial, Helvetica;
+  --font-xs: 400 .75rem/1.5 'Montserrat';
+  --font-s: 400 .875rem/1.5 'Montserrat';
+  --font-m: 500 1.125rem/1.5 'Montserrat';
+  --font-ml: 700 1.25rem/1.5 'Montserrat';
+  --font-l: 700 1.5rem/1.5 'Montserrat';
+  --font-xl: 700 1.75rem/1.5 'Montserrat';
+
+  --primary-bg-color: #ffffff;
+  --secondary-bg-color: #F9F9F9;
+  --section-bg-color: #F7F3F0;
+
+  --color-default: #333333;
+  --color-extra-l-grey: #858585;
+  --color-l-grey: #737373;
+  --color-m-grey: #6D7278;
+  --color-alt-m-grey: #808080;
+  --color-black: #000000;
+  --color-header: #1b1f2a;
+  --color-black-hover: rgb(111, 115, 118);
+  --color-white: #ffffff;
+  --color-primary: #333333;
+
+  --button-primary-color: #FF3399;
+  --button-hover-color: #f9c;
+  --button-lead-color: #292522;
+  --button-lead-alt-color: #6D7278;
+  --button-header-color: #858585;
+  --button-border-width: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.page {
+  font-family: var(--primary-font-family);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

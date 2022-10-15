@@ -1,0 +1,49 @@
+@keyframes dropdown-opens{
+    from {
+      transform: translateY(15px);
+      opacity: 0;
+      }
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+      }
+}
+
+.header__dropdown {
+    height: fit-content;
+}
+
+.header__dropdown-menu {
+    display: none;
+    position: absolute;
+    background: hsl(0, 0%, 90%);
+    font: var(--font-s);
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    padding: 15px;
+    width: min-content;
+    animation: dropdown-opens .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.header__dropdown:hover .header__dropdown-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__dropdown .header__dropdown-item {
+    padding: 10px 20px 10px 10px;
+}
+
+.header__dropdown .header__dropdown-item:hover {
+    opacity: .7;
+}
+
+.header__dropdown .header__navbar-item::after {
+    content: '';
+    width: 8.5px;
+    height: 13px;
+    margin: 0 0 0 5px;
+    opacity: .7;
+    display: inline-block;
+    background: url('../../../Images/angle-double-down.svg') no-repeat;
+}

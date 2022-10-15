@@ -1,0 +1,10 @@
+.header__search-icon {
+    width: 22px;
+    height: fit-content;
+    margin: auto 0 20px;
+    opacity: .85;
+}
+
+.header__search-icon:hover {
+    opacity: .6;
+}

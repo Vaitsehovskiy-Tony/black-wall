@@ -1,0 +1,20 @@
+@import url(../common/Logo/Logo.css);
+@import url(./HeaderNavbar/HeaderNavbar.css);
+@import url(./HeaderDropdown/HeaderDropdown.css);
+@import url(./HeaderSearch/HeaderSearch.css);
+@import url(./SearchPopup/SearchPopup.css);
+@import url(./HeaderContact/HeaderContact.css);
+
+.header {
+    background: #e5e5e5;
+    width: 100%;
+    display: flex;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1140px;
+    width: 100%;
+}

@@ -1,0 +1,20 @@
+.header__navbar {
+    display: flex;
+    margin: auto auto 15px;
+    padding: 0;
+}
+
+.header__navbar-item {
+    margin: auto;
+    padding: 0 10px;
+    color: var(--color-header);
+    font: var(--font-m);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+}
+
+.header__navbar-item:hover {
+    color: var(--color-black-hover);
+}
+
