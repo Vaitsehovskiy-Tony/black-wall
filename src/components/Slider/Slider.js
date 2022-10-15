@@ -18,7 +18,7 @@ export default function Slider({ slides }) {
     const interval = setInterval(() => {
       enabled.current = true;
       changeSlide();
-    }, 300000);
+    }, 5000);
     return () => {
       clearInterval(interval);
     };
