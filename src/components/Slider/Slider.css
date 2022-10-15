@@ -16,6 +16,22 @@
   }
 }
 
+@keyframes textAppearance {
+  0% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-50%);
+    opacity: 1;
+  }
+}
+
+
 /* slider behavior styles */
 .slider {
   display: flex;
@@ -73,6 +89,7 @@
   padding: 30px 125px 40px 55px;
   font: var(--font-xl);
   white-space: nowrap;
+  animation: textAppearance 2s ease-in-out;
 }
 
 .slider__title {
