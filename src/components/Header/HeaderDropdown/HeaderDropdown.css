@@ -28,6 +28,7 @@
 .header__dropdown:hover .header__dropdown-menu {
     display: flex;
     flex-direction: column;
+    z-index: 1;
 }
 
 .header__dropdown .header__dropdown-item {
