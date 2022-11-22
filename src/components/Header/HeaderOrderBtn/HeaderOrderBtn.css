@@ -1,0 +1,12 @@
+.header__contact {
+    height: fit-content;
+    margin: auto;
+    font: var(--font-l);
+    font-weight: 600;
+    color: var(--color-white);
+    opacity: .85;
+    border: 0;
+    background: transparent;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ffffff;
+}

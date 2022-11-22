@@ -1,23 +1,32 @@
 import { useState, useEffect, useRef } from "react";
 
 export default function Slider({ slides }) {
-  const [slideIndex, setSlideIndex] = useState(0);
-  const [previousSlideIndex, setPreviousSlideIndex] = useState(slides.length-1);
-  const enabled = useRef(false);
+  
+  const direction = useRef("normal");
+  const [secondSlideIndex, setSecondSlideIndex] = useState(0);
+  const [firstSlideIndex, setFirstSlideIndex] = useState(slides.length - 1);
 
-  let currentSlides = [slides[previousSlideIndex], slides[slideIndex]];
+  const currentSlides = [slides[firstSlideIndex], slides[secondSlideIndex]];
 
-  function changeSlide() {
+  function nextSlide() {
     const nextSlideIndex =
-      slideIndex === slides.length - 1 ? 0 : slideIndex + 1;
-    setPreviousSlideIndex(slideIndex);
-    setSlideIndex(nextSlideIndex);
+      secondSlideIndex === slides.length - 1 ? 0 : secondSlideIndex + 1;
+    setFirstSlideIndex(secondSlideIndex);
+    setSecondSlideIndex(nextSlideIndex);
   }
+  
+  const previousSlide = () => {
+    direction.current = "reverse";
+    const nextSlideIndex =
+      secondSlideIndex === 0 ? slides.length - 1 : secondSlideIndex - 1;
+    setFirstSlideIndex(secondSlideIndex);
+    setSecondSlideIndex(nextSlideIndex);
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      enabled.current = true;
-      changeSlide();
+      direction.current = "normal";
+      nextSlide();
     }, 5000);
     return () => {
       clearInterval(interval);
@@ -27,14 +36,20 @@ export default function Slider({ slides }) {
   return (
     <div className="slider">
       {currentSlides.map((slide) => (
-        <div className={`slider_slide ${enabled.current  ? 'enabled' : ''}`} key={slide.id}>
-          <img className="slider__img" src={slide.url} alt="slide img" />
+        <div className={`slider_slide ${direction.current}`} key={slide.id}>
+          <img
+            className="slider__img"
+            src={slide.url}
+            alt="slide img"
+            onClick={previousSlide}
+          />
           <div className="slider__text-block">
             <h2 className="slider__title">{slide.title}</h2>
             <h2 className="slider__subtitle">{slide.subtitle}</h2>
             <span className="slider__text">{slide.text}</span>
           </div>
-          <a className="slider__arrow-link" href={slide.linkToPost}>{'>'}
+          <a className="slider__arrow-link" href={slide.linkToPost}>
+            {">"}
           </a>
         </div>
       ))}

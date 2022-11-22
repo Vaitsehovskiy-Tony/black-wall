@@ -1,8 +1,9 @@
 import React from "react";
 
-function HeaderDropdown() {
+function HeaderDropdown({dropdown}) {
 
-    const dropdownMenu = [
+    console.log('HeaderDropdown', dropdown)
+    const defaulDropdownMenu = [
         {
             id: 1,
             title: 'О нас',
@@ -34,11 +35,13 @@ function HeaderDropdown() {
         },
     ]
 
+    const dropdownItem = dropdown ? dropdown : defaulDropdownMenu;
+    console.log(dropdownItem)
     return (
-        <div className="header__dropdown">
-            <span className="header__navbar-item">Главная</span>
+        <div className="header__dropdown" key={dropdownItem.id}>
+            <span className="header__navbar-item">{dropdownItem.title}</span>
             <ul className="header__dropdown-menu">
-                {dropdownMenu.map(i => 
+                {dropdownItem.dropdown.map(i => 
                     <a className="header__dropdown-item" href={i.link} key={i.id}>{i.title}</a>
                 )}
             </ul>

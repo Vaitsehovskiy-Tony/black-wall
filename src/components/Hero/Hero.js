@@ -1,44 +1,18 @@
-import Slider from '../Slider/Slider';
+export default function Hero({mainPageData}) {
 
-export default function Hero() {
-
-    const slides = [
-        {
-            id: 1,
-            url: 'https://blwall.art/wp-content/uploads/2020/12/091a1640-1536x1024.jpg',
-            linkToPost: '/',
-            title:'Квартиры',
-            subtitle:'Старого фонда',
-            text:'Под ключ'
-        },
-        {
-            id: 2,
-            url: 'https://blwall.art/wp-content/uploads/2021/11/kuhnya-gostinaya-2-edited.jpg',
-            linkToPost: '/',
-            title:'Квартиры',
-            subtitle:'Старого фонда',
-            text:'Под ключ'
-        },
-        {
-            id: 3,
-            url: 'https://blwall.art/wp-content/uploads/2022/08/091a9021-1536x1024.jpg',
-            linkToPost: '/',
-            title:'Квартиры',
-            subtitle:'Старого фонда',
-            text:'Под ключ'
-        },
-        {
-            id: 4,
-            url: 'https://blwall.art/wp-content/uploads/2020/12/091a1678-1536x1024.jpg',
-            linkToPost: '/',
-            title:'Квартиры',
-            subtitle:'Старого фонда',
-            text:'Под ключ'
-        }
-    ]
-
+    const hero = mainPageData.hero;
         
     return (
-        <Slider slides={slides} />
+        <section className="hero">
+            <picture className="hero__bg">
+                <source media="(max-width: 991px)" src={'http://localhost:1337/uploads/Rectangle_4276_77953d2707.png'}/>
+                <img className="hero__bg-img" src={'http://localhost:1337/uploads/Rectangle_4276_77953d2707.png'} alt="Hero photo"/>
+            </picture>
+            <div className="hero__content">
+                <h2 className="hero__description">{hero.description}</h2>
+                <h1 className="hero__title">{hero.title}</h1>
+            </div>
+            <div className="hero__overlay"></div>
+        </section>
     )
 }

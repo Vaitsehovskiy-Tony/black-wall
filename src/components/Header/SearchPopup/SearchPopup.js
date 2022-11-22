@@ -1,4 +1,4 @@
-import closeIcon from '../../../Images/close-icon.svg';
+import closeIcon from '../../../images/close-icon.svg';
 
 export default function SearchPopup(props) {
     return (

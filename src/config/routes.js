@@ -1,0 +1,3 @@
+export const headerRoute = 'http://localhost:1337/api/header?locale=ru&populate[Header][populate]=%2A';
+export const footerRoute = 'http://localhost:1337/api/footer?locale=ru&populate[Footer][populate]=%2A';
+export const mainPageRoute = 'http://localhost:1337/api/main-pages?locale=ru&populate[About][populate]=%2A&populate[NewProjects][populate]=%2A&populate[OurTeam][populate]=%2A&populate[ContactUs][populate]=%2A&populate[OrderForm][populate]=%2A&populate[Hero][populate]=%2A';

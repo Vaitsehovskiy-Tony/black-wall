@@ -1,4 +1,4 @@
-import searchIcon from '../../../Images/search.svg';
+import searchIcon from '../../../images/search.svg';
 
 export default function HeaderSearch(props) {
 

@@ -1,0 +1,27 @@
+.header-lang {
+    margin: auto;
+}
+
+.header-lang__item-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-lang__item {
+    text-transform: uppercase;
+ }
+
+.header-lang__bottom-arrow {
+    padding: 0 0 0 7px  ;
+    width: 11px;
+}
+
+
+
+.header-lang__options {
+    display: none;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}

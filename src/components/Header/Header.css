@@ -1,20 +1,24 @@
 @import url(../common/Logo/Logo.css);
 @import url(./HeaderNavbar/HeaderNavbar.css);
-@import url(./HeaderDropdown/HeaderDropdown.css);
+/*@import url(./HeaderDropdown/HeaderDropdown.css);*/
 @import url(./HeaderSearch/HeaderSearch.css);
 @import url(./SearchPopup/SearchPopup.css);
-@import url(./HeaderContact/HeaderContact.css);
+@import url(HeaderOrderBtn/HeaderOrderBtn.css);
+@import url(./HeaderLanguageSelector/HeaderLanguageSelector.css);
 
 .header {
-    background: #e5e5e5;
+    position: absolute;
+    top: 0;
     width: 100%;
     display: flex;
+    z-index: 1;
 }
 
 .header__wrapper {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    max-width: 1140px;
+    max-width: 1350px;
     width: 100%;
+    color: var(--color-white);
 }
