@@ -1,27 +1,25 @@
 .header-lang {
-    margin: auto;
+  margin: auto 0 auto 30px;
 }
 
 .header-lang__item-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header-lang__item {
-    text-transform: uppercase;
- }
-
-.header-lang__bottom-arrow {
-    padding: 0 0 0 7px  ;
-    width: 11px;
+  text-transform: uppercase;
 }
 
-
+.header-lang__bottom-arrow {
+  padding: 0 0 0 7px;
+  width: 11px;
+}
 
 .header-lang__options {
-    display: none;
-    list-style-type: none;
-    margin-left: 0;
-    padding-left: 0;
+  display: none;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
 }

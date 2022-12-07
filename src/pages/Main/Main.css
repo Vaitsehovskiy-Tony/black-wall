@@ -1,0 +1,14 @@
+@import url('../../components/Hero/Hero.css');
+@import url('../../components/Slider/Slider.css');
+@import url('../../components/About/About.css');
+@import url("../../components/NewProjects/NewProjects.css");
+@import url("../../components/OrderForm/OrderForm.css");
+@import url("../../components/OurTeam/OurTeam.css");
+@import url("../../components/ProjectStages/ProjectStages.css");
+@import url("../../components/ContactUs/ContactUs.css");
+@import url("../../components/ProjectItem/ProjectItem.css");
+
+.main-page {
+    background: var(--color-black);
+    color: var(--color-white);
+}

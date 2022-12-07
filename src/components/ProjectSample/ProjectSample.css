@@ -1,0 +1,38 @@
+.sample {
+  display: flex;
+  flex-direction: column;
+}
+
+.sample__img-container {
+  width: 100%;
+  height: 436px;
+}
+
+.sample__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sample__content {
+  height: 200px;
+}
+
+.sample__title {
+  margin: 24px 0 0;
+  font: var(--font-h-s);
+  text-overflow: ellipsis;
+}
+
+.sample__subtitle {
+  display: block;
+  margin: 8px 0 0;
+  font: var(--font-xs);
+  color: var(--color-grey);
+  line-height: 1.6;
+  width: 80%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

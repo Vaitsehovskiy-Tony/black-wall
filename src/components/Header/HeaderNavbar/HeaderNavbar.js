@@ -1,13 +1,13 @@
 import React from "react";
+import { Link, Route } from "react-router-dom";
 
-function HeaderNavbar({navbar}) {
-
+function HeaderNavbar({ navbar }) {
   return (
     <ul className="header__navbar">
       {navbar.map((i) => (
-        <a className="header__navbar-item" href={i.link} key={i.id}>
+        <Link to={i.link} className="header__navbar-item" key={i.id}>
           {i.title}
-        </a>
+        </Link>
       ))}
     </ul>
   );

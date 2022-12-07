@@ -1,19 +1,17 @@
-import useFetch from '../hooks/useFetch';
+import useFetch from "../hooks/useFetch";
 
 function MainApi(url) {
+  const { error, data } = useFetch(url);
 
-    const  { error, data} = useFetch(url)
+  // if (!!loading & !error)
+  // {   return ( <h1>Loading...</h1>)
+  // }
 
-    // if (!!loading & !error) 
-    // {   return ( <h1>Loading...</h1>)
-    // }    
+  if (!!error || !data) {
+    console.error("error", error, data);
+  }
 
-    if (!!error || !data) {
-        console.log("error", error, data)
-    }
-
-    console.log('res ok', data)
-    return data;
+  return data;
 }
 
 export default MainApi;

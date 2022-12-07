@@ -1,0 +1,34 @@
+.feature {
+        border-top: 1px solid var(--color-l-grey);
+                border-bottom: 1px solid var(--color-l-grey);
+
+}
+
+.feature:first-of-type {
+    margin: 32px 0 0;
+            border-bottom: none;
+}
+
+.feature__top-container {
+    display: flex;
+    justify-content: space-between;
+        padding: 26px 0;
+    margin: 0;
+}
+
+.feature__title {
+        font: var(--font-ml);
+    font-weight: 500;
+    color: var(--color-black);
+    margin: 0;
+}
+
+.feature__icon {
+    object-fit: contain;
+    padding: 0 2px;
+}
+
+.feature__text {
+    margin: 16px 0 0;
+    font: var(--font-m);
+}

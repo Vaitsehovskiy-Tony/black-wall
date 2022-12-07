@@ -1,0 +1,25 @@
+.page-title__content {
+  margin: 168px auto 0;
+  transform: translate(-50%, -100%);
+  text-align: center;
+  color: var(--color-black);
+  z-index: 1;
+  /*animation: hero-content ease-out 2s;*/
+}
+
+.hero .page-title__content {
+  position: absolute;
+  color: var(--color-white);
+  top: 50%;
+  left: 50%;
+}
+
+.page-title__description {
+  font: var(--font-h-s);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.page-title__title {
+  font: var(--font-h-xl);
+  margin: 0;
+}

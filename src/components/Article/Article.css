@@ -1,0 +1,7 @@
+.article {
+    margin: 120px auto 0;
+}
+
+.article__title {
+    font: var(--font-h-l);
+}
