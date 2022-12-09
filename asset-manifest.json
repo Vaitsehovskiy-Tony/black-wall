@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/black-wall/static/css/main.d5390269.css",
+    "main.js": "/black-wall/static/js/main.bf786b59.js",
+    "static/js/787.2224b12b.chunk.js": "/black-wall/static/js/787.2224b12b.chunk.js",
+    "static/media/logo-white.svg": "/black-wall/static/media/logo-white.166ec8d53120c26599ff9dbf9de9a810.svg",
+    "static/media/logo-dark.svg": "/black-wall/static/media/logo-dark.4de77be2cf460bb308354fb5ad9e54f5.svg",
+    "static/media/whatsapp (7) 1.svg": "/black-wall/static/media/whatsapp (7) 1.5e2ef56c40d88b248e114c0f6631dacb.svg",
+    "index.html": "/black-wall/index.html",
+    "static/media/telegram (12) 1.svg": "/black-wall/static/media/telegram (12) 1.6ca3b753e80c6cce21e4e2c692624f66.svg",
+    "static/media/right-arrow.svg": "/black-wall/static/media/right-arrow.260aea6f568f7fe35ebac28ab8c24002.svg",
+    "static/media/bottom-arrow.svg": "/black-wall/static/media/bottom-arrow.ccd225e1911ad0eaa0ea55eb86d8a917.svg",
+    "main.d5390269.css.map": "/black-wall/static/css/main.d5390269.css.map",
+    "main.bf786b59.js.map": "/black-wall/static/js/main.bf786b59.js.map",
+    "787.2224b12b.chunk.js.map": "/black-wall/static/js/787.2224b12b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d5390269.css",
+    "static/js/main.bf786b59.js"
+  ]
+}
