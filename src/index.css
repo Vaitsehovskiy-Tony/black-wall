@@ -1,63 +1,65 @@
-@import url('./vendor/normalize.css');
-@import url('./components/Header/Header.css');
+@import url("./vendor/normalize.css");
+@import url("./components/Header/Header.css");
 @import url("./components/Footer/Footer.css");
 @import url("./styles.css");
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 :root {
-    --primary-font-family: 'Montserrat', sans-serif, Arial, Helvetica;
+  --primary-font-family: "Montserrat", sans-serif, Arial, Helvetica;
 
-    --font-h-xl: 500 4.375em/1.1 'Montserrat';
-    --font-h-l: 500 3.0625rem/1.2 'Montserrat';
-    --font-h-m: 500 1.75rem/1.3 'Montserrat';
-    --font-h-s: 500 1.375rem/1.3 'Montserrat';
+  --font-h-xl: 500 4.375em/1.1 "Montserrat";
+  --font-h-l: 500 3.0625rem/1.2 "Montserrat";
+  --font-h-m: 500 1.75rem/1.3 "Montserrat";
+  --font-h-s: 500 1.375rem/1.3 "Montserrat";
 
-    --font-l: 400 1.25rem/1.5 'Montserrat';
-    --font-ml: 400 1.125rem/1.3 'Montserrat';
-    --font-m: 400 1rem/1.5 'Montserrat';
-    --font-s: 400 .9375em/1.6 'Montserrat';
-    --font-xs: 400 .875rem/1.6 'Montserrat';
+  --font-l: 400 1.25rem/1.5 "Montserrat";
+  --font-ml: 400 1.125rem/1.3 "Montserrat";
+  --font-m: 400 1rem/1.5 "Montserrat";
+  --font-s: 400 0.9375em/1.6 "Montserrat";
+  --font-xs: 400 0.875rem/1.6 "Montserrat";
 
-    --primary-bg-color: #191919;
-    --secondary-bg-color: #F4F5F6;
+  --primary-bg-color: #191919;
+  --secondary-bg-color: #f4f5f6;
 
-    --color-grey: #B5B1B1;
-    --color-l-grey: #E7E7E7;
-    --color-m-grey: #C7C5C5;
-    --color-dark-grey: #323232;
-    --color-accent: #BBA187;
-    --color-black: #191919;
-    --color-white: #FFFFFF;
-    --color-error: #D22F2F;
+  --color-grey: #b5b1b1;
+  --color-l-grey: #e7e7e7;
+  --color-m-grey: #c7c5c5;
+  --color-dark-grey: #323232;
+  --color-accent: #bba187;
+  --color-black: #191919;
+  --color-white: #ffffff;
+  --color-white2: #f0f3f5;
+  --color-white3: #f5f5f5;
+  --color-error: #d22f2f;
 
-    /*--button-primary-color: #FF3399;*/
-    /*--button-hover-color: #f9c;*/
-    /*--button-lead-color: #292522;*/
-    /*--button-lead-alt-color: #6D7278;*/
-    /*--button-header-color: #858585;*/
-    /*--button-border-width: 1rem;*/
+  /*--button-primary-color: #FF3399;*/
+  /*--button-hover-color: #f9c;*/
+  /*--button-lead-color: #292522;*/
+  /*--button-lead-alt-color: #6D7278;*/
+  /*--button-header-color: #858585;*/
+  /*--button-border-width: 1rem;*/
 }
 
 @media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 .page {
-    font-family: var(--primary-font-family);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  font-family: var(--primary-font-family);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .wrapper {
-    margin: 240px 46px 0;
+  margin: 240px 46px 0;
 }

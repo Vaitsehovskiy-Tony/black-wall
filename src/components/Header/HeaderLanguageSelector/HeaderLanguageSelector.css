@@ -1,25 +1,49 @@
 .header-lang {
-  margin: auto 0 auto 30px;
+  position: relative;
+  margin: auto 0;
+  padding: 0 15px;
 }
 
 .header-lang__item-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .header-lang__item {
   text-transform: uppercase;
+  padding: 0 7px 0 0;
 }
 
 .header-lang__bottom-arrow {
-  padding: 0 0 0 7px;
   width: 11px;
+  transition: all .1s ease-out;
+}
+
+.header-lang__bottom-arrow.active {
+    width: 11px;
+  transform: rotate(180deg);
 }
 
 .header-lang__options {
   display: none;
+  position: absolute;
   list-style-type: none;
-  margin-left: 0;
-  padding-left: 0;
+  margin: 0;
+  padding: 5px 15px 5px 0;
+  left: 0;
+}
+
+.header-lang__options.active {
+    display: block;
+}
+
+.header-lang__options-item {
+    padding: 0 15px 0;
+    cursor: pointer;
+}
+
+.header-lang__options-item:hover {
+    background-color: var(--color-l-grey);
 }

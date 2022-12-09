@@ -4,7 +4,7 @@ import PageTitle from "../../components/common/PageTitle/PageTitle";
 import ProjectSample from "../../components/ProjectSample/ProjectSample";
 import OrderForm from "../../components/OrderForm/OrderForm";
 const Portfolio = () => {
-  const { mainPage, portfolio, projectsList } = useContext(DataContext);
+  const { portfolio, projectsList } = useContext(DataContext);
   const staticTags = ["Все", "Жилые помещения", "Нежилые помещения"];
   const state = "disabled";
 
@@ -26,7 +26,7 @@ const Portfolio = () => {
           <ProjectSample projectItem={i} />
         ))}
       </div>
-      <OrderForm mainPageData={mainPage} />
+      <OrderForm display={""} />
     </main>
   );
 };

@@ -1,11 +1,14 @@
-import React, { useRef } from "react";
+import React, { useRef, useContext } from "react";
 import { useForm } from "react-hook-form";
+import { DataContext } from "../../utils/getContext";
 import emailjs from "@emailjs/browser";
 import arrow from "../../images/right-arrow.svg";
+import { Avatars } from "../common/Avatars/Avatars";
 
-const OrderForm = ({ mainPageData }) => {
+const OrderForm = ({ display }) => {
+  const { orderForm } = useContext(DataContext);
   const form = useRef();
-  const orderForm = mainPageData.orderForm;
+  console.log(orderForm);
   const {
     register,
     handleSubmit,
@@ -32,6 +35,7 @@ const OrderForm = ({ mainPageData }) => {
       <div className="form__wrapper">
         <h2 className="form__title">{orderForm.title}</h2>
         <span className="form__subtitle">{orderForm.subtitle}</span>
+        <Avatars display={display} members={orderForm.formAvatars} />
         <form
           ref={form}
           onSubmit={handleSubmit(sendEmail)}

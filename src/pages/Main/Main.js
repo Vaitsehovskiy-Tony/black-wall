@@ -18,7 +18,7 @@ const Main = () => {
       <NewProjects mainPageData={mainPage} projectsList={projectsList} />
       <OurTeam mainPageData={mainPage} />
       {/*<ContactUs mainPageData={mainPage} />*/}
-      <OrderForm mainPageData={mainPage} />
+      <OrderForm mainPageData={mainPage} display={"none"} />
     </main>
   );
 };

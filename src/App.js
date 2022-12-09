@@ -12,7 +12,7 @@ function App() {
   const location = useLocation();
 
   // todo: remove
-  useEffect(() => window.scrollTo(0, 10000));
+  // useEffect(() => window.scrollTo(0, 1000));
 
   return (
     <div className="page">

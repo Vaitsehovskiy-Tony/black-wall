@@ -14,7 +14,7 @@ const OurTeam = ({ mainPageData }) => {
       ))}
       <img
         src={`http://localhost:1337` + sharedData.teamPhoto.data.attributes.url}
-        alt=""
+        alt="our team photo"
         className="our-team__photo"
       />
     </section>

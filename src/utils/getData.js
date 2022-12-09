@@ -4,6 +4,9 @@ import mainPageStaticData from "../static/mainPageStaticData";
 import { projectListStaticData } from "../static/projectListStaticData";
 import { portfolioPageStaticData } from "../static/portfolioPageStaticData";
 import { projectPageStaticData } from "../static/projectPageStaticData";
+import { orderFormStaticData } from "../static/orderFormStaticData";
+import { contactsPageStaticData } from "../static/contactsPageStaticData";
+import { pricesPageStaticData } from "../static/pricesPageStaticData";
 
 function getData(element) {
   let data;
@@ -33,8 +36,12 @@ function getData(element) {
       ];
     case "project":
       return projectPageStaticData.data.attributes;
-    // case 'header':
-    //     return !!MainApi(headerRoute) ? MainApi(headerRoute) : headerStaticData;
+    case "orderForm":
+      return orderFormStaticData.data.attributes;
+    case "contacts":
+      return contactsPageStaticData.data[0].attributes;
+    case "prices":
+      return pricesPageStaticData.data[0].attributes;
   }
 }
 

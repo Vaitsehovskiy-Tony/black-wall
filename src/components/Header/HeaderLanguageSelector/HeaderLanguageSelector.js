@@ -1,19 +1,27 @@
 import getLocales from "../../../utils/getLocales";
 import bottomArrow from "../../../images/bottom-arrow.svg";
+import bottomArrowDark from "../../../images/bottom-arrow-dark.png";
+import { useState } from "react";
 
-function HeaderLanguageSelector() {
+function HeaderLanguageSelector({ headerStyle }) {
+  const [isActive, setIsActive] = useState(false);
+  function handleLangSwitch() {
+    setIsActive(!isActive);
+  }
+  const bottomIcon =
+    headerStyle === "header_light" ? bottomArrow : bottomArrowDark;
   const { currentLocale, locales } = getLocales();
   return (
-    <div className="header-lang">
-      <div className="header-lang__item-container">
+    <div className="header-lang" onMouseLeave={handleLangSwitch}>
+      <div className="header-lang__item-container" onClick={handleLangSwitch}>
         <span className="header-lang__item">{currentLocale}</span>
         <img
-          className="header-lang__bottom-arrow"
-          src={bottomArrow}
+          className={`header-lang__bottom-arrow ${isActive ? "active" : ""}`}
+          src={bottomIcon}
           alt="bottom arrow"
         />
       </div>
-      <ul className="header-lang__options">
+      <ul className={`header-lang__options ${isActive ? "active" : ""}`}>
         {locales.map((locale, index) => (
           <li className="header-lang__options-item" key={index}>
             {locale}
