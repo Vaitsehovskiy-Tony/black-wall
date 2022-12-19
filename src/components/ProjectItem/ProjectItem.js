@@ -7,7 +7,7 @@ const ProjectItem = ({ projectItem }) => {
       {/*<div className="wtf">*/}
       <img
         className="project-item__img"
-        src={`http://localhost:1337${imgPath}`}
+        src={`http://vaitstony.art:1337${imgPath}`}
         alt={projectItem.title}
       />
       {/*</div>*/}

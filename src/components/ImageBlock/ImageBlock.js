@@ -2,7 +2,7 @@ export const ImageBlock = ({ element }) => {
   return (
     <figure className="img-block">
       <img
-        src={`http://localhost:1337${element.image.data.attributes.url}`}
+        src={`http://vaitstony.art:1337${element.image.data.attributes.url}`}
         alt={element.description}
         className="img-block__img"
       />

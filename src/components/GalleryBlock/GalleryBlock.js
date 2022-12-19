@@ -6,7 +6,7 @@ export const GalleryBlock = ({ gallery }) => {
         <div className="page-gallery__img-container">
           {gallery.gallery.data.map((e, i) => (
             <img
-              src={`http://localhost:1337${e.attributes.url}`}
+              src={`http://vaitstony.art:1337${e.attributes.url}`}
               alt=""
               className="page-gallery__img"
             />

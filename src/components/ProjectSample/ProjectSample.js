@@ -7,7 +7,7 @@ const ProjectSample = ({ projectItem }) => {
       <div className="sample__img-container">
         <img
           className="sample__img"
-          src={`http://localhost:1337${imgPath}`}
+          src={`http://vaitstony.art:1337${imgPath}`}
           alt={projectItem.title}
         />
       </div>

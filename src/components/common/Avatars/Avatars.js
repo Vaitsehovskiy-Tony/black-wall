@@ -4,7 +4,7 @@ export const Avatars = ({ members, display }) => {
       {members.map((member) => (
         <div className={`form__avatar-container ${display}`}>
           <img
-            src={`http://localhost:1337${member.avatar.data.attributes.url}`}
+            src={`http://vaitstony.art:1337${member.avatar.data.attributes.url}`}
             alt={member.title + "image"}
             className="form__avatar"
           />

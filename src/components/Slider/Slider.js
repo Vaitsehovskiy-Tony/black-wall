@@ -56,7 +56,7 @@ export default function Slider({ mainPageData }) {
 
   function getImg(i) {
     return !!i
-      ? `http://localhost:1337${i.sliderImage.data.attributes.url}`
+      ? `http://vaitstony.art:1337${i.sliderImage.data.attributes.url}`
       : "";
   }
   return (
