@@ -15,7 +15,7 @@ function Header() {
       <div className="header__wrapper">
         <Logo headerStyle={headerStyle} />
         <HeaderNavbar navbar={header.navbar} />
-        <HeaderLanguageSelector headerStyle={headerStyle} />
+        <HeaderLanguageSelector headerStyle={headerStyle || "header_light"} />
         <HeaderOrderBtn bttnText={header.orderProject} />
       </div>
     </header>

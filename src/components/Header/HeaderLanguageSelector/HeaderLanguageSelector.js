@@ -8,8 +8,8 @@ function HeaderLanguageSelector({ headerStyle }) {
   function handleLangSwitch() {
     setIsActive(!isActive);
   }
-  const bottomIcon =
-    headerStyle === "header_light" ? bottomArrow : bottomArrowDark;
+
+  const bottomIcon = headerStyle === "light" ? bottomArrow : bottomArrowDark;
   const { currentLocale, locales } = getLocales();
   return (
     <div className="header-lang" onMouseLeave={handleLangSwitch}>
