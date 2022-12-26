@@ -1,4 +1,4 @@
-const headerStaticData = {
+export const headerStaticData = {
   data: {
     id: 2,
     attributes: {
@@ -13,7 +13,7 @@ const headerStaticData = {
           {
             id: 45,
             title: "Главная",
-            link: "/black-wall",
+            link: "/",
           },
           {
             id: 46,
@@ -36,5 +36,3 @@ const headerStaticData = {
   },
   meta: {},
 };
-
-export default headerStaticData;

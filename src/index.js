@@ -6,14 +6,18 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
 import { DataContextProvider } from "./utils/getContext";
 
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <Router>
-    <DataContextProvider>
-      <App />
-    </DataContextProvider>
-  </Router>
+  // <React.StrictMode>
+    <Router>
+      <DataContextProvider> 
+        <App />
+      </DataContextProvider>
+
+    </Router>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -7,18 +7,29 @@ import Contacts from "./pages/Contacts/Contacts";
 import Prices from "./pages/Prices/Prices";
 import { useEffect } from "react";
 import Footer from "./components/Footer/Footer";
+import MainApi from "./api/MainApi";
+import { headerRoute } from "./config/routes"
+
+
+import { QueryClientProvider, QueryClient } from "react-query";
+
+const queryClient = new QueryClient();
+
 
 function App() {
   const location = useLocation();
+  // console.log(MainApi(headerRoute))
 
   // todo: remove
   // useEffect(() => window.scrollTo(0, 1000));
 
   return (
+    <QueryClientProvider client={queryClient}>
+
     <div className="page">
       <Header />
       <Routes>
-        <Route exact path={"/black-wall"} element={<Main />}></Route>
+        <Route exact path={"/"} element={<Main />}></Route>
       </Routes>
       {/*<Main mainPageData={mainPageData} projectsList={projectsList} />*/}
       <Routes>
@@ -39,6 +50,8 @@ function App() {
       </Routes>
       <Footer />
     </div>
+    </QueryClientProvider>
+
   );
 }
 

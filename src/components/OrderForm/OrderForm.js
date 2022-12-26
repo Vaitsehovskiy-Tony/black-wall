@@ -8,7 +8,6 @@ import { Avatars } from "../common/Avatars/Avatars";
 const OrderForm = ({ display }) => {
   const { orderForm } = useContext(DataContext);
   const form = useRef();
-  console.log(orderForm);
   const {
     register,
     handleSubmit,

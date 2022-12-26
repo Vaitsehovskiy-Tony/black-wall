@@ -1,17 +1,25 @@
+import { useContext } from "react";
 import useFetch from "../hooks/useFetch";
+import { DataContext } from "../utils/getContext";
 
-function MainApi(url) {
-  const { error, data } = useFetch(url);
+const MainApi = (url, contextElement, staticData) => {
+  // debugger
+  // console.log(DataContext)
+  // const appData = useContext(DataContext);
+  // const { error, data } = useFetch(url);
+  // console.log(appData)
 
-  // if (!!loading & !error)
-  // {   return ( <h1>Loading...</h1>)
+  // if (!!appData && appData[contextElement] && !!appData[contextElement].apiData) {
+  //   return;
   // }
 
-  if (!!error || !data) {
-    console.error("error", error, data);
-  }
-
-  return data;
+  let apiData = false;
+  // if (!!data && !error) {
+  //   apiData = true;
+  //   return data;
+  // } else if (!!error && !data) {
+    return [staticData, apiData];
+  // }
 }
 
 export default MainApi;

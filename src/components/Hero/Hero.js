@@ -9,13 +9,13 @@ export default function Hero({ mainPageData }) {
         <source
           media="(max-width: 991px)"
           src={
-            "http://vaitstony.art:1337/uploads/Rectangle_4276_77953d2707.png"
+            "https://api.vaitstony.art/uploads/Rectangle_4276_77953d2707.png"
           }
         />
         <img
           className="hero__bg-img"
           src={
-            "http://vaitstony.art:1337/uploads/Rectangle_4276_77953d2707.png"
+            "https://api.vaitstony.art/uploads/Rectangle_4276_77953d2707.png"
           }
           alt="Hero photo"
         />

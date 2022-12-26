@@ -1,4 +1,4 @@
-const footerStaticData = {
+export const footerStaticData = {
   data: {
     id: 2,
     attributes: {
@@ -67,5 +67,3 @@ const footerStaticData = {
   },
   meta: {},
 };
-
-export default footerStaticData;

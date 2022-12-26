@@ -1,26 +1,39 @@
 import React from "react";
-import getData from "./getData";
+import GetData from "./GetData";
+
 const DataContext = React.createContext();
-const headerData = getData("header");
-const footerData = getData("footer");
-const [mainPageData, projectsList] = getData("mainPage");
-const [portfolioPageData, projectList] = getData("portfolio");
-const projectData = getData("project");
-const orderFormData = getData("orderForm");
-const contactsData = getData("contacts");
-const pricesData = getData("prices");
+const {
+  header,
+  mainPage,
+  projectsList,
+  footer,
+  portfolio,
+  project,
+  orderForm,
+  contacts,
+  prices,
+} = GetData();
 
 const DataContextProvider = ({ children }) => {
+  console.log(header,
+    mainPage,
+    projectsList,
+    footer,
+    portfolio,
+    project,
+    orderForm,
+    contacts,
+    prices)
   const state = {
-    header: headerData,
-    mainPage: mainPageData,
-    projectsList: projectsList,
-    footer: footerData,
-    portfolio: portfolioPageData,
-    project: projectData,
-    orderForm: orderFormData,
-    contacts: contactsData,
-    prices: pricesData,
+    header,
+    mainPage,
+    projectsList,
+    footer,
+    portfolio,
+    project,
+    orderForm,
+    contacts,
+    prices,
   };
 
   return <DataContext.Provider value={state}>{children}</DataContext.Provider>;
