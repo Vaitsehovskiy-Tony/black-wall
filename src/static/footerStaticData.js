@@ -20,17 +20,17 @@ export const footerStaticData = {
           {
             id: 50,
             title: "Портфолио",
-            link: "/",
+            link: "/portfolio",
           },
           {
             id: 51,
             title: "Контакты",
-            link: "/",
+            link: "/contacts",
           },
           {
             id: 52,
             title: "Цены",
-            link: "/",
+            link: "/prices",
           },
         ],
         navbarSocial: [
