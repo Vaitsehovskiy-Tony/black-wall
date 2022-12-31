@@ -15,15 +15,7 @@ const {
 } = GetData();
 
 const DataContextProvider = ({ children }) => {
-  console.log(header,
-    mainPage,
-    projectsList,
-    footer,
-    portfolio,
-    project,
-    orderForm,
-    contacts,
-    prices)
+
   const state = {
     header,
     mainPage,

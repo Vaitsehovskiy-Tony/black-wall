@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 const ProjectSample = ({ projectItem }) => {
   const imgPath = (projectItem.imageHorizontal || projectItem.imageVertical)
     .data.attributes.url;
 
   return (
-    <a className="sample">
+    <Link to={"/project/some-project"} className="sample">
       <div className="sample__img-container">
         <img
           className="sample__img"
@@ -15,7 +17,7 @@ const ProjectSample = ({ projectItem }) => {
         <h6 className="sample__title">'{projectItem.title}'</h6>
         <span className="sample__subtitle">{projectItem.subtitle}</span>
       </div>
-    </a>
+    </Link>
   );
 };
 

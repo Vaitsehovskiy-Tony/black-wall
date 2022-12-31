@@ -43,8 +43,8 @@ function GetData() {
   const contactsData = MainApi(contactsPageRoute, 'contacts', contactsPageStaticData)[0];
   const pricesData = MainApi(pricesPageRoute,  'prices', pricesPageStaticData)[0];
 
-  console.log(contactsData)
-  console.log(pricesData)
+  // console.log(contactsData)
+  // console.log(pricesData)
 
   
   return {
@@ -63,6 +63,12 @@ function GetData() {
   //   headerPath:'data.attributes.header',
 
   // }
+
+  // 'header': 'data.data.attributes.header'
+  // 'page': 'page.data[0].attributes'
+  // 'element': 'element.data[0].attributes.element'
+
+
 
   // switch (element) {
   //   case "header":

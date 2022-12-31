@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import useFetch from "../hooks/useFetch";
+import useFetch from "../hooks/Fetch";
 import { DataContext } from "../utils/getContext";
 
 const MainApi = (url, contextElement, staticData) => {

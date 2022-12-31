@@ -1,6 +1,7 @@
 import PageTitle from "../common/PageTitle/PageTitle";
 
 export default function Hero({ mainPageData }) {
+  // console.log(mainPageData);
   const hero = mainPageData.hero;
 
   return (
