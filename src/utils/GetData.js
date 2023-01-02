@@ -22,7 +22,7 @@ import {
   pricesPageRoute,
   orderFormRoute,
   projectPageRoute,
-} from "../config/routes";
+} from "../constants/routes"
 
 
 

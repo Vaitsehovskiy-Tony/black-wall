@@ -8,7 +8,7 @@ import Prices from "./pages/Prices/Prices";
 import { useEffect } from "react";
 import Footer from "./components/Footer/Footer";
 import MainApi from "./api/MainApi";
-import { headerRoute } from "./config/routes"
+import { headerRoute } from "./constants/routes"
 
 
 import { QueryClientProvider, QueryClient } from "react-query";

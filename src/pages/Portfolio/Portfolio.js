@@ -3,18 +3,24 @@ import { DataContext } from "../../utils/getContext";
 import PageTitle from "../../components/common/PageTitle/PageTitle";
 import ProjectSample from "../../components/ProjectSample/ProjectSample";
 import OrderForm from "../../components/OrderForm/OrderForm";
+import { useFetch } from "../../hooks/useFetch";
 const Portfolio = () => {
-  const { portfolio, projectsList } = useContext(DataContext);
+  const { projectsList } = useContext(DataContext);
   const staticTags = ["Все", "Жилые помещения", "Нежилые помещения"];
   const state = "disabled";
-
-  console.log(portfolio, projectsList);
+  
+  const {content, status} = useFetch('portfolioPage', 'page');
+  
+  if (status === "loading") {
+    return <h1>loading</h1>;
+  }
+  // console.log(portfolio, projectsList);
 
   return (
     <main className="portfolio">
       <PageTitle
-        description={portfolio.portfolioDescription}
-        title={portfolio.portfolioTitle}
+        description={content.portfolioDescription}
+        title={content.portfolioTitle}
       />
       <div className="portfolio__tags">
         {staticTags.map((i) => (

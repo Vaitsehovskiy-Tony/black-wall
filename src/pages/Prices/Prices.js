@@ -3,18 +3,25 @@ import { DataContext } from "../../utils/getContext";
 import PageTitle from "../../components/common/PageTitle/PageTitle";
 import { PriceCards } from "../../components/PriceCards/PriceCards";
 import { PriceDetails } from "../../components/PriceDetails/PriceDetails";
+import { Preloader } from "../../components/common/Preloader/Preloader";
+import { useFetch } from "../../hooks/useFetch";
 
 const Prices = () => {
-  const { prices } = useContext(DataContext);
-  console.log(prices);
+
+  const {isLoading, content} = useFetch('pricesPage','page');
+
+  if (isLoading) {
+    return <Preloader/>
+  }
+
   return (
     <main className="prices-page">
       <PageTitle
-        description={prices.pageTitle.description}
-        title={prices.pageTitle.title}
+        description={content.pageTitle.description}
+        title={content.pageTitle.title}
       />
-      <PriceCards cards={prices.priceCard} />
-      <PriceDetails cards={prices.priceCard} details={prices.priceDetails} />
+      <PriceCards cards={content.priceCard} />
+      <PriceDetails cards={content.priceCard} details={content.priceDetails} />
     </main>
   );
 };
