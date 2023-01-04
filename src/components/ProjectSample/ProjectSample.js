@@ -1,24 +1,21 @@
 import { Link } from "react-router-dom";
 
-const ProjectSample = ({ projectItem }) => {
-  const imgPath = (projectItem.imageHorizontal || projectItem.imageVertical)
-    .data.attributes.url;
-
+export const ProjectSample = ({ projectItem }) => {
+  const imgPath = projectItem.coverImage.data.attributes.url;
+  console.log('1', projectItem)
   return (
-    <Link to={"/project/some-project"} className="sample">
+    <Link to={`/project/` + projectItem.projectId} className="sample">
       <div className="sample__img-container">
         <img
           className="sample__img"
-          src={`http://vaitstony.art:1337${imgPath}`}
+          src={`http://api.vaitstony.art${imgPath}`}
           alt={projectItem.title}
         />
       </div>
       <div className="sample__content">
-        <h6 className="sample__title">'{projectItem.title}'</h6>
+        <h6 className="sample__title">{projectItem.title}</h6>
         <span className="sample__subtitle">{projectItem.subtitle}</span>
       </div>
     </Link>
   );
 };
-
-export default ProjectSample;

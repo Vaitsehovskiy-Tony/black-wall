@@ -1,9 +1,9 @@
-import getLocales from "../../../utils/getLocales";
+import { useState } from "react";
+import {getLocales} from "../../../utils/getLocales";
 import bottomArrow from "../../../images/bottom-arrow.svg";
 import bottomArrowDark from "../../../images/bottom-arrow-dark.png";
-import { useState } from "react";
 
-function HeaderLanguageSelector({ headerStyle }) {
+export const HeaderLanguageSelector = ({ headerStyle }) => {
   const [isActive, setIsActive] = useState(false);
   function handleLangSwitch() {
     setIsActive(!isActive);

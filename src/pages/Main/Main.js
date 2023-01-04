@@ -1,40 +1,32 @@
-import Hero from "../../components/Hero/Hero";
-import { useContext, useEffect, useState } from "react";
-import About from "../../components/About/About";
-import NewProjects from "../../components/NewProjects/NewProjects";
-import OurTeam from "../../components/OurTeam/OurTeam";
-import OrderForm from "../../components/OrderForm/OrderForm";
-import ContactUs from "../../components/ContactUs/ContactUs";
-import Slider from "../../components/Slider/Slider";
-import { DataContext } from "../../utils/getContext";
-import DataElement from "../../tmp/DataElement";
-import { useQuery } from "react-query";
-import Fetch from "../../hooks/Fetch";
+import { Hero } from "../../components/Hero/Hero";
+import { About } from "../../components/About/About";
+import { NewProjects } from "../../components/NewProjects/NewProjects";
+import { OurTeam } from "../../components/OurTeam/OurTeam";
+import { OrderForm } from "../../components/OrderForm/OrderForm";
+import { Slider } from "../../components/Slider/Slider";
 import { useFetch } from "../../hooks/useFetch";
 import { Preloader } from "../../components/common/Preloader/Preloader";
+import { getProjectsList } from "../../utils/getProjectsList";
 
-const Main = () => {
+export const Main = () => {
+  const projectsList = useFetch("projectList");
+  const { isLoading, content } = useFetch("mainPage");
 
-  const { projectsList } = useContext(DataContext);
-
-  const {isLoading, content} = useFetch('mainPage', 'page');
-  
-  if (isLoading) {
-    return <Preloader/>
+  if (isLoading || projectsList.isLoading) {
+    return <Preloader />;
   }
+
+  const projectsListContent = getProjectsList(projectsList.content);
 
   return (
     <main className="main-page">
-      {/* <p>{data.data[0].attributes.title}</p> */}
       <Hero mainPageData={content} />
       <About mainPageData={content} />
-      {/* <Slider mainPageData={mainPage} projectsList={projectsList} /> */}
-      <NewProjects mainPageData={content} projectsList={projectsList} />
-      {/* <OurTeam mainPageData={mainPage} /> */}
-      {/*<ContactUs mainPageData={mainPage} />*/}
-      <OrderForm mainPageData={content} display={"none"} />
+      <Slider mainPageData={content} projectsList={projectsListContent} />
+      <NewProjects mainPageData={content} projectsList={projectsListContent} />
+      <OurTeam mainPageData={content} />
+      {/* <ContactUs mainPageData={content} /> */}
+      <OrderForm orderFormData={content.orderForm} display={"none"} />
     </main>
   );
 };
-
-export default Main;

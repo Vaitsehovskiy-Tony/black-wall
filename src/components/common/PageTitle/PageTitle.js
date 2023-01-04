@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 
-export default function PageTitle({ description, title }) {
+export const PageTitle = ({ description, title }) => {
   const location = useLocation();
   const position =
     location.pathname === "/portfolio" ||

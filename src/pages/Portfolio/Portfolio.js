@@ -1,20 +1,22 @@
-import { useContext } from "react";
-import { DataContext } from "../../utils/getContext";
-import PageTitle from "../../components/common/PageTitle/PageTitle";
-import ProjectSample from "../../components/ProjectSample/ProjectSample";
-import OrderForm from "../../components/OrderForm/OrderForm";
+import { PageTitle } from "../../components/common/PageTitle/PageTitle";
+import { ProjectSample } from "../../components/ProjectSample/ProjectSample";
+import { OrderForm } from "../../components/OrderForm/OrderForm";
 import { useFetch } from "../../hooks/useFetch";
-const Portfolio = () => {
-  const { projectsList } = useContext(DataContext);
+import { getProjectsList } from "../../utils/getProjectsList";
+
+export const Portfolio = () => {
+
+  const { isLoading, content } = useFetch("portfolioPage");
+  const orderForm = useFetch("orderForm");
+  const projectsList = useFetch("projectList");
+
   const staticTags = ["Все", "Жилые помещения", "Нежилые помещения"];
   const state = "disabled";
-  
-  const {content, status} = useFetch('portfolioPage', 'page');
-  
-  if (status === "loading") {
+
+  if (isLoading || projectsList.isLoading || orderForm.isLoading) {
     return <h1>loading</h1>;
   }
-  // console.log(portfolio, projectsList);
+  const projectsListContent = getProjectsList(projectsList.content);
 
   return (
     <main className="portfolio">
@@ -28,13 +30,11 @@ const Portfolio = () => {
         ))}
       </div>
       <div className="portfolio__items-container">
-        {projectsList.map((i) => (
+        {projectsListContent.map((i) => (
           <ProjectSample projectItem={i} />
         ))}
       </div>
-      <OrderForm display={""} />
+      <OrderForm orderFormData={orderForm.content} display={'none'} />
     </main>
   );
 };
-
-export default Portfolio;

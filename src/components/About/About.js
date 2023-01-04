@@ -1,6 +1,4 @@
-import Slider from "../Slider/Slider";
-
-const About = ({ mainPageData }) => {
+export const About = ({ mainPageData }) => {
   const about = mainPageData.about;
   return (
     <section className="about">
@@ -15,5 +13,3 @@ const About = ({ mainPageData }) => {
     </section>
   );
 };
-
-export default About;

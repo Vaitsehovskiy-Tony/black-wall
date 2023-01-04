@@ -1,12 +1,11 @@
-import React, { useRef, useContext } from "react";
+import { useRef } from "react";
 import { useForm } from "react-hook-form";
-import { DataContext } from "../../utils/getContext";
-import emailjs from "@emailjs/browser";
-import arrow from "../../images/right-arrow.svg";
 import { Avatars } from "../common/Avatars/Avatars";
+import arrow from "../../images/right-arrow.svg";
+import emailjs from "@emailjs/browser";
 
-const OrderForm = ({ display }) => {
-  const { orderForm } = useContext(DataContext);
+export const OrderForm = ({ orderFormData, display }) => {
+  const elementData = orderFormData;
   const form = useRef();
   const {
     register,
@@ -32,9 +31,9 @@ const OrderForm = ({ display }) => {
   return (
     <section className="form">
       <div className="form__wrapper">
-        <h2 className="form__title">{orderForm.title}</h2>
-        <span className="form__subtitle">{orderForm.subtitle}</span>
-        <Avatars display={display} members={orderForm.formAvatars} />
+        <h2 className="form__title">{elementData.title}</h2>
+        <span className="form__subtitle">{elementData.subtitle}</span>
+        <Avatars display={display} members={elementData.formAvatars} />
         <form
           ref={form}
           onSubmit={handleSubmit(sendEmail)}
@@ -43,26 +42,26 @@ const OrderForm = ({ display }) => {
           <input
             className="form_text-style form__name"
             type="text"
-            placeholder={orderForm.formData.nameText}
+            placeholder={elementData.formData.nameText}
             {...register}
             name="name"
           />
           <input
             className="form_text-style form__contact"
             type="text"
-            placeholder={orderForm.formData.contactText}
+            placeholder={elementData.formData.contactText}
             {...register}
             name="email"
           />
           <input
             className="form_text-style form__country"
             type="text"
-            placeholder={orderForm.formData.countryText}
+            placeholder={elementData.formData.countryText}
             {...register}
             name="message"
           />
           <span className="form__choose-type">
-            {orderForm.formData.arrayTitle}
+            {elementData.formData.arrayTitle}
           </span>
           <div className="form__radio-container">
             <label className="form__radio-container_1">
@@ -72,7 +71,7 @@ const OrderForm = ({ display }) => {
                 type="radio"
                 value="Квартира"
               />
-              {orderForm.formData.array[0]}
+              {elementData.formData.array[0]}
             </label>
             <label className="form__radio-container_2">
               <input
@@ -81,14 +80,14 @@ const OrderForm = ({ display }) => {
                 type="radio"
                 value="Иное"
               />
-              {orderForm.formData.array[1]}
+              {elementData.formData.array[1]}
             </label>
           </div>
           <div className="form__submit-container">
             <input
               className="form__submit"
               type="submit"
-              value={orderForm.formData.buttonText}
+              value={elementData.formData.buttonText}
             />
             <img src={arrow} alt="right arrow" className="form__submit-arrow" />
           </div>
@@ -97,5 +96,3 @@ const OrderForm = ({ display }) => {
     </section>
   );
 };
-
-export default OrderForm;

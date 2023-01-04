@@ -1,4 +1,5 @@
 export const GalleryBlock = ({ gallery }) => {
+  console.log('gallery',gallery)
   return (
     <section className="page-gallery">
       <h3 className="page-gallery__title">{gallery.title}</h3>
@@ -6,7 +7,7 @@ export const GalleryBlock = ({ gallery }) => {
         <div className="page-gallery__img-container">
           {gallery.gallery.data.map((e, i) => (
             <img
-              src={`http://vaitstony.art:1337${e.attributes.url}`}
+              src={`http://api.vaitstony.art${e.attributes.url}`}
               alt=""
               className="page-gallery__img"
             />

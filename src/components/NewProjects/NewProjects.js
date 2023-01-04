@@ -1,7 +1,8 @@
-import ProjectItem from "../ProjectItem/ProjectItem";
+import { ProjectItem } from "../ProjectItem/ProjectItem";
 
-const NewProjects = ({ mainPageData, projectsList }) => {
+export const NewProjects = ({ mainPageData, projectsList }) => {
   const newProjects = mainPageData.newProjects;
+  debugger
   const desktopList = projectsList.slice(0, 4);
 
   return (
@@ -17,5 +18,3 @@ const NewProjects = ({ mainPageData, projectsList }) => {
     </section>
   );
 };
-
-export default NewProjects;

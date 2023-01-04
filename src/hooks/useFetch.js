@@ -1,10 +1,14 @@
 import { useQuery } from "react-query";
 import { makeFetch } from "../services/route.service";
 
-export const useFetch = (name) => {
-  const { isLoading, data, status, error } = useQuery(`${name}Data`, () => makeFetch(name), {
-    keepPreviousData: true,
-  });
+export const useFetch = (name, id) => {
+  const { isLoading, data, status, error }= useQuery(
+    `${!!id ? id : name}Data`,
+    () => makeFetch(name, id),
+    {
+      keepPreviousData: true,
+    }
+  );
 
   let content = null;
 
@@ -19,16 +23,28 @@ export const useFetch = (name) => {
       case "portfolioPage":
         content = data.data[0].attributes;
         break;
+      case "pricesPage":
+        content = data.data[0].attributes;
+        break;
       case "orderForm":
         content = data.data.attributes;
         break;
-      case "pricesPage":
-        content = data.data[0].attributes;
+      case "header":
+        content = data.data.attributes.header;
+        break;
+      case "footer":
+        content = data.data.attributes.footer;
+        break;
+      case "projectList":
+        content = data.data;
+        break;
+      case "projectPage":
+        debugger
+        content = data.data.attributes;
         break;
       default:
         return undefined;
     }
-    console.log(content)
   }
   if (status === "error") {
   }

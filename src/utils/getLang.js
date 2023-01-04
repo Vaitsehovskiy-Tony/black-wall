@@ -1,4 +1,4 @@
-export default function getLang() {
+export const  getLang = () => {
   if (navigator.languages && navigator.languages.length) {
     return navigator.languages[0];
   } else {

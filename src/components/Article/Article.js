@@ -17,6 +17,7 @@ function getArticleElement(item, index) {
       console.log(item);
       return <TextBlock element={item} key={index} />;
     case "image":
+      console.log('item', item)
       return <ImageBlock element={item} key={index} />;
     case "slider":
       return <SliderBlock element={item} key={index} />;
@@ -28,6 +29,7 @@ function getArticleElement(item, index) {
 }
 
 export const Article = ({ project }) => {
+  console.log(project)
   return (
     <section className="article project-wrapper">
       <h2 className="article__title">{project.articleTitle}</h2>

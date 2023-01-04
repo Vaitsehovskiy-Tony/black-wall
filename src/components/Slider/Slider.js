@@ -2,13 +2,13 @@ import { useState } from "react";
 import rightArrow from "../../images/right-arrow.png";
 import leftArrow from "../../images/left-arrow.png";
 
-export default function Slider({ mainPageData }) {
+export const Slider = ({ mainPageData }) => {
   // const isLoop = true;
   const slides = mainPageData.slides;
 
   // const direction = useRef("normal");
   // const position = useRef("start");
-
+  console.log(slides)
   const [indexes, setIndexes] = useState([-1, 0, 1]);
 
   function simpleNextSlide() {

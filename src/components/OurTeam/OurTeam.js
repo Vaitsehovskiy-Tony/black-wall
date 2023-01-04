@@ -1,4 +1,4 @@
-const OurTeam = ({ mainPageData }) => {
+export const OurTeam = ({ mainPageData }) => {
   const sharedData = mainPageData.ourTeam;
   const membersData = mainPageData.teamMember;
 
@@ -22,5 +22,3 @@ const OurTeam = ({ mainPageData }) => {
     </section>
   );
 };
-
-export default OurTeam;

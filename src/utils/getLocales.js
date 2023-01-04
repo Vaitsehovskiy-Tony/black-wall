@@ -1,7 +1,6 @@
-import React from "react";
-import getLang from "../utils/getLang";
+import {getLang} from "../utils/getLang";
 
-function getLocales() {
+export const getLocales = () => {
     const locales = ['en', 'ru', 'hb'];
     const systemLocale = getLang();
     const currentLocale = locales.filter(i =>

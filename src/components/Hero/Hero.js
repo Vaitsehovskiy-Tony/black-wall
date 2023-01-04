@@ -1,7 +1,7 @@
-import PageTitle from "../common/PageTitle/PageTitle";
+import { PageTitle } from "../common/PageTitle/PageTitle";
 
-export default function Hero({ mainPageData }) {
-  // console.log(mainPageData);
+export const Hero = ({ mainPageData }) => {
+  console.log('hero', mainPageData)
   const hero = mainPageData.hero;
 
   return (
@@ -10,13 +10,13 @@ export default function Hero({ mainPageData }) {
         <source
           media="(max-width: 991px)"
           src={
-            "https://api.vaitstony.art/uploads/Rectangle_4276_77953d2707.png"
+            `https://api.vaitstony.art${hero.picture.data.attributes.url}`
           }
         />
         <img
           className="hero__bg-img"
           src={
-            "https://api.vaitstony.art/uploads/Rectangle_4276_77953d2707.png"
+            `https://api.vaitstony.art${hero.picture.data.attributes.url}`
           }
           alt="Hero photo"
         />
@@ -25,4 +25,4 @@ export default function Hero({ mainPageData }) {
       <div className="hero__overlay"></div>
     </section>
   );
-}
+};

@@ -1,18 +1,16 @@
-import { useContext } from "react";
-import { DataContext } from "../../utils/getContext";
-import PageTitle from "../../components/common/PageTitle/PageTitle";
+import { PageTitle } from "../../components/common/PageTitle/PageTitle";
 import { PriceCards } from "../../components/PriceCards/PriceCards";
 import { PriceDetails } from "../../components/PriceDetails/PriceDetails";
 import { Preloader } from "../../components/common/Preloader/Preloader";
 import { useFetch } from "../../hooks/useFetch";
 
-const Prices = () => {
-
-  const {isLoading, content} = useFetch('pricesPage','page');
+export const Prices = () => {
+  const { isLoading, content } = useFetch("pricesPage");
 
   if (isLoading) {
-    return <Preloader/>
+    return <Preloader />;
   }
+  console.log(content)
 
   return (
     <main className="prices-page">
@@ -25,5 +23,3 @@ const Prices = () => {
     </main>
   );
 };
-
-export default Prices;

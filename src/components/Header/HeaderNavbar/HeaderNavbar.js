@@ -1,7 +1,6 @@
-import React from "react";
-import { Link, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function HeaderNavbar({ navbar }) {
+export const HeaderNavbar = ({ navbar }) => {
   return (
     <ul className="header__navbar">
       {navbar.map((i) => (
