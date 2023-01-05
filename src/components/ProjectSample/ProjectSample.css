@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+.sample.hidden {
+  display: none;
+}
+
 .sample__img-container {
   width: 100%;
   height: 436px;

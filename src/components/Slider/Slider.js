@@ -8,7 +8,6 @@ export const Slider = ({ mainPageData }) => {
 
   // const direction = useRef("normal");
   // const position = useRef("start");
-  console.log(slides)
   const [indexes, setIndexes] = useState([-1, 0, 1]);
 
   function simpleNextSlide() {

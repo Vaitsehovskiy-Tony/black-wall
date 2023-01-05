@@ -10,6 +10,7 @@
 .portfolio__tag {
     color: var(--color-grey);
     font: var(--font-ml);
+    cursor: pointer;
 }
 
 .portfolio__tag.enabled {

@@ -6,7 +6,6 @@ import { Portfolio } from "./pages/Portfolio/Portfolio";
 import { Contacts } from "./pages/Contacts/Contacts";
 import { Prices } from "./pages/Prices/Prices";
 import { Footer } from "./components/Footer/Footer";
-
 import { QueryClientProvider, QueryClient } from "react-query";
 
 const queryClient = new QueryClient();

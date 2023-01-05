@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
 
-export const ProjectSample = ({ projectItem }) => {
+export const ProjectSample = ({ projectItem, filter }) => {
   const imgPath = projectItem.coverImage.data.attributes.url;
-  console.log('1', projectItem)
+  const itemTag = projectItem.tag.data.attributes.tag;
+
   return (
-    <Link to={`/project/` + projectItem.projectId} className="sample">
+    <Link
+      to={`/project/` + projectItem.projectId}
+      className={`sample ${!!filter && filter !== itemTag ? "hidden" : ""}`}
+    >
       <div className="sample__img-container">
         <img
           className="sample__img"

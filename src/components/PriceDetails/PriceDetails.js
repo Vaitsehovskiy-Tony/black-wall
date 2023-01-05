@@ -1,8 +1,6 @@
 import checked from "../../images/checked.png";
 
 export const PriceDetails = ({ cards, details }) => {
-  console.log("llll", cards, details);
-  //
   return (
     <section className="rates">
       <div className="rates__rates-container">

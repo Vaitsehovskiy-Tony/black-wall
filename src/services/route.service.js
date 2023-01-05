@@ -2,6 +2,7 @@ const routes = (name, id = null, lang = "ru") => {
   const baseUrl = "https://api.vaitstony.art/api/";
   const locale = `?locale=${lang}`;
   let url;
+
   switch (name) {
 
     case "mainPage":
@@ -28,6 +29,10 @@ const routes = (name, id = null, lang = "ru") => {
         "&populate[formAvatars][populate]=%2A";
       break;
 
+    case "contactUs":
+      url = baseUrl + "contact-us" + locale + "&populate=%2A";
+      break;
+
     case "projectList":
       url =
         baseUrl +
@@ -39,6 +44,7 @@ const routes = (name, id = null, lang = "ru") => {
     case "portfolioPage":
       url = baseUrl + "portfolio-pages" + locale;
       break;
+
     case "contactsPage":
       url = baseUrl + "contacts-pages" + locale + "&populate=%2A";
       break;
@@ -48,7 +54,7 @@ const routes = (name, id = null, lang = "ru") => {
         baseUrl +
         "prices-pages" +
         locale +
-        "&populate[priceCard][populate]=%2A&populate[pageTitle][populate]=%2A&populate[priceDetails][populate]=%2A";
+        "&populate[priceCard][populate]=%2A&populate[pageTitle][populate]=%2A&populate[priceDetails][populate]=%2A&populate[workflow][populate]=%2A";
       break;
 
     case "projectPage":
@@ -59,18 +65,25 @@ const routes = (name, id = null, lang = "ru") => {
         locale +
         "&populate[hero][populate]=%2A&populate[slider][populate]=%2A&populate[aboutProject][populate]=%2A&populate[projectElement][populate]=%2A&populate[image-item][populate]=%2A&populate[gallery][populate]=%2A";
       break;
+
+      case "tags":
+        url = baseUrl + 'tags' + locale;
+        break;
+
+      default:
+        return null;
   }
 
   return url;
 };
 
-const getRoute = (name, id) => {
-  return routes(name, id);
+// todo: remove useless function
+const getRoute = (name, id, locale) => {
+  return routes(name, id, locale);
 };
 
-export const makeFetch = async (name, id) => {
-  debugger
-  const url = getRoute(name, id);
+export const makeFetch = async (name, id, locale) => {
+  const url = getRoute(name, id, locale);
   const response = await fetch(url, {
     method: "GET",
     credentials: "same-origin",

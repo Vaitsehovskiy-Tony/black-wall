@@ -1,5 +1,12 @@
+import logoLight from "../../../images/logo-white.svg";
+
 export const Preloader = () => {
   return (
-    <h1>Loading...</h1>
-  )
-}
+    <section className="preloader">
+      <div className="preloader__content">
+        <div className="preloader__overlay"></div>
+        <img className="preloader__img" src={logoLight} alt="preloader"/>
+      </div>
+    </section>
+  );
+};

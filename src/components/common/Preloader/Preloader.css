@@ -1,0 +1,35 @@
+@keyframes preloader {
+    from {
+        transform: translate(0);
+    }
+    to {
+        transform: translate(0, -100%);
+    }
+    
+}
+
+.preloader {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background-color: var(--color-black);
+}
+
+.preloader__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.preloader__overlay {
+    position: absolute;
+    background-color: var(--color-black);
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    transform: translate(0, -100%);
+    animation: preloader 1s ease-out;
+}

@@ -7,16 +7,18 @@ import { useFetch } from "../../hooks/useFetch";
 import { getProjectsList } from "../../utils/getProjectsList";
 import { Preloader } from "../../components/common/Preloader/Preloader";
 import { useParams } from "react-router-dom";
+import { OrderForm } from "../../components/OrderForm/OrderForm";
 
 export const Project = () => {
   const projectsList = useFetch("projectList");
+  const orderForm = useFetch("orderForm");
   const { id } = useParams();
   const projectPage = useFetch("projectPage", id);
 
-  if (projectPage.isLoading || projectsList.isLoading) {
+  if (projectPage.isLoading || projectsList.isLoading || orderForm.isLoading) {
     return <Preloader />;
   }
-  console.log(projectPage);
+
   const projectsListContent = getProjectsList(projectsList.content);
 
   return (
@@ -26,6 +28,7 @@ export const Project = () => {
       <Article project={projectPage.content} />
       <GalleryBlock gallery={projectPage.content.gallery} />
       <OtherProjects projects={projectsListContent} />
+      <OrderForm orderFormData={orderForm.content} />
     </main>
   );
 };

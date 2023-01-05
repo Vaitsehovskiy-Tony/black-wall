@@ -1,7 +1,6 @@
 import { PageTitle } from "../common/PageTitle/PageTitle";
 
 export const Hero = ({ mainPageData }) => {
-  console.log('hero', mainPageData)
   const hero = mainPageData.hero;
 
   return (

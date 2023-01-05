@@ -1,5 +1,4 @@
 export const GalleryBlock = ({ gallery }) => {
-  console.log('gallery',gallery)
   return (
     <section className="page-gallery">
       <h3 className="page-gallery__title">{gallery.title}</h3>

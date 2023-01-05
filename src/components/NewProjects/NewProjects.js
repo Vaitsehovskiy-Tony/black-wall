@@ -2,7 +2,6 @@ import { ProjectItem } from "../ProjectItem/ProjectItem";
 
 export const NewProjects = ({ mainPageData, projectsList }) => {
   const newProjects = mainPageData.newProjects;
-  debugger
   const desktopList = projectsList.slice(0, 4);
 
   return (

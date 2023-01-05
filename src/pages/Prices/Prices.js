@@ -3,6 +3,7 @@ import { PriceCards } from "../../components/PriceCards/PriceCards";
 import { PriceDetails } from "../../components/PriceDetails/PriceDetails";
 import { Preloader } from "../../components/common/Preloader/Preloader";
 import { useFetch } from "../../hooks/useFetch";
+import { Workflow } from "../../components/Workflow/Workflow";
 
 export const Prices = () => {
   const { isLoading, content } = useFetch("pricesPage");
@@ -10,7 +11,6 @@ export const Prices = () => {
   if (isLoading) {
     return <Preloader />;
   }
-  console.log(content)
 
   return (
     <main className="prices-page">
@@ -19,6 +19,7 @@ export const Prices = () => {
         title={content.pageTitle.title}
       />
       <PriceCards cards={content.priceCard} />
+      <Workflow content={content.workflow} />
       <PriceDetails cards={content.priceCard} details={content.priceDetails} />
     </main>
   );

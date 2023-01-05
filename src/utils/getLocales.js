@@ -1,17 +1,13 @@
-import {getLang} from "../utils/getLang";
+import { getLang } from "../utils/getLang";
 
 export const getLocales = () => {
-    const locales = ['en', 'ru', 'hb'];
-    const systemLocale = getLang();
-    const currentLocale = locales.filter(i =>
-        systemLocale.includes(i)
-    ).join();
-    locales.splice(locales.indexOf(currentLocale), 1);
+  const localeOptions = ["en", "ru", "hb"];
+  const systemLocale = getLang();
+  const activeLocale = localeOptions.filter((i) => systemLocale.includes(i)).join();
+    localeOptions.splice(localeOptions.indexOf(activeLocale), 1);
 
-    return {
-        currentLocale,
-        locales
-    }
-}
-
-export default getLocales;
+  return {
+    activeLocale,
+    localeOptions
+  };
+};

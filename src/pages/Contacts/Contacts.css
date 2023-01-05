@@ -1,17 +1,25 @@
 .contacts-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--color-black);
 }
 .contacts__wrapper {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .contacts-page .page-title__content {
-    color: var(--color-white);
+  color: var(--color-white);
 }
 
 .contacts-page__container {
-    margin: 136px auto 240px;
+  margin: 136px auto 240px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1000px) {
+  .contacts-page__container {
+    flex-direction: column;
+  }
 }
