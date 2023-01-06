@@ -1,0 +1,36 @@
+.contacts__title {
+    font: var(--font-h-l);
+}
+
+.contacts__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts__block {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 20px;
+}
+
+.contacts__block:last-of-type .contacts__item-title {
+    width: 20%;   
+}
+
+.contacts__item {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.contacts__item-title {
+    width: 50%;
+    font: var(--font-ml);
+    color: var(--color-grey);
+}
+
+
+
+.contacts__link {
+    color: var(--color-accent);
+}
