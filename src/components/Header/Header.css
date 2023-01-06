@@ -4,6 +4,7 @@
 @import url(./SearchPopup/SearchPopup.css);
 @import url(HeaderOrderBtn/HeaderOrderBtn.css);
 @import url(./HeaderLanguageSelector/HeaderLanguageSelector.css);
+@import url(./HeaderBurger/HeaderBurger.css);
 
 @keyframes header {
   0% {

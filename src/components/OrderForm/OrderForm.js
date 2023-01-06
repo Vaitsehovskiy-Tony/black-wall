@@ -29,7 +29,7 @@ export const OrderForm = ({ orderFormData, display }) => {
   };
 
   return (
-    <section className="form">
+    <section className="form wrapper">
       <div className="form__wrapper">
         <h2 className="form__title">{elementData.title}</h2>
         <span className="form__subtitle">{elementData.subtitle}</span>

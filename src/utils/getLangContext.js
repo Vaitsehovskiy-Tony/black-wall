@@ -4,7 +4,7 @@ import { getLang } from "./getLang";
 const LangContext = React.createContext();
 
 const getLocales = () => {
-  const localeOptions = ["en", "ru", "he"];
+  const localeOptions = ["en", "ru"];
   const systemLocale = !!localStorage.getItem("locale")
     ? localStorage.getItem("locale")
     : getLang();
@@ -27,7 +27,7 @@ const LangContextProvider = ({ children }) => {
     locales,
     userLocaleChange: (locale) => {
       const activeLocale = locale;
-      const localeOptions = ["en", "ru", "he"];
+      const localeOptions = ["en", "ru"];
       localStorage.setItem("locale", locale);
       localeOptions.splice(localeOptions.indexOf(locale), 1);
       setLocales({ activeLocale, localeOptions });

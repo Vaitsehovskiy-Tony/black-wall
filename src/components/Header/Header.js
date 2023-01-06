@@ -5,10 +5,11 @@ import { HeaderLanguageSelector } from "./HeaderLanguageSelector/HeaderLanguageS
 import { HeaderStyle } from "../../utils/getHeaderStyle";
 import { useFetch } from "../../hooks/useFetch";
 import { Preloader } from "../../components/common/Preloader/Preloader";
+import { HeaderBurger } from "./HeaderBurger/HeaderBurger";
 
 export const Header = () => {
   const headerStyle = HeaderStyle();
-
+  const isNarrow = window.matchMedia("screen and (max-width: 950px)");
   const { isLoading, content } = useFetch("header");
 
   if (isLoading) {
@@ -18,10 +19,17 @@ export const Header = () => {
   return (
     <header className={`header header_${headerStyle}`}>
       <div className="header__wrapper">
-        <Logo headerStyle={headerStyle} />
+        <Logo headerStyle={headerStyle || "light"} />
         <HeaderNavbar navbar={content.navbar} />
-        <HeaderLanguageSelector headerStyle={headerStyle || "header_light"} />
-        <HeaderOrderBtn bttnText={content.orderProject} />
+        <HeaderLanguageSelector headerStyle={headerStyle || "light"} />
+        { isNarrow.matches ? (
+          <HeaderBurger headerStyle={headerStyle || "light"} />
+        ) : (
+          <HeaderOrderBtn
+            bttnText={content.orderProject}
+            headerStyle={headerStyle}
+          />
+        )}
       </div>
     </header>
   );

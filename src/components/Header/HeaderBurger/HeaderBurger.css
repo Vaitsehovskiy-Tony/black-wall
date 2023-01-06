@@ -1,0 +1,7 @@
+.header__burger {
+    width: 22px;
+    height: 15px;
+    margin: auto 0 auto 15px;
+    opacity: 0.85;
+    cursor: pointer;
+}
