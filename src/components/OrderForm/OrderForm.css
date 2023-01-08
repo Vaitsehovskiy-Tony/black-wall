@@ -16,6 +16,19 @@
     "avatar form";
 }
 
+@media screen and (max-width: 600px){
+  .form__wrapper {
+    padding: 100px 0;
+    margin: 0 15px;
+    display: grid;
+    grid-template-areas:
+      "title"
+      "subtitle"
+      "form"
+      "form";
+  }
+}
+
 .form__title {
   font: var(--font-h-l);
   grid-area: title;
@@ -38,6 +51,19 @@
     "types ."
     "submit submit";
 }
+
+@media screen and (max-width: 600px){
+  .form__container {
+    grid-template-areas:
+    "name"
+    "contact"
+    "country"
+    "choose-type"
+    "types"
+    "submit";
+  }
+}
+
 
 .form_text-style {
   margin: 0 0 24px;
@@ -64,6 +90,13 @@
   margin: 0 0 24px 20px;
   grid-area: country;
 }
+
+@media screen and (max-width: 600px){
+  .form__country {
+    margin: 0 0 24px;
+  }
+}
+
 .form__choose-type {
   margin: 24px 0 15px;
   grid-area: choose-type;
@@ -72,6 +105,13 @@
 .form__radio-container {
   display: flex;
   grid-area: types;
+}
+
+@media screen and (max-width: 600px){
+  .form__radio-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .form__radio-container_1 {
@@ -83,6 +123,12 @@
   margin: 0 0 0 25px;
   font-size: 1.125rem;
   white-space: nowrap;
+}
+
+@media screen and (max-width: 600px){
+  .form__radio-container_2 {
+    margin: 10px 0 0;
+  }
 }
 
 .form__radio {

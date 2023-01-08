@@ -12,7 +12,7 @@ export const ProjectSample = ({ projectItem, filter }) => {
       <div className="sample__img-container">
         <img
           className="sample__img"
-          src={`http://api.vaitstony.art${imgPath}`}
+          src={`https://api.vaitstony.art${imgPath}`}
           alt={projectItem.title}
         />
       </div>

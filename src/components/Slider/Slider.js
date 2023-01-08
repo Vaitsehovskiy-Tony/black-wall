@@ -55,7 +55,7 @@ export const Slider = ({ mainPageData }) => {
 
   function getImg(i) {
     return !!i
-      ? `http://vaitstony.art:1337${i.sliderImage.data.attributes.url}`
+      ? `https://api.vaitstony.art${i.sliderImage.data.attributes.url}`
       : "";
   }
   return (

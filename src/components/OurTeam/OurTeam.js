@@ -14,9 +14,9 @@ export const OurTeam = ({ mainPageData }) => {
       ))}
       <img
         src={
-          `http://vaitstony.art:1337` + sharedData.teamPhoto.data.attributes.url
+          `https://api.vaitstony.art` + sharedData.teamPhoto.data.attributes.url
         }
-        alt="our team photo"
+        alt="our team"
         className="our-team__photo"
       />
     </section>

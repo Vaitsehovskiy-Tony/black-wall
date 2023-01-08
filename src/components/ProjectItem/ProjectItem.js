@@ -6,7 +6,7 @@ export const ProjectItem = ({ projectItem }) => {
       {/*<div className="wtf">*/}
       <img
         className="project-item__img"
-        src={`http://api.vaitstony.art${imgPath}`}
+        src={`https://api.vaitstony.art${imgPath}`}
         alt={projectItem.title}
       />
       {/*</div>*/}

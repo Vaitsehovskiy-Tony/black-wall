@@ -9,7 +9,7 @@ export const GalleryBlock = ({ gallery }) => {
       <div className="page-gallery__grid">
         {gallery.gallery.data.map((e, i) => (
             <img
-              src={`http://api.vaitstony.art${e.attributes.url}`}
+              src={`https://api.vaitstony.art${e.attributes.url}`}
               alt=""
               className="page-gallery__img"
               key={i}

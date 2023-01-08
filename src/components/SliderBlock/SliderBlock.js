@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 
 export const SliderBlock = ({ element }) => {
-  const firstImage = `http://vaitstony.art:1337${element.images.data[0].attributes.url}`;
-  const secondImage = `http://vaitstony.art:1337${element.images.data[1].attributes.url}`;
+  const firstImage = `https://api.vaitstony.art${element.images.data[0].attributes.url}`;
+  const secondImage = `https://api.vaitstony.art${element.images.data[1].attributes.url}`;
   const [sliderValue, setSliderValue] = useState("500");
 
   const handleChange = (e) => {

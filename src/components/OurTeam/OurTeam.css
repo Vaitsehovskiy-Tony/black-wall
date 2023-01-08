@@ -7,6 +7,16 @@
     "alex photo";
 }
 
+@media screen and (max-width: 600px){
+  .our-team {
+    grid-template-areas:
+    "title"
+    "photo"
+    "jane"
+    "alex";
+  }
+}
+
 .our-team__title {
   grid-area: title;
   font: var(--font-h-l);
@@ -16,6 +26,7 @@
 .our-team__member {
   margin: 48px 0 0;
 }
+
 .our-team__member:first-of-type {
   grid-area: jane;
 }
@@ -47,3 +58,4 @@
   height: 100%;
   object-fit: cover;
 }
+

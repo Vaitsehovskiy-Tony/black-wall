@@ -1,7 +1,7 @@
 export const About = ({ mainPageData }) => {
   const about = mainPageData.about;
   return (
-    <section className="about">
+    <section className="about wrapper">
       <div className="about__side-text-container">
         <h3 className="about__side-text-title">{about.sideTitle}</h3>
         <span className="about__side-text-subtitle">{about.sideSubtitle}</span>
