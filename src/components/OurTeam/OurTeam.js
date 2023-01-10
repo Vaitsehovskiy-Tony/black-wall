@@ -22,7 +22,6 @@ export const OurTeam = ({ mainPageData }) => {
           ) : (
             <p className="our-team__quote-text">{person.quote}</p>
           )}
-          <hr className="our-team__collapse-line" />
         </div>
       ))}
       <img

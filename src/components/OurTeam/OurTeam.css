@@ -10,6 +10,7 @@
 
 @media screen and (max-width: 600px) {
   .our-team {
+    grid-template-columns: 1fr;
     grid-template-areas:
       "title"
       "photo"
