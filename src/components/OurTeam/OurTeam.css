@@ -1,30 +1,37 @@
 .our-team {
   margin: 240px auto 0;
   display: grid;
+  grid-template-columns: 7fr 5fr;
   grid-template-areas:
     "title photo"
     "jane photo"
     "alex photo";
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   .our-team {
     grid-template-areas:
-    "title"
-    "photo"
-    "jane"
-    "alex";
+      "title"
+      "photo"
+      "jane"
+      "alex";
   }
 }
 
 .our-team__title {
   grid-area: title;
   font: var(--font-h-l);
-  margin: 0 0 16px;
+  margin: 0 10% 16px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .our-team__title {
+    font-size: 2.06rem;
+  }
 }
 
 .our-team__member {
-  margin: 48px 0 0;
+  margin: 48px 10% 0 0;
 }
 
 .our-team__member:first-of-type {
@@ -41,15 +48,47 @@
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 600px) {
+  .our-team__member-name {
+    font-size: 1,25rem;
+  }
+}
+
 .our-team__member-about {
   font: var(--font-m);
   color: var(--color-l-grey);
 }
 
-.our-team__member-quote {
-  font: var(--font-m);
-  padding: 0 0 0 16px;
+@media screen and (max-width: 600px) {
+  .our-team__member-about {
+    font: var(--font-xs);
+  }
+}
+
+.our-team .collapsing__text  {
+  font: var(--font-xs);
+  padding: 10px 0 10px 16px;
   border-left: 1px solid var(--color-accent);
+}
+
+.our-team__quote-text {
+  padding: 10px 0 10px 16px;  
+  border-left: 1px solid var(--color-accent);
+}
+
+@media screen and (max-width: 600px) {
+  .our-team  .collapsing__title {
+    font: var(--font-l);
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  .our-team__collapse-line {
+    display: block;
+    color: var(--color-dark-grey);
+    height: 1px;
+    margin: 0;
+  }
 }
 
 .our-team__photo {
@@ -59,3 +98,8 @@
   object-fit: cover;
 }
 
+@media screen and (max-width: 600px) {
+  .our-team__photo {
+    height: 420px;
+  }
+}

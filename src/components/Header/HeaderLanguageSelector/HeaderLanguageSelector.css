@@ -18,11 +18,11 @@
 
 .header-lang__bottom-arrow {
   width: 11px;
-  transition: all .1s ease-out;
+  transition: all 0.1s ease-out;
 }
 
 .header-lang__bottom-arrow.active {
-    width: 11px;
+  width: 11px;
   transform: rotate(180deg);
 }
 
@@ -36,14 +36,14 @@
 }
 
 .header-lang__options.active {
-    display: block;
+  display: block;
 }
 
 .header-lang__options-item {
-    padding: 0 15px 0;
-    cursor: pointer;
+  padding: 0 15px 0;
+  cursor: pointer;
 }
 
 .header-lang__options-item:hover {
-    background-color: var(--color-l-grey);
+  background-color: var(--color-l-grey);
 }

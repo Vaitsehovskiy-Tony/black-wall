@@ -157,6 +157,7 @@
   width: fit-content;
   white-space: nowrap;
   padding: 0 0 9px;
+  cursor: pointer;
 }
 .form__submit {
   margin: auto 13px auto 0;
@@ -167,6 +168,7 @@
   color: var(--color-grey);
   text-align: start;
   line-height: 1;
+  cursor: pointer;
 }
 
 .form__submit-arrow {

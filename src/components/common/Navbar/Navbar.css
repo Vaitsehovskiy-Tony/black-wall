@@ -13,7 +13,7 @@
 .header__navbar-item {
   margin: auto;
   padding: 0 10px;
-  color: var(--color-header);
+  /* color: var(--color-header); */
 }
 
 .header__navbar-item:hover {

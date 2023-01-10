@@ -1,35 +1,53 @@
 import { Logo } from "../common/Logo/Logo";
-import { HeaderNavbar } from "./HeaderNavbar/HeaderNavbar";
-import { HeaderOrderBtn } from "./HeaderOrderBtn/HeaderOrderBtn";
+import { Navbar } from "../common/Navbar/Navbar";
+import { HeaderCTABtn } from "./HeaderCTABtn/HeaderCTABtn";
 import { HeaderLanguageSelector } from "./HeaderLanguageSelector/HeaderLanguageSelector";
 import { HeaderStyle } from "../../utils/getHeaderStyle";
 import { useFetch } from "../../hooks/useFetch";
 import { Preloader } from "../../components/common/Preloader/Preloader";
-import { HeaderBurger } from "./HeaderBurger/HeaderBurger";
+import { Modal } from "../Modal/Modal";
+import { useState } from "react";
 
 export const Header = () => {
   const headerStyle = HeaderStyle();
-  const isNarrow = window.matchMedia("screen and (max-width: 950px)");
-  const { isLoading, content } = useFetch("header");
+  const header = useFetch("header");
+  const orderForm = useFetch("orderForm");
+  const [modalState, setModalState] = useState({
+    state: false,
+    content: "navbar",
+  });
 
-  if (isLoading) {
+  const handleModal = (type) => {
+    if (type === "orderForm") {
+      setModalState({ state: modalState.state, content: type });
+    } else {
+      setModalState({ state: !modalState.state, content: "navbar" });
+    }
+  };
+
+  if (header.isLoading || orderForm.isLoading) {
     return <Preloader />;
   }
 
   return (
     <header className={`header header_${headerStyle}`}>
+      <Modal
+        type={""}
+        navbar={header.content.navbar}
+        orderForm={orderForm.content}
+        modalState={modalState}
+        handleModal={handleModal}
+      />
       <div className="header__wrapper">
         <Logo headerStyle={headerStyle || "light"} />
-        <HeaderNavbar navbar={content.navbar} />
+        <Navbar navbar={header.content.navbar} />
         <HeaderLanguageSelector headerStyle={headerStyle || "light"} />
-        { isNarrow.matches ? (
-          <HeaderBurger headerStyle={headerStyle || "light"} />
-        ) : (
-          <HeaderOrderBtn
-            bttnText={content.orderProject}
-            headerStyle={headerStyle}
-          />
-        )}
+        <HeaderCTABtn
+          bttnText={header.content.orderProject}
+          headerStyle={headerStyle || "light"}
+          modalState={modalState}
+          handleModal={handleModal}
+        />
       </div>
     </header>
   );

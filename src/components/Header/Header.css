@@ -1,10 +1,11 @@
 @import url(../common/Logo/Logo.css);
-@import url(./HeaderNavbar/HeaderNavbar.css);
+@import url(../common/Navbar/Navbar.css);
 @import url(./HeaderSearch/HeaderSearch.css);
 @import url(./SearchPopup/SearchPopup.css);
-@import url(HeaderOrderBtn/HeaderOrderBtn.css);
+@import url(./HeaderCTABtn/HeaderCTABtn.css);
 @import url(./HeaderLanguageSelector/HeaderLanguageSelector.css);
 @import url(./HeaderBurger/HeaderBurger.css);
+@import url(../Modal/Modal.css);
 
 @keyframes header {
   0% {
@@ -23,11 +24,19 @@
   top: 0;
   width: 100%;
   display: flex;
-  z-index: 1;
+  z-index: 2;
   font: var(--font-s);
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
+
+@media screen and (max-width: 600px) {
+	.header {
+    font: var(--font-m);
+  }
+}
+
+
 .header.header_light {
   color: var(--color-white);
 }
@@ -39,7 +48,13 @@
 .header__wrapper {
   display: flex;
   justify-content: flex-end;
-  margin: 0 auto;
-  padding: 5px 15px;
-  width: 95%;
+  margin: 20px 46px;
+  width: 100%;
+  z-index: 3;
+}
+
+@media screen and (max-width: 600px) {
+	.header__wrapper {
+    margin: 5px 15px;
+  }
 }

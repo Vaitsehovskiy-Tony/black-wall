@@ -1,0 +1,63 @@
+@import url(./NavBarModal/NavBarModal.css);
+@import url(./OrderModal/OrderModal.css);
+
+@keyframes dropdown-show {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: .6;
+  }
+  66% {
+    opacity: .75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  flex-direction: column;
+  background: var(--color-black);
+  z-index: 2;
+  color: white;
+  font: var(--font-ml);
+}
+
+.modal.active {
+  display: flex;
+  animation: dropdown-show .25s ease-out;
+}
+
+/* navbar type styles */
+.modal .header__navbar {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.modal .header__navbar-item {
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.modal__hr {
+  margin: 20px 15px;
+  color: var(--color-dark-grey);
+}
+
+.modal__order-button {
+  margin: auto;
+  font: var(--font-s);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  background: transparent;
+  border: none;
+  /* todo - make dynamic, same to whole element */
+  color: white;
+  cursor: pointer;
+}

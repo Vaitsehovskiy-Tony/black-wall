@@ -1,0 +1,34 @@
+.modal__container.navbar {
+    margin: auto 0;
+    transform: translateY(-40px);
+    display: flex;
+    flex-direction: column;
+  }
+
+.modal .header__navbar {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.modal .header__navbar-item {
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.modal__hr {
+  margin: 20px 15px;
+  color: var(--color-dark-grey);
+}
+
+.modal__order-button {
+  margin: auto;
+  font: var(--font-s);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  background: transparent;
+  border: none;
+  /* todo - make dynamic, same to whole element */
+  color: white;
+  cursor: pointer;
+}
