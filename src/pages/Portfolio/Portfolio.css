@@ -12,6 +12,11 @@
     font: var(--font-ml);
     cursor: pointer;
 }
+@media screen and (max-width: 600px) {
+    .portfolio__tag {
+        font: var(--font-m);       
+  }
+}
 
 .portfolio__tag.enabled {
     color: var(--color-black);
@@ -20,10 +25,17 @@
 }
 
 .portfolio__items-container {
-    margin: 24px 0 0;
+    margin: 24px 15px 0;
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 600px) {
+    .portfolio__items-container {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .portfolio__items-container .sample:first-of-type,

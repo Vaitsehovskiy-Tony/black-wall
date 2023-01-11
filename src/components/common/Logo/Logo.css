@@ -2,3 +2,9 @@
   height: 60px;
   margin: auto auto auto 0;
 }
+
+@media screen and (max-width: 600px) {
+  .logo {
+    opacity: .75;
+  }
+}

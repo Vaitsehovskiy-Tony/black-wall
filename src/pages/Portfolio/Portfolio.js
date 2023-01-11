@@ -63,7 +63,7 @@ export const Portfolio = () => {
           />
         ))}
       </div>
-      <OrderForm orderFormData={orderForm.content} display={"visible"} />
+      <OrderForm orderFormData={orderForm.content} display={"mixed"} />
     </main>
   );
 };

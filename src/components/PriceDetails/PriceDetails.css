@@ -37,3 +37,13 @@
 .rates__option-pic {
   margin: auto;
 }
+
+
+.prices-page .collapsing__bottom-line {
+  margin: 0;
+  border: none;
+}
+
+.prices-page .collapsing__bottom-line:last-of-type {
+  border-bottom: 1px solid var(--color-dark-grey);
+}

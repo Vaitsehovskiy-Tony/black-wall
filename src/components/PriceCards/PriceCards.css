@@ -1,8 +1,17 @@
 .price__cards {
-    margin: 80px auto;
+  margin: 80px auto;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 600px) {
+  .price__cards {
+    margin: 80px auto;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
 }
 
 .price__card {
@@ -51,7 +60,8 @@
   font-weight: 500;
   text-transform: uppercase;
   padding: 10px 30px;
-    transition: all .2s ease-out;
+  width: 100%;
+  transition: all .2s ease-out;
 }
 
 .price__button:hover {

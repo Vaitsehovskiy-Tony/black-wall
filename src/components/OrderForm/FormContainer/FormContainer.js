@@ -3,7 +3,8 @@ import { useForm } from "react-hook-form";
 
 
 export const FormContainer = ({formParametrs}) => {
-    const {
+
+  const {
       handleSubmit,
       content,
       form,

@@ -61,6 +61,7 @@ a {
   flex-direction: column;
   justify-content: center;
   max-width: 100%;
+  background: var(--color-white3);
 }
 
 .wrapper {
@@ -69,6 +70,6 @@ a {
 
 @media screen and (max-width: 600px){
   .wrapper {
-    margin: 64px 15px 0;
+    margin: 120px 15px 0;
   }
 }

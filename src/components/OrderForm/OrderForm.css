@@ -1,13 +1,18 @@
 @import url('../common/Avatars/Avatars.css');
 
 .form {
+  padding: 240px 46px 240px;
   background-color: var(--color-black);
   color: var(--color-white);
 }
 
+@media screen and (max-width: 600px){
+  .form {
+    padding: 120px 15px 120px;
+  }
+}
+
 .form__wrapper {
-  padding: 240px 0;
-  margin: 0 46px;
   display: grid;
   grid-template-areas:
     "title form"
@@ -18,14 +23,8 @@
 
 @media screen and (max-width: 600px){
   .form__wrapper {
-    padding: 100px 0;
-    margin: 0 15px;
-    display: grid;
-    grid-template-areas:
-      "title"
-      "subtitle"
-      "form"
-      "form";
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -33,6 +32,12 @@
   font: var(--font-h-l);
   grid-area: title;
   margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .form__title {
+    font-size: 2.06rem;
+  }
 }
 
 .form__subtitle {
@@ -54,6 +59,7 @@
 
 @media screen and (max-width: 600px){
   .form__container {
+    margin: 46px 0 0;
     grid-template-areas:
     "name"
     "contact"
@@ -169,6 +175,21 @@
   text-align: start;
   line-height: 1;
   cursor: pointer;
+}
+
+@media screen and (max-width: 600px){
+  .form__submit-container {
+    padding: 0 0 1px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .form__submit{
+    font: var(--font-xs);
+    letter-spacing: 0.03em;
+    color: var(--color-white);
+    font-weight: 500;
+  }    
 }
 
 .form__submit-arrow {

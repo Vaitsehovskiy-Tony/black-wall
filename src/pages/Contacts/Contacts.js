@@ -26,7 +26,7 @@ export const Contacts = () => {
               display={"visible"}
             />
           </div>
-          <ContactUs content={contactUs.content} />
+          <ContactUs content={contactUs.content} extaClass={'no-title'}/>
         </section>
       </div>
     </main>

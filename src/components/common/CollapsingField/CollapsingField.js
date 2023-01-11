@@ -1,4 +1,7 @@
+import { CollapsingList } from "./CollapsingList/CollapsingList";
+
 export const CollapsingField = ({ title, text, icon }) => {
+  console.log(typeof text);
   return (
     <>
       <details className="collapsing__container">
@@ -6,7 +9,11 @@ export const CollapsingField = ({ title, text, icon }) => {
           <p className="collapsing__title">{title}</p>
           <img className="collapsing__img" alt="arrow down" src={icon} />
         </summary>
-        <p className="collapsing__text">{text}</p>
+        { ( typeof text === 'object') ? (
+          <CollapsingList list={text}/>
+        ) : (
+          <p className="collapsing__text">{text}</p>
+        )}
       </details>
       <hr className="collapsing__bottom-line" />
     </>

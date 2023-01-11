@@ -4,7 +4,7 @@
     opacity: 0;
   }
   100% {
-    font-size: .875rem;
+    font-size: 0.875rem;
     opacity: 0;
   }
 }
@@ -35,24 +35,31 @@
 .collapsing__img {
   width: 14px;
   object-fit: contain;
-  transition: all .25s ease-out;
+  transition: all 0.25s ease-out;
 }
 .collapsing__text {
   display: flex;
   padding: 0 0 0 16px;
+  margin: 0;
   transition: all 1s ease-out;
   cursor: pointer;
+}
+
+.collapsing__text.collapsing__text_dots {
+  display: list-item;
+  list-style: disc;
+  margin: 0 0 0 16px;
+  padding: 0 0 0 16px;
 }
 
 details[open] .collapsing__text {
   animation-name: invisiblyGrowFontSize, fadeIn;
   animation-duration: 500ms, 200ms;
   animation-delay: 0ms, 500ms;
-  margin: 0;
 }
 
 details[open] .collapsing__img {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .our-team__collapse-line {
@@ -62,6 +69,5 @@ details[open] .collapsing__img {
 .collapsing__bottom-line {
   display: block;
   color: var(--color-dark-grey);
-  height: 1px;
-  margin: 10px 0 0 ;
+  margin: 10px 0 0;
 }

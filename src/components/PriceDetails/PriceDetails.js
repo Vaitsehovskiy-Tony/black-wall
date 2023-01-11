@@ -1,10 +1,11 @@
 import checked from "../../images/checked.png";
 
-export const PriceDetails = ({ cards, details }) => {
+export const PriceDetails = ({ pricesObj, details }) => {
+
   return (
     <section className="rates">
       <div className="rates__rates-container">
-        {cards.map((i) => (
+        {pricesObj.map((i) => (
           <span className="rates__rate">{i.title}</span>
         ))}
       </div>

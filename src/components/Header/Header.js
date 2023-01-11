@@ -7,6 +7,7 @@ import { useFetch } from "../../hooks/useFetch";
 import { Preloader } from "../../components/common/Preloader/Preloader";
 import { Modal } from "../Modal/Modal";
 import { useState } from "react";
+import { useScrollDirection } from "../../hooks/useScrollDirection";
 
 export const Header = () => {
   const headerStyle = HeaderStyle();
@@ -16,6 +17,7 @@ export const Header = () => {
     state: false,
     content: "navbar",
   });
+  const scrollDirection = useScrollDirection();
 
   const handleModal = (type) => {
     if (type === "orderForm") {
@@ -30,7 +32,7 @@ export const Header = () => {
   }
 
   return (
-    <header className={`header header_${headerStyle}`}>
+    <header className={`header header_${headerStyle} ${ scrollDirection === "down" ? "hide" : "show"}`}>
       <Modal
         type={""}
         navbar={header.content.navbar}

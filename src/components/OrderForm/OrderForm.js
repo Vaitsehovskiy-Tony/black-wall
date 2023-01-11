@@ -15,12 +15,11 @@ export const OrderForm = ({ orderFormData, display, handleModal }) => {
   } = useForm();
 
   const [submitState, setSubmitState] = useState(false);
-  console.log(submitState);
 
   const sendEmail = (e) => {
     // localStorage.setItem("formSend", true);
     setSubmitState(true);
-    console.log('submitState');
+    console.log("submitState");
     // emailjs
     //   .sendForm(
     //     "service_j3ba6er",
@@ -33,7 +32,7 @@ export const OrderForm = ({ orderFormData, display, handleModal }) => {
     //     }
     //   );
   };
-
+  console.log(submitState);
   const dynamicContent = submitState
     ? {
         title: orderFormData.submitTitle,
@@ -53,16 +52,16 @@ export const OrderForm = ({ orderFormData, display, handleModal }) => {
     sendEmail,
     register,
     dynamicContent,
-    arrow
+    arrow,
   };
 
   return (
-    <section className="form wrapper">
+    <section className="form">
       <div className="form__wrapper">
         <h2 className="form__title">{dynamicContent.title}</h2>
         <span className="form__subtitle">{dynamicContent.subtitle}</span>
         <Avatars display={display} members={orderFormData.formAvatars} />
-        {submitState || localStorage.getItem("locale") ? (
+        {submitState || localStorage.getItem("formSend") ? (
           <div className="form__submit-container" onClick={handleModal}>
             <span className="form__submit">{dynamicContent.buttonText}</span>
             <img src={arrow} alt="right arrow" className="form__submit-arrow" />

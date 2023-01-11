@@ -28,7 +28,7 @@ export const Main = () => {
       <NewProjects mainPageData={content} projectsList={projectsListContent} />
       <OurTeam mainPageData={content} />
       <ContactUs content={contactUs.content} />
-      <OrderForm orderFormData={content.orderForm} display={"none"} />
+      <OrderForm orderFormData={content.orderForm} display={"none"}  onClick={() => console.log('click')} />
     </main>
   );
 };

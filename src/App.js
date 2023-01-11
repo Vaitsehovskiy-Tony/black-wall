@@ -7,10 +7,13 @@ import { Contacts } from "./pages/Contacts/Contacts";
 import { Prices } from "./pages/Prices/Prices";
 import { Footer } from "./components/Footer/Footer";
 import { QueryClientProvider, QueryClient } from "react-query";
+import { useEffect } from "react";
 
 const queryClient = new QueryClient();
 
 function App() {
+  // useEffect(() => window.scroll(0, 10000));
+
   return (
     <QueryClientProvider client={queryClient}>
       <div className="page">

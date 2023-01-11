@@ -1,6 +1,6 @@
-export const ContactUs = ({ content }) => {
+export const ContactUs = ({ content, extaClass }) => {
   return (
-    <section className="contacts wrapper">
+    <section className={`contacts wrapper ${extaClass}`}>
       <h2 className="contacts__title">{content.title}</h2>
       <div className="contacts__container">
         <div className="contacts__block">

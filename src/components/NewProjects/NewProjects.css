@@ -20,6 +20,7 @@
   height: fit-content;
   width: fit-content;
 }
+
 @media screen and (min-width: 600px) {
   .new-projects__container {
     grid-template: repeat(2, 751px) / repeat(12, 1fr);

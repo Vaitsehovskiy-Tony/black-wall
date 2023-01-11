@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 
 export const GalleryBlock = ({ gallery }) => {
-  useEffect(() => window.scroll(0, 6000));
 
   return (
     <section className="page-gallery">
