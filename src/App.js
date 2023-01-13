@@ -12,7 +12,7 @@ import { useEffect } from "react";
 const queryClient = new QueryClient();
 
 function App() {
-  // useEffect(() => window.scroll(0, 10000));
+  useEffect(() => window.scroll(0, 6000));
 
   return (
     <QueryClientProvider client={queryClient}>

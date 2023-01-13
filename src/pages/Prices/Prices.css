@@ -11,6 +11,7 @@
 
 @media screen and (max-width: 600px) {
     .prices-page {
-        margin: 0 15px 0;
+        width: auto;
+        margin: 0 15px;
     }
 }

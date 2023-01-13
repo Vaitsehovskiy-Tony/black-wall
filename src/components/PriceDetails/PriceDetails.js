@@ -4,6 +4,7 @@ export const PriceDetails = ({ pricesObj, details }) => {
 
   return (
     <section className="rates">
+      <h3 className="rates__title">{pricesObj.title}</h3>
       <div className="rates__rates-container">
         {pricesObj.map((i) => (
           <span className="rates__rate">{i.title}</span>

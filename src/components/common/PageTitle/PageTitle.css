@@ -20,6 +20,12 @@
   left: 50%;
 }
 
+@media screen and (max-width: 600px) {
+  .hero .page-title__content {
+    max-width: 100%;
+  }
+}
+
 .page-title__description {
   font: var(--font-h-s);
   letter-spacing: 2px;

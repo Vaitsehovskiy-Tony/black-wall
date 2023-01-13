@@ -1,19 +1,19 @@
-import { CollapsingList } from "./CollapsingList/CollapsingList";
+import { CollapsingData } from "./CollapsingData/CollapsingData";
+import whiteArrow from "../../../images/arrow_down.png";
+import blackArrow from "../../../images/arrow_down-black.png";
 
-export const CollapsingField = ({ title, text, icon }) => {
-  console.log(typeof text);
+export const CollapsingField = ({ title, text, iconStyle='black', type }) => {
+
+  const icon = iconStyle === "white" ? whiteArrow : blackArrow;
+
   return (
     <>
       <details className="collapsing__container">
         <summary className="collapsing__bar">
-          <p className="collapsing__title">{title}</p>
+          <h4 className="collapsing__title">{title}</h4>
           <img className="collapsing__img" alt="arrow down" src={icon} />
         </summary>
-        { ( typeof text === 'object') ? (
-          <CollapsingList list={text}/>
-        ) : (
-          <p className="collapsing__text">{text}</p>
-        )}
+        <CollapsingData text={text} type={type}/>
       </details>
       <hr className="collapsing__bottom-line" />
     </>

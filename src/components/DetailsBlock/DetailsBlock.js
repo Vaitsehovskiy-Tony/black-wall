@@ -1,4 +1,8 @@
 export const DetailsBlock = ({ about }) => {
+  const makeScroll = () => {
+    const gallery = document.querySelector(".page-gallery");
+    gallery.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <section className="details project-wrapper">
       <h2 className="details__title">{about.title}</h2>
@@ -10,7 +14,9 @@ export const DetailsBlock = ({ about }) => {
           </div>
         ))}
       </div>
-      <button className="details__scroll">{about.goToButton}</button>
+      <button className="details__scroll" onClick={makeScroll}>
+        {about.goToButton}
+      </button>
     </section>
   );
 };

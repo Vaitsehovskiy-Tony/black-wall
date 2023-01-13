@@ -1,5 +1,4 @@
 import { CollapsingField } from "../common/CollapsingField/CollapsingField";
-import arrow from "../../images/arrow_down.png";
 
 export const OurTeam = ({ mainPageData }) => {
   const sharedData = mainPageData.ourTeam;
@@ -17,7 +16,8 @@ export const OurTeam = ({ mainPageData }) => {
             <CollapsingField
               title={person.collapseBarTitle}
               text={person.quote}
-              icon={arrow}
+              iconStyle='white'
+              type='string'
             />
           ) : (
             <p className="our-team__quote-text">{person.quote}</p>

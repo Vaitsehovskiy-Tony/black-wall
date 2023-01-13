@@ -9,7 +9,5 @@ export const getPriceObj = (card, details) => {
       }
     }
   }
-  console.log(priceObj);
-
   return priceObj;
 };

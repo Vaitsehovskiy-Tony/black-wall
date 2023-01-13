@@ -2,7 +2,7 @@ import { ProjectSample } from "../ProjectSample/ProjectSample";
 
 export const OtherProjects = ({ projects }) => {
   return (
-    <section className="other-projects">
+    <section className="other-projects project-wrapper">
       <h3 className="other-projects__title"></h3>
       <div className="other-projects__items">
         {projects.map((i) => (

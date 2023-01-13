@@ -5,25 +5,38 @@
   color: var(--color-dark-grey);
 }
 
+@media screen and (max-width: 600px) {
+  .text {
+    font: var(--font-m  );
+  }
+}
+
+
 .text h3 {
   margin: 40px 0 0;
-      font: var(--font-h-m);
-      line-height: 1.3;
-    color: var(--color-black);
-    letter-spacing: .03rem;
-    text-transform: uppercase;
+  font: var(--font-h-m);
+  line-height: 1.3;
+  color: var(--color-black);
+  letter-spacing: 0.03rem;
 }
+
+@media screen and (max-width: 600px) {
+  .text h3 {
+    font-size: 1.5rem;
+  }
+}
+
 
 .text p {
   margin: 16px 0 0;
 }
 
 .text strong {
-  font-weight: 500 ;
+  font-weight: 500;
 }
 
 .text ul {
-  margin: .5rem 0 0;
+  margin: 0.5rem 0 0;
   padding-left: 1rem;
 }
 
@@ -33,7 +46,7 @@
 }
 
 .text ol {
-  margin: .5rem 0 0;
+  margin: 0.5rem 0 0;
   padding-left: 1.56rem;
 }
 
@@ -48,4 +61,13 @@
   font-size: 1.625rem;
   color: var(--color-black);
   line-height: 1.4;
+}
+
+@media screen and (max-width: 600px) {
+  .text blockquote {
+    margin: 1rem 0 0;
+    padding: 0;
+    border: none;
+    font-size: 1.25rem;
+  }
 }

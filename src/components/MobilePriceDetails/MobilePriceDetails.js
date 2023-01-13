@@ -1,11 +1,17 @@
 import { CollapsingField } from "../common/CollapsingField/CollapsingField";
-import arrow from "../../images/bottom-arrow.png";
+import arrow from "../../images//arrow_down-black.png";
 
-export const MobilePriceDetails = ({ pricesObj }) => {
+export const MobilePriceDetails = ({ pricesObj, title }) => {
   return (
     <section className="mobile-price">
+      <h3 className="mobile-price__tile">{title}</h3>
       {pricesObj.map((i) => (
-        <CollapsingField title={i.title} text={i.options} icon={arrow}/>
+        <CollapsingField
+          title={i.title}
+          text={i.options}
+          type="object"
+          icon={arrow}
+        />
       ))}
     </section>
   );

@@ -5,3 +5,9 @@
 .article__title {
     font: var(--font-h-l);
 }
+
+@media screen and (max-width: 600px) {
+    .article__title {
+        font-size: 2.06rem;
+    }
+}

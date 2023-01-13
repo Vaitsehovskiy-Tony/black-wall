@@ -92,6 +92,19 @@
   }
 }
 
+.our-team__collapse-line {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .our-team__collapse-line {
+    display: block;
+    color: var(--color-dark-grey);
+    height: 1px;
+    margin: 0;
+  }
+}
+
 .our-team__photo {
   grid-area: photo;
   width: 100%;
@@ -103,4 +116,13 @@
   .our-team__photo {
     height: 420px;
   }
+}
+
+
+.our-team .collapsing__container {
+  border-top: 1px solid var(--color-dark-grey);
+}
+
+.our-team .collapsing__bottom-line {
+  color: var(--color-dark-grey);
 }

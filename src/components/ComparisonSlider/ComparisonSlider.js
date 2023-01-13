@@ -1,6 +1,6 @@
 import {  useState } from "react";
 
-export const SliderBlock = ({ element }) => {
+export const ComparisonSlider = ({ element }) => {
   const firstImage = `https://api.vaitstony.art${element.images.data[0].attributes.url}`;
   const secondImage = `https://api.vaitstony.art${element.images.data[1].attributes.url}`;
   const [sliderValue, setSliderValue] = useState("500");

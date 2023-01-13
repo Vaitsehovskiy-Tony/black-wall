@@ -3,7 +3,7 @@ import { useEffect } from "react";
 export const GalleryBlock = ({ gallery }) => {
 
   return (
-    <section className="page-gallery">
+    <section className="page-gallery project-wrapper">
       <h3 className="page-gallery__title">{gallery.title}</h3>
       <div className="page-gallery__grid">
         {gallery.gallery.data.map((e, i) => (

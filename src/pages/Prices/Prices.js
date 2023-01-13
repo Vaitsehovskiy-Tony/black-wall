@@ -13,7 +13,6 @@ export const Prices = () => {
   if (isLoading) {
     return <Preloader />;
   }
-
   const isNarrow = window.matchMedia("screen and (max-width: 750px)");
   const priceObj = getPriceObj(content.priceCard, content.priceDetails);
 
@@ -26,7 +25,7 @@ export const Prices = () => {
       <PriceCards cards={content.priceCard} />
       <Workflow content={content.workflow} />
       {isNarrow.matches ? (
-        <MobilePriceDetails pricesObj={priceObj}/>
+        <MobilePriceDetails pricesObj={priceObj} title={content.priceDetailsTitle}/>
       ) : (
         <PriceDetails pricesObj={priceObj} details={content.priceDetails} />
       )}

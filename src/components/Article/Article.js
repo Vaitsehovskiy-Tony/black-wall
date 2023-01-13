@@ -1,6 +1,6 @@
 import { TextBlock } from "../TextBlock/TextBlock";
 import { ImageBlock } from "../ImageBlock/ImageBlock";
-import { SliderBlock } from "../SliderBlock/SliderBlock";
+import { ComparisonSlider } from "../ComparisonSlider/ComparisonSlider";
 import { FeatureBlock } from "../FeatureBlock/FeatureBlock";
 
 function getArticleElement(item, index) {
@@ -18,14 +18,13 @@ function getArticleElement(item, index) {
     case "image":
       return <ImageBlock element={item} key={index} />;
     case "slider":
-      return <SliderBlock element={item} key={index} />;
+      return <ComparisonSlider element={item} key={index} />;
     case "feachure":
       return <FeatureBlock element={item} key={index} />;
     default:
       return null;
   }
-}
-
+}      
 export const Article = ({ project }) => {
 
   return (

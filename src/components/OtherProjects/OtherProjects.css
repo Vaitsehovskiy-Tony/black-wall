@@ -3,3 +3,10 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
 }
+
+@media screen and (max-width: 600px) {
+    .other-projects__items {
+        display: flex;
+        flex-direction: column;
+    }
+}

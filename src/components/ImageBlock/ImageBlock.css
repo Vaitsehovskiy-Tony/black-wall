@@ -4,6 +4,12 @@
     margin: 40px auto 78px;
 }
 
+@media screen and (max-width: 600px) {
+    .img-block {
+        height: 330px;
+    }
+}
+
 .img-block__img {
     width: 100%;
     height: 100%;

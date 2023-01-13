@@ -1,7 +1,7 @@
 @import url("../../components/ProjectSample/ProjectSample.css");
 @import url("../../components/TextBlock/TextBlock.css");
 @import url("../../components/ImageBlock/ImageBlock.css");
-@import url("../../components/SliderBlock/SliderBlock.css");
+@import url("../../components/ComparisonSlider/ComparisonSlider.css");
 @import url("../../components/FeatureBlock/FeatureBlock.css");
 @import url("../../components/GalleryBlock/GalleryBlock.css");
 @import url("../../components/OtherProjects/OtherProjects.css");
@@ -10,9 +10,10 @@
 
 
 .project-wrapper {
-    width: 900px;
+    max-width: 900px;
     margin-right: auto;
     margin-left: auto;
+    padding: 0 15px;
 }
 
 .project-page {
