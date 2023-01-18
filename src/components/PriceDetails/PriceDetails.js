@@ -3,7 +3,7 @@ import checked from "../../images/checked.png";
 export const PriceDetails = ({ pricesObj, details }) => {
 
   return (
-    <section className="rates">
+    <section className="rates wrapper">
       <h3 className="rates__title">{pricesObj.title}</h3>
       <div className="rates__rates-container">
         {pricesObj.map((i) => (

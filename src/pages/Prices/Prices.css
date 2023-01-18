@@ -3,14 +3,14 @@
 @import url("../../components/Workflow/Workflow.css");
 @import url("../../components/MobilePriceDetails/MobilePriceDetails.css");
 
-.prices-page {
+.prices {
     margin: 0 auto;
     width: 100%;
     background-color: var(--color-white3);
 }
 
 @media screen and (max-width: 600px) {
-    .prices-page {
+    .prices{
         width: auto;
         margin: 0 15px;
     }

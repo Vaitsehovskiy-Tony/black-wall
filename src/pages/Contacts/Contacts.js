@@ -4,16 +4,15 @@ import { Avatars } from "../../components/common/Avatars/Avatars";
 import { PageTitle } from "../../components/common/PageTitle/PageTitle";
 import { ContactUs } from "../../components/ContactUs/ContactUs";
 
-export const Contacts = () => {
+export const Contacts = ({ orderFormContent, contactUsContent }) => {
   const contacts = useFetch("contactsPage");
-  const orderForm = useFetch("orderForm");
-  const contactUs = useFetch("contactUs");
 
-  if (contacts.isLoading || orderForm.isLoading || contactUs.isLoading) {
+  if (contacts.isLoading) {
     return <Preloader />;
   }
+
   return (
-    <main className="contacts-page">
+    <main className="contacts-page page__wrapper">
       <div className="contacts__wrapper">
         <PageTitle
           description={contacts.content.description}
@@ -22,11 +21,11 @@ export const Contacts = () => {
         <section className="contacts-page__container">
           <div className="contacts-page__avatars">
             <Avatars
-              members={orderForm.content.formAvatars}
+              members={orderFormContent.formAvatars}
               display={"visible"}
             />
           </div>
-          <ContactUs content={contactUs.content} extaClass={'no-title'}/>
+          <ContactUs content={contactUsContent} extaClass={"no-title"} />
         </section>
       </div>
     </main>

@@ -1,6 +1,10 @@
-.rates {
-  margin: 80px 46px 240px;
+.rates.wrapper {
   border-bottom: 1px solid var(--color-l-grey);
+}
+
+.page__wrapper .rates.wrapper {
+  margin:80px auto 240px;
+
 }
 
 .rates__rates-container {

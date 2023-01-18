@@ -2,53 +2,38 @@ import { Logo } from "../common/Logo/Logo";
 import { Navbar } from "../common/Navbar/Navbar";
 import { HeaderCTABtn } from "./HeaderCTABtn/HeaderCTABtn";
 import { HeaderLanguageSelector } from "./HeaderLanguageSelector/HeaderLanguageSelector";
-import { HeaderStyle } from "../../utils/getHeaderStyle";
-import { useFetch } from "../../hooks/useFetch";
-import { Preloader } from "../../components/common/Preloader/Preloader";
-import { Modal } from "../Modal/Modal";
-import { useState } from "react";
 import { useScrollDirection } from "../../hooks/useScrollDirection";
 
-export const Header = () => {
-  const headerStyle = HeaderStyle();
-  const header = useFetch("header");
-  const orderForm = useFetch("orderForm");
-  const [modalState, setModalState] = useState({
-    state: false,
-    content: "navbar",
-  });
-  const scrollDirection = useScrollDirection();
+export const Header = ({
+  headerStyle,
+  content
+}) => {
 
-  const handleModal = (type) => {
-    if (type === "orderForm") {
-      setModalState({ state: modalState.state, content: type });
-    } else {
-      setModalState({ state: !modalState.state, content: "navbar" });
-    }
-  };
+    const scrollDirection = useScrollDirection();
 
-  if (header.isLoading || orderForm.isLoading) {
-    return <Preloader />;
-  }
+  // const handleModal = (type) => {
+  //   if (type === "orderForm") {
+  //     setModalState({ state: modalState.state, content: "orderForm" });
+  //   } else if (type === "orderFormFullscreen") {
+  //     setModalState({ state: !modalState.state, content: "orderForm"});
+  //   } else {
+  //     setModalState({ state: !modalState.state, content: "navbar" });
+  //   }
+  // };
 
   return (
-    <header className={`header header_${headerStyle} ${ scrollDirection === "down" ? "hide" : "show"}`}>
-      <Modal
-        type={""}
-        navbar={header.content.navbar}
-        orderForm={orderForm.content}
-        modalState={modalState}
-        handleModal={handleModal}
-      />
+    <header
+      className={`header header_${headerStyle} ${
+        scrollDirection === "down" ? "hide" : "show"
+      }`}
+    >
       <div className="header__wrapper">
         <Logo headerStyle={headerStyle || "light"} />
-        <Navbar navbar={header.content.navbar} />
+        <Navbar navbar={content.navbar} />
         <HeaderLanguageSelector headerStyle={headerStyle || "light"} />
         <HeaderCTABtn
-          bttnText={header.content.orderProject}
+          bttnText={content.orderProject}
           headerStyle={headerStyle || "light"}
-          modalState={modalState}
-          handleModal={handleModal}
         />
       </div>
     </header>

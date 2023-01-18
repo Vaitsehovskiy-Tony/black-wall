@@ -1,7 +1,14 @@
+import { ModalContext } from "../../utils/getModalContext";
+import { useContext } from "react";
 import checked from "../../images/checked.png";
+
 export const PriceCards = ({ cards }) => {
+
+  const { handleModal, handleModalContent } =
+    useContext(ModalContext);
+
   return (
-    <section className="price__cards">
+    <section className="price__cards wrapper">
       {cards.map((i) => (
         <div className="price__card" key={i.id}>
           <h6 className="price__title">{i.title}</h6>
@@ -9,7 +16,9 @@ export const PriceCards = ({ cards }) => {
             <span className="price__number">{i.price}</span>
             <span className="price__symbols">{i.priceSymbols}</span>
           </div>
-          <button className="price__button">{i.button}</button>
+          <button className="price__button" onClick={()=> { handleModalContent('pricesForm'); handleModal()}}>
+            {i.button}
+          </button>
           <span className="price__text">{i.description}</span>
           <div className="price__options">
             {i.priceOption.map((k) => (

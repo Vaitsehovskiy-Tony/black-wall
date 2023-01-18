@@ -61,15 +61,23 @@ a {
   flex-direction: column;
   justify-content: center;
   max-width: 100%;
-  background: var(--color-white3);
+  background: var(--color-black);
 }
 
-.wrapper {
-  margin: 240px 46px 0;
+.page.page_light {
+  background: var(--color-white3);
+
+}
+
+.page__wrapper .wrapper {
+  max-width: 1440px;
+  margin: 240px auto 0;
+  padding: 0 46px;
 }
 
 @media screen and (max-width: 600px){
-  .wrapper {
-    margin: 120px 15px 0;
+  .page__wrapper .wrapper {
+    margin: 120px auto 0;
+    padding: 0 15px;
   }
 }

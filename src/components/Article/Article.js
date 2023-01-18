@@ -24,13 +24,12 @@ function getArticleElement(item, index) {
     default:
       return null;
   }
-}      
-export const Article = ({ project }) => {
-
+}
+export const Article = ({ content }) => {
   return (
     <section className="article project-wrapper">
-      <h2 className="article__title">{project.articleTitle}</h2>
-      {project.projectElement.map((e, i) => getArticleElement(e, i))}
+      <h2 className="article__title">{content.articleTitle}</h2>
+      {content.map((e, i) => getArticleElement(e, i))}
     </section>
   );
 };

@@ -2,14 +2,13 @@ import { PageTitle } from "../../components/common/PageTitle/PageTitle";
 import { ProjectSample } from "../../components/ProjectSample/ProjectSample";
 import { OrderForm } from "../../components/OrderForm/OrderForm";
 import { useFetch } from "../../hooks/useFetch";
-import { getProjectsList } from "../../utils/getProjectsList";
 import { useEffect, useState } from "react";
+import { Preloader } from "../../components/common/Preloader/Preloader";
 
-export const Portfolio = () => {
+export const Portfolio = ({ orderFormContent, projectsListContent }) => {
   const [filter, setFilter] = useState();
-  const { isLoading, content } = useFetch("portfolioPage");
-  const orderForm = useFetch("orderForm");
-  const projectsList = useFetch("projectList");
+
+  const portfolio = useFetch("portfolioPage");
   const tagsArr = useFetch("tags");
 
   useEffect(() => {
@@ -18,28 +17,23 @@ export const Portfolio = () => {
     }
   }, [tagsArr, filter]);
 
-  if (
-    isLoading ||
-    projectsList.isLoading ||
-    orderForm.isLoading ||
-    tagsArr.isLoading
-  ) {
-    return <h1>loading</h1>;
+  if (portfolio.isLoading || tagsArr.isLoading) {
+    return <Preloader />;
   }
+
   const tags = tagsArr.content.map((i) => {
     return i.attributes.tag;
   });
 
-  const projectsListContent = getProjectsList(projectsList.content);
   const handleClick = (e) => {
     setFilter(e.target.textContent);
   };
 
   return (
-    <main className="portfolio">
+    <main className="portfolio page__wrapper">
       <PageTitle
-        description={content.portfolioDescription}
-        title={content.portfolioTitle}
+        description={portfolio.content.portfolioDescription}
+        title={portfolio.content.portfolioTitle}
       />
       <div className="portfolio__tags">
         {tags.map((i) => (
@@ -63,7 +57,7 @@ export const Portfolio = () => {
           />
         ))}
       </div>
-      <OrderForm orderFormData={orderForm.content} display={"mixed"} />
+      <OrderForm content={orderFormContent} display={"mixed"} />
     </main>
   );
 };

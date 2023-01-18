@@ -3,7 +3,7 @@ import arrow from "../../images//arrow_down-black.png";
 
 export const MobilePriceDetails = ({ pricesObj, title }) => {
   return (
-    <section className="mobile-price">
+    <section className="mobile-price wrapper">
       <h3 className="mobile-price__tile">{title}</h3>
       {pricesObj.map((i) => (
         <CollapsingField

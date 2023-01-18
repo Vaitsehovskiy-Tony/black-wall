@@ -1,26 +1,20 @@
 import { PageTitle } from "../common/PageTitle/PageTitle";
 
-export const Hero = ({ mainPageData }) => {
-  const hero = mainPageData.hero;
-
+export const Hero = ({ content }) => {
   return (
     <section className="hero">
       <picture className="hero__bg">
         <source
           media="(max-width: 991px)"
-          src={
-            `https://api.vaitstony.art${hero.picture.data.attributes.url}`
-          }
+          src={`https://api.vaitstony.art${content.picture.data.attributes.url}`}
         />
         <img
           className="hero__bg-img"
-          src={
-            `https://api.vaitstony.art${hero.picture.data.attributes.url}`
-          }
-          alt="Hero photo"
+          src={`https://api.vaitstony.art${content.picture.data.attributes.url}`}
+          alt="Hero"
         />
       </picture>
-      <PageTitle title={hero.title} description={hero.description} />
+      <PageTitle title={content.title} description={content.description} />
       <div className="hero__overlay"></div>
     </section>
   );

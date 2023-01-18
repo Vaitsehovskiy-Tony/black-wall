@@ -2,16 +2,15 @@ import { useState } from "react";
 import rightArrow from "../../images/right-arrow.png";
 import leftArrow from "../../images/left-arrow.png";
 
-export const Slider = ({ mainPageData }) => {
+export const Slider = ({ content }) => {
   // const isLoop = true;
-  const slides = mainPageData.slides;
 
   // const direction = useRef("normal");
   // const position = useRef("start");
   const [indexes, setIndexes] = useState([-1, 0, 1]);
 
   function simpleNextSlide() {
-    if (indexes[indexes.length - 1] < slides.length) {
+    if (indexes[indexes.length - 1] < content.length) {
       setIndexes(
         indexes.map((index) => {
           return index + 1;
@@ -34,7 +33,7 @@ export const Slider = ({ mainPageData }) => {
   //   // isActive.current = true;
   //   setIndexes(
   //     indexes.map((index) => {
-  //       if (index === slides.length - 1) {
+  //       if (index === content.length - 1) {
   //         return 0;
   //       }
   //       return index + 1;
@@ -46,7 +45,7 @@ export const Slider = ({ mainPageData }) => {
   //   setIndexes(
   //     indexes.map((index) => {
   //       if (index === 0) {
-  //         return slides.length - 1;
+  //         return content.length - 1;
   //       }
   //       return index - 1;
   //     })
@@ -59,20 +58,20 @@ export const Slider = ({ mainPageData }) => {
       : "";
   }
   return (
-    <div className="slider">
+    <div className="slider wrapper">
       <div className="slider__slides">
         {indexes.map((i) =>
-          !!slides[i] ? (
+          !!content[i] ? (
             <figure className={`slider__slide `} key={i}>
               <img
                 className="slider__img"
-                src={getImg(slides[i])}
+                src={getImg(content[i])}
                 alt="slide img"
               />
               <figcaption className="slider__description-container">
                 <hr className="slider__description-line" />
                 <span className="slider__description">
-                  {slides[i].sliderDescription}
+                  {content[i].sliderDescription}
                 </span>
               </figcaption>
             </figure>
@@ -93,7 +92,7 @@ export const Slider = ({ mainPageData }) => {
         </span>
         <hr className="slider__index-line" />
         <span className="slider__index-item">
-          {indexes.length < 10 ? `0${slides.length}` : slides.length}
+          {indexes.length < 10 ? `0${content.length}` : content.length}
         </span>
         <img
           src={rightArrow}
@@ -104,4 +103,4 @@ export const Slider = ({ mainPageData }) => {
       </div>
     </div>
   );
-}
+};

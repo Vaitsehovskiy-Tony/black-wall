@@ -1,0 +1,62 @@
+.field {
+  position: relative;
+}
+
+.field.name {
+    grid-area: name;
+}
+
+.field.email {
+    grid-area: contact;
+}
+
+.field.country {
+    grid-area: country;
+}
+
+.field__input {
+  margin: 0 0 24px;
+  line-height: 1.5;
+  font-size: 1.125rem;
+  background: transparent;
+  border: none;
+  color: var(--color-grey);
+  border-bottom: 1px solid var(--color-grey);
+}
+
+.field__input:focus {
+  border: none;
+  border-bottom: 1px solid var(--color-accent);
+  outline: 1px solid transparent;
+}
+.field__input::placeholder {
+  opacity: 0.8;
+}
+
+.field__input:focus ~ .field__label,
+.field__input:not(:placeholder-shown) ~ .field__label {
+  top: -20px;
+  left: 0px;
+  font-size: 0.95rem;
+}
+
+.field__input:invalid {
+  border-bottom: 1px solid #d22f2f;
+}
+
+.field__input:placeholder-shown {
+  border-bottom: 1px solid var(--color-grey);
+  color: transparent;
+  opacity: 0.8;
+}
+
+.field__label {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  font-size: 1.125rem;
+  color: var(--color-grey);
+  opacity: 0.8;
+  transition: all 0.25s ease-out;
+  cursor: text;
+}

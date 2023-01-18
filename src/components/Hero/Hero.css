@@ -27,10 +27,19 @@
   position: relative;
 }
 
+/* .page__wrapper > .hero .page__wrapper {
+  width: 100%;
+} */
+
 @media screen and (max-width: 600px){
   .hero {
     height: 640px;
   }
+}
+
+
+.hero__bg {
+  width: 100vw;
 }
 
 .hero__bg-img {
@@ -49,6 +58,6 @@
     rgba(0, 0, 0, 0) 100%
   );
   top: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
 }

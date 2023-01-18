@@ -1,33 +1,30 @@
 import { PageTitle } from "../../components/common/PageTitle/PageTitle";
 import { PriceCards } from "../../components/PriceCards/PriceCards";
 import { PriceDetails } from "../../components/PriceDetails/PriceDetails";
-import { Preloader } from "../../components/common/Preloader/Preloader";
-import { useFetch } from "../../hooks/useFetch";
 import { Workflow } from "../../components/Workflow/Workflow";
 import { getPriceObj } from "../../utils/getPriceObj";
 import { MobilePriceDetails } from "../../components/MobilePriceDetails/MobilePriceDetails";
 
-export const Prices = () => {
-  const { isLoading, content } = useFetch("pricesPage");
-
-  if (isLoading) {
-    return <Preloader />;
-  }
+export const Prices = ({ prices, orderFormContent }) => {
   const isNarrow = window.matchMedia("screen and (max-width: 750px)");
-  const priceObj = getPriceObj(content.priceCard, content.priceDetails);
+
+  const priceObj = getPriceObj(prices.priceCard, prices.priceDetails);
 
   return (
-    <main className="prices-page">
+    <main className="prices page__wrapper">
       <PageTitle
-        description={content.pageTitle.description}
-        title={content.pageTitle.title}
+        description={prices.pageTitle.description}
+        title={prices.pageTitle.title}
       />
-      <PriceCards cards={content.priceCard} />
-      <Workflow content={content.workflow} />
+      <PriceCards cards={prices.priceCard}  orderForm={orderFormContent}/>
+      <Workflow content={prices.workflow} />
       {isNarrow.matches ? (
-        <MobilePriceDetails pricesObj={priceObj} title={content.priceDetailsTitle}/>
+        <MobilePriceDetails
+          pricesObj={priceObj}
+          title={prices.priceDetailsTitle}
+        />
       ) : (
-        <PriceDetails pricesObj={priceObj} details={content.priceDetails} />
+        <PriceDetails pricesObj={priceObj} details={prices.priceDetails} />
       )}
     </main>
   );

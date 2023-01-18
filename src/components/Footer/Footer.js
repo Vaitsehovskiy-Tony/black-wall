@@ -1,18 +1,10 @@
 import { Link } from "react-router-dom";
-import { useFetch } from "../../hooks/useFetch";
-import { Preloader } from "../../components/common/Preloader/Preloader";
 import { Logo } from "../common/Logo/Logo";
 import tgIcon from "../../images/telegram (12) 1.svg";
 import wpIcon from "../../images/whatsapp (7) 1.svg";
 
-export const Footer = () => {
+export const Footer = ({ content }) => {
   const icons = [tgIcon, wpIcon];
-
-  const { isLoading, content } = useFetch("footer");
-
-  if (isLoading) {
-    return <Preloader />;
-  }
 
   return (
     <footer className="footer">

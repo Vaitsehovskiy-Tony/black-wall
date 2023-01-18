@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import { useState } from "react";
 
 export const ComparisonSlider = ({ element }) => {
   const firstImage = `https://api.vaitstony.art${element.images.data[0].attributes.url}`;
@@ -28,7 +28,7 @@ export const ComparisonSlider = ({ element }) => {
           min="1"
           max="1000"
           value={sliderValue}
-          class="comparison__slider"
+          className="comparison__slider"
           name="slider"
           id="slider"
           onChange={handleChange}

@@ -2,6 +2,27 @@
   margin: 0;
 }
 
+.modal .form__container {
+  margin: 40px 0 0 ;
+}
+
+.modal .field.name {
+  margin: 0 0 10px;
+}
+
 .modal__container.orderForm {
-    margin: auto 0;
-  }
+  margin: auto 0;
+}
+
+.page_light .modal .form {
+  background: var(--color-white3);
+  color: var(--color-black);
+}
+
+.page_light .modal .form__radio:checked {
+  border: 0.32rem solid var(--color-white3);
+}
+
+.page_light .modal .form__submit {
+  color: var(--color-black);
+}

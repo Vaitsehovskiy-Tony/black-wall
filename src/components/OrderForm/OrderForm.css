@@ -1,7 +1,10 @@
 @import url('../common/Avatars/Avatars.css');
+@import url('./InputTextField/InputTextField.css');
 
 .form {
   padding: 240px 46px 240px;
+  margin: auto;
+  max-width: 1440px;
   background-color: var(--color-black);
   color: var(--color-white);
 }
@@ -21,10 +24,15 @@
     "avatar form";
 }
 
+.modal.active .form__subtitle {
+  width: 100%;
+}
+
 @media screen and (max-width: 600px){
   .form__wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -36,7 +44,8 @@
 
 @media screen and (max-width: 600px) {
   .form__title {
-    font-size: 2.06rem;
+    font-size: clamp(1rem, 8vw, 2.06rem);
+    white-space: nowrap;
   }
 }
 
@@ -45,6 +54,13 @@
   grid-area: subtitle;
   width: 70%;
 }
+
+@media screen and (max-width: 600px) {
+  .form__subtitle {
+    width: 100%;
+  }
+}
+
 
 .form__container {
   grid-area: form;
@@ -81,17 +97,57 @@
   border-bottom: 1px solid var(--color-grey);
 }
 
+.form_text-style_label {
+  position: absolute;
+}
+
 .form_text-style:focus {
   border: none;
-  outline: 1px solid var(--color-accent);
+  border-bottom: 1px solid var(--color-accent);
+  outline: 1px solid transparent;
 }
 .form__name {
   grid-area: name;
+  position: relative;
 }
 
 .form__contact {
   grid-area: contact;
 }
+
+.form_text-style::placeholder {
+  opacity: .8;
+}
+
+/* .form_text-style_label,
+.form_text-style_label:empty { */
+.form_text-style_label{
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  font-size: 1.125rem;
+  color: var(--color-grey);
+  opacity: .8;
+  transition: all .25s ease-out;
+}
+
+.form__name_input:focus ~ .form_text-style_label,
+.form__name_input:not(:placeholder-shown)  ~ .form_text-style_label {
+  top: -20px;
+  left: 0px;
+  font-size: .95rem;
+}
+
+.form__name_input:invalid {
+  border-bottom: 1px solid #D22F2F;
+}
+
+.form__name_input:placeholder-shown {
+  border-bottom: 1px solid var(--color-grey);
+  color: transparent;
+  opacity: .8;
+}
+
 .form__country {
   margin: 0 0 24px 20px;
   grid-area: country;
@@ -153,8 +209,11 @@
   outline: 0.125em solid var(--color-accent);
 }
 
-.form__submit-container {
+.form__submit-wrapper {
   grid-area: submit;
+}
+
+.form__submit-container {
   margin: 56px 0 0;
   display: flex;
   align-items: center;

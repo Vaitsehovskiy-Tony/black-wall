@@ -9,6 +9,7 @@
   display: flex;
   flex-direction: column;
   margin: auto;
+  text-transform: uppercase;
 }
 
 .modal .header__navbar-item {
@@ -22,13 +23,13 @@
 }
 
 .modal__order-button {
-  margin: auto;
+  margin: 20px 0 auto;
   font: var(--font-s);
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   background: transparent;
   border: none;
   /* todo - make dynamic, same to whole element */
-  color: white;
   cursor: pointer;
+  color: inherit;
 }

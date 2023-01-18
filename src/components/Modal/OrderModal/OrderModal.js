@@ -1,9 +1,15 @@
 import { OrderForm } from "../../OrderForm/OrderForm";
 
-export const OrderModal = ({ content, handleModal }) => {
+export const OrderModal = ({ orderForm, handleModal, prices }) => {
+  console.log(prices);
   return (
     <>
-      <OrderForm orderFormData={content} display={"none"} handleModal={handleModal} />
+      <OrderForm
+        content={orderForm}
+        display={"none"}
+        handleModal={handleModal}
+        prices={prices}
+      />
     </>
   );
 };

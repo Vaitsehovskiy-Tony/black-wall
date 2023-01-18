@@ -1,13 +1,13 @@
-export const DetailsBlock = ({ about }) => {
+export const DetailsBlock = ({ content }) => {
   const makeScroll = () => {
     const gallery = document.querySelector(".page-gallery");
     gallery.scrollIntoView({ behavior: "smooth" });
   };
   return (
     <section className="details project-wrapper">
-      <h2 className="details__title">{about.title}</h2>
+      <h2 className="details__title">{content.title}</h2>
       <div className="details__container">
-        {about.projectDetails.map((i) => (
+        {content.projectDetails.map((i) => (
           <div className="details__item-container" key={i.id}>
             <span className="details__item-topic">{i.topic}</span>
             <span className="details__item-details">{i.details}</span>
@@ -15,7 +15,7 @@ export const DetailsBlock = ({ about }) => {
         ))}
       </div>
       <button className="details__scroll" onClick={makeScroll}>
-        {about.goToButton}
+        {content.goToButton}
       </button>
     </section>
   );

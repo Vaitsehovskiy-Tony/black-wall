@@ -5,16 +5,23 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
 import { LangContextProvider } from "./utils/getLangContext";
+import { ModalContextProvider } from "./utils/getModalContext";
+import { QueryClientProvider, QueryClient } from "react-query";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+const queryClient = new QueryClient();
 
 root.render(
   <React.StrictMode>
-  <LangContextProvider>
-    <Router>
-      <App />
-    </Router>
-  </LangContextProvider>
+    <LangContextProvider>
+      <ModalContextProvider>
+        <Router>
+          <QueryClientProvider client={queryClient}>
+            <App />
+          </QueryClientProvider>
+        </Router>
+      </ModalContextProvider>
+    </LangContextProvider>
   </React.StrictMode>
 );
 
