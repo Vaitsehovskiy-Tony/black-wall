@@ -28,8 +28,9 @@
 
 .page-title__description {
   font: var(--font-h-s);
-  letter-spacing: 2px;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
+  margin: 0 0 10px;
 }
 
 @media screen and (max-width: 600px) {

@@ -10,10 +10,10 @@ import { PageStyles } from "./utils/getPageStyle";
 import { Preloader } from "./components/common/Preloader/Preloader";
 import { useMultiFetch } from "./hooks/useMultiFetch";
 import { Modal } from "./components/Modal/Modal";
-// import { useEffect } from "react";
+import { useEffect } from "react";
 
 function App() {
-  // useEffect(() => window.scroll(0, 5000));
+  // useEffect(() => window.scroll(0, 1000));
 
   const { header, page } = PageStyles();
   const { state, content } = useMultiFetch();

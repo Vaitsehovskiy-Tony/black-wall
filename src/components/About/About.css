@@ -1,13 +1,12 @@
-.about {
+.page__wrapper .about.wrapper {
   margin: 160px auto 0;
   display: flex;
-  justify-content: center;
 }
 
 .about__side-text-container {
   align-self: end;
   width: 19%;
-  margin: auto 35px 35px 0;
+  margin: 0 35px 0 50PX;
 }
 
 @media screen and (max-width: 600px){
@@ -18,16 +17,18 @@
 
 .about__side-text-title {
   font: var(--font-h-l);
+  font-size: 4.125rem;
   font-weight: 700;
-  margin: 0;
+  margin: 0 0 10px;
 }
 .about__side-text-subtitle {
   font: var(--font-m);
+  margin: 25px 0 0  ;
 }
 
 .about__text-container {
   width: 62%;
-  margin: 0 0 35px 35px;
+  margin: 0 0 0 35px;
 }
 
 @media screen and (max-width: 600px){
@@ -58,7 +59,8 @@
 .about__text {
   font: var(--font-ml);
   font-size: 1.625rem;
-  margin: 0;
+  margin: 32px 0 0;
+  line-height: 1.4;
 }
 
 @media screen and (max-width: 600px){

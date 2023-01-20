@@ -3,7 +3,7 @@ import { About } from "../../components/About/About";
 import { NewProjects } from "../../components/NewProjects/NewProjects";
 import { OurTeam } from "../../components/OurTeam/OurTeam";
 import { OrderForm } from "../../components/OrderForm/OrderForm";
-import { Slider } from "../../components/Slider/Slider";
+import { SliderBlock } from "../../components/SliderBlock/SliderBlock";
 import { ContactUs } from "../../components/ContactUs/ContactUs";
 
 export const Main = ({ content }) => {
@@ -11,7 +11,7 @@ export const Main = ({ content }) => {
     <main className="main-page page__wrapper">
       <Hero content={content.mainPage.hero} />
       <About content={content.mainPage.about} />
-      <Slider
+      <SliderBlock
         content={content.mainPage.slides}
         projectsList={content.projectsList}
       />

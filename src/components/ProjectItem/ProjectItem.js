@@ -5,9 +5,9 @@ export const ProjectItem = ({ projectItem }) => {
 
   return (
     <Link className="project-item" to={projectItem.id}>
-      <img
+      <div
         className="project-item__img"
-        src={`https://api.vaitstony.art${imgPath}`}
+        style={{backgroundImage: `url(https://api.vaitstony.art${imgPath})`}}
         alt={projectItem.title}
       />
       <h6 className="project-item__title">{projectItem.title}</h6>
