@@ -47,6 +47,11 @@
   padding: 40px;
 }
 
+
+.modal.active .form__subtitle {
+  width: 100%;
+}
+
 @media screen and (max-width: 600px) {
 .page_light .modal.active .form {
   padding: 100px 40px;

@@ -1,5 +1,5 @@
-@import url('../common/Avatars/Avatars.css');
-@import url('./InputTextField/InputTextField.css');
+@import url("../common/Avatars/Avatars.css");
+@import url("./InputTextField/InputTextField.css");
 
 .form {
   padding: 240px 46px 240px;
@@ -9,7 +9,7 @@
   color: var(--color-white);
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   .form {
     padding: 120px 15px 120px;
   }
@@ -22,13 +22,12 @@
     "subtitle form"
     "avatar form"
     "avatar form";
+  justify-content: flex-start;
 }
 
-.modal.active .form__subtitle {
-  width: 100%;
-}
 
-@media screen and (max-width: 600px){
+
+@media screen and (max-width: 600px) {
   .form__wrapper {
     display: flex;
     flex-direction: column;
@@ -53,6 +52,8 @@
   margin: 24px 0 8px;
   grid-area: subtitle;
   width: 70%;
+  font: var(--font-ml);
+  line-height: 1.6;
 }
 
 @media screen and (max-width: 600px) {
@@ -61,10 +62,10 @@
   }
 }
 
-
 .form__container {
   grid-area: form;
   display: grid;
+  margin: 0 0 0 10px;
   grid-template-areas:
     "name name"
     "contact country"
@@ -73,19 +74,18 @@
     "submit submit";
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   .form__container {
     margin: 46px 0 0;
     grid-template-areas:
-    "name"
-    "contact"
-    "country"
-    "choose-type"
-    "types"
-    "submit";
+      "name"
+      "contact"
+      "country"
+      "choose-type"
+      "types"
+      "submit";
   }
 }
-
 
 .form_text-style {
   margin: 0 0 24px;
@@ -116,36 +116,34 @@
 }
 
 .form_text-style::placeholder {
-  opacity: .8;
+  opacity: 0.8;
 }
 
-/* .form_text-style_label,
-.form_text-style_label:empty { */
-.form_text-style_label{
+.form_text-style_label {
   position: absolute;
   top: 4px;
   left: 4px;
   font-size: 1.125rem;
   color: var(--color-grey);
-  opacity: .8;
-  transition: all .25s ease-out;
+  opacity: 0.8;
+  transition: all 0.25s ease-out;
 }
 
 .form__name_input:focus ~ .form_text-style_label,
-.form__name_input:not(:placeholder-shown)  ~ .form_text-style_label {
+.form__name_input:not(:placeholder-shown) ~ .form_text-style_label {
   top: -20px;
   left: 0px;
-  font-size: .95rem;
+  font-size: 0.95rem;
 }
 
 .form__name_input:invalid {
-  border-bottom: 1px solid #D22F2F;
+  border-bottom: 1px solid #d22f2f;
 }
 
 .form__name_input:placeholder-shown {
   border-bottom: 1px solid var(--color-grey);
   color: transparent;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .form__country {
@@ -153,23 +151,24 @@
   grid-area: country;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   .form__country {
     margin: 0 0 24px;
   }
 }
 
 .form__choose-type {
-  margin: 24px 0 15px;
+  margin: 40px 0 15px 0;
   grid-area: choose-type;
 }
 
 .form__radio-container {
   display: flex;
   grid-area: types;
+  margin: 10px 0 0 10px;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   .form__radio-container {
     display: flex;
     flex-direction: column;
@@ -182,12 +181,12 @@
 }
 
 .form__radio-container_2 {
-  margin: 0 0 0 25px;
+  margin: 0 0 0 35px;
   font-size: 1.125rem;
   white-space: nowrap;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   .form__radio-container_2 {
     margin: 10px 0 0;
   }
@@ -214,7 +213,7 @@
 }
 
 .form__submit-container {
-  margin: 56px 0 0;
+  margin: 60px 0 0 0;
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--color-grey);
@@ -236,21 +235,22 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   .form__submit-container {
     padding: 0 0 1px;
   }
 }
 
-@media screen and (max-width: 600px){
-  .form__submit{
+@media screen and (max-width: 600px) {
+  .form__submit {
     font: var(--font-xs);
     letter-spacing: 0.03em;
     color: var(--color-white);
     font-weight: 500;
-  }    
+  }
 }
 
 .form__submit-arrow {
   margin: auto 0;
 }
+
