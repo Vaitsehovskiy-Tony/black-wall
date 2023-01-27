@@ -6,7 +6,7 @@ import { ContactUs } from "../../components/ContactUs/ContactUs";
 
 export const Contacts = ({ orderFormContent, contactUsContent }) => {
   const contacts = useFetch("contactsPage");
-
+  console.log(contacts)
   if (contacts.isLoading) {
     return <Preloader />;
   }

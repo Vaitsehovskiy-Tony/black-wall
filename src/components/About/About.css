@@ -3,6 +3,13 @@
   display: flex;
 }
 
+
+@media screen and (max-width: 600px){
+  .page__wrapper .about.wrapper {
+    margin: 30px auto 0;
+  }
+}
+
 .about__side-text-container {
   align-self: end;
   width: 19%;
@@ -35,6 +42,7 @@
   .about__text-container {
     width: 100%;
     margin: 0 0 35px;
+    line-height: 1.4;
   }
 }
 

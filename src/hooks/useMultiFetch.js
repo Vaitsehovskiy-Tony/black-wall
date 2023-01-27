@@ -14,6 +14,7 @@ export const useMultiFetch = () => {
   const contactUsContent = useFetch("contactUs");
   const footerContent = useFetch("footer");
   const pricesContent = useFetch("pricesPage");
+  const staticTextsContent = useFetch("staticTexts");
 
   if (
     headerContent.isLoading ||
@@ -22,7 +23,8 @@ export const useMultiFetch = () => {
     mainPageContent.isLoading ||
     contactUsContent.isLoading ||
     footerContent.isLoading ||
-    pricesContent.isLoading
+    pricesContent.isLoading ||
+    staticTextsContent.isLoading
   ) {
     result.state = "loading";
     return result;
@@ -38,6 +40,7 @@ export const useMultiFetch = () => {
     contactUs: contactUsContent.content,
     prices: pricesContent.content,
     footer: footerContent.content,
+    staticTexts: staticTextsContent.content
   };
 
   return result;

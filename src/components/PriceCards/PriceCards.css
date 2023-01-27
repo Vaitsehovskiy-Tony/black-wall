@@ -1,3 +1,16 @@
+.prices.page__wrapper .wrapper {
+  margin: 80px auto 0;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 600px) {
+  .prices.page__wrapper .wrapper {
+    margin: 40px auto 0;
+    box-sizing: border-box;
+    padding: 0;
+  }
+}
+
 .price__cards {
   margin: 80px auto;
   display: grid;
@@ -21,7 +34,7 @@
   justify-content: flex-start;
   background-color: var(--color-white);
   color: var(--color-dark-grey);
-    transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .price__card:hover {
@@ -29,9 +42,32 @@
   color: var(--color-white);
 }
 
+.price__scroll-button {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .price__top-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .price__scroll-button {
+    display: block;
+    color: var(--color-grey);
+    border-bottom: 1px solid var(--color-grey);
+    font-size: 0.75rem;
+    padding: 5px 0 0px;
+    margin: auto 0;
+    cursor: pointer;
+  }
+}
+
 .price__title {
   font: var(--font-h-s);
-  margin: 20px 0 0;
+  margin: 3px 0 0;
 }
 
 .price__price-container {
@@ -40,9 +76,15 @@
 }
 
 .price__number {
-  margin: 20px 0 0;
+  margin: 25px 0 0 5px;
   font-size: 2.75rem;
   font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+  .price__number {
+    margin: 30px 0 0;
+  }
 }
 
 .price__symbols {
@@ -52,21 +94,30 @@
 }
 
 .price__button {
-  margin: 24px 0 0;
+  margin: 35px 0 0;
   color: var(--color-grey);
   background-color: var(--color-l-grey);
   border: none;
   font: var(--font-ml);
   font-weight: 500;
   text-transform: uppercase;
-  padding: 10px 30px;
+  padding: 15px 30px;
   width: 100%;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
+  letter-spacing: 0.03em;
 }
+
+@media screen and (max-width: 600px) {
+  .price__button {
+    font: var(--font-m);
+    padding:10px 30px;
+  }
+}
+
 
 .price__button:hover {
   background-color: var(--color-accent);
-      color: var(--color-white);
+  color: var(--color-white);
 }
 
 .price__text {
@@ -79,8 +130,14 @@
   margin: 0;
 }
 
+@media screen and (max-width: 600px) {
+  .price__options {
+    margin: 0 0 20px;
+  }
+}  
+
 .price__option-container {
-  margin: 20px 0 0;
+  margin: 15px 0 0;
   font: var(--font-h-s);
   display: flex;
   width: fit-content;

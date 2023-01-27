@@ -43,7 +43,7 @@ export const Slider = ({ slides }) => {
   // });
 
   return (
-    <section className="slider__wrapper">
+    <>
       <div className="slider" {...swipeHanlers}>
         {!!currentSlides.length &&
           currentSlides.map((slide) => (
@@ -68,6 +68,5 @@ export const Slider = ({ slides }) => {
           ))}
       </div>
       <ProgressBar length={slides.length} index={secondSlideIndex} />
-    </section>
-  );
+      </>);
 };

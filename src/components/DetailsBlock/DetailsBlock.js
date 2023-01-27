@@ -1,4 +1,4 @@
-export const DetailsBlock = ({ content }) => {
+export const DetailsBlock = ({ content, staticText }) => {
   const makeScroll = () => {
     const gallery = document.querySelector(".page-gallery");
     gallery.scrollIntoView({ behavior: "smooth" });
@@ -15,7 +15,7 @@ export const DetailsBlock = ({ content }) => {
         ))}
       </div>
       <button className="details__scroll" onClick={makeScroll}>
-        {content.goToButton}
+        {staticText}
       </button>
     </section>
   );

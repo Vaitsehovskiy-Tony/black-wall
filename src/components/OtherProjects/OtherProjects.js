@@ -1,14 +1,11 @@
 import { ProjectSample } from "../ProjectSample/ProjectSample";
+import { SliderBlock } from "../SliderBlock/SliderBlock";
 
-export const OtherProjects = ({ content }) => {
+export const OtherProjects = ({ content, staticText }) => {
   return (
     <section className="other-projects project-wrapper">
-      {/* <h3 className="other-projects__title"></h3> */}
-      <div className="other-projects__items">
-        {content.map((i) => (
-          <ProjectSample projectItem={i} key={i.id} />
-        ))}
-      </div>
+      <h3 className="other-projects__title">{staticText}</h3>
+      <SliderBlock content={content}/>
     </section>
   );
 };

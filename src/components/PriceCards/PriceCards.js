@@ -6,12 +6,19 @@ export const PriceCards = ({ cards }) => {
 
   const { handleModal, handleModalContent } =
     useContext(ModalContext);
+    const makeScroll = () => {
+      const gallery = document.querySelector(".mobile-price");
+      gallery.scrollIntoView({ behavior: "smooth" });
+    };
 
   return (
     <section className="price__cards wrapper">
       {cards.map((i) => (
         <div className="price__card" key={i.id}>
+          <div className="price__top-wrapper">
           <h6 className="price__title">{i.title}</h6>
+            <span className="price__scroll-button" onClick={makeScroll}>{i.goToPriceDetails}</span>
+          </div>
           <div className="price__price-container">
             <span className="price__number">{i.price}</span>
             <span className="price__symbols">{i.priceSymbols}</span>

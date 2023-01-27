@@ -18,9 +18,12 @@ export const useFetch = (name, id) => {
   // todo: unify cases
   if (status === "success") {
     switch (name) {
-
       case "mainPage":
         content = data.data[0].attributes;
+        break;
+
+      case "staticTexts":
+        content = data.data.attributes;
         break;
 
       case "contactsPage":
@@ -59,9 +62,9 @@ export const useFetch = (name, id) => {
         content = data.data.attributes;
         break;
 
-        case "tags":
-          content = data.data;
-          break;
+      case "tags":
+        content = data.data;
+        break;
 
       default:
         return undefined;
@@ -70,5 +73,5 @@ export const useFetch = (name, id) => {
   if (status === "error") {
   }
 
-  return { isLoading, content, error};
+  return { isLoading, content, error };
 };

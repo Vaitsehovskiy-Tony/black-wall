@@ -3,23 +3,28 @@
   flex-direction: column;
 }
 
+@media screen and (max-width: 600px) {
+  .sample__img {
+    height: fit-content;
+  }
+}
+
+
 .sample.hidden {
   display: none;
 }
 
 .sample__img-container {
   width: 100%;
-  height: 436px;
 }
 
 .sample__img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 
 @media screen and (max-width: 600px) {
-  .sample__img-container {
+  .sample__img {
     height: 330px;
   }
 }
@@ -38,6 +43,12 @@
   margin: 24px 0 0;
   font: var(--font-h-s);
   text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 600px) {
+  .sample__title {
+    margin: 20px 0 0;
+  }
 }
 
 .sample__subtitle {

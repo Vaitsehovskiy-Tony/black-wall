@@ -3,6 +3,12 @@
 }
 
 @media screen and (max-width: 600px) {
+.prices.page__wrapper .wrapper {
+  margin: 120px 0 120px;
+}}
+
+
+@media screen and (max-width: 600px) {
   .mobile-price__tile {
     font: var(--font-h-l);
     font-size: 2.06rem;
@@ -20,6 +26,12 @@
 .mobile-price .collapsing__title {
   font: var(--font-h-s);
   margin: 17px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .mobile-price .collapsing__title {
+    margin: 15px 0;
+  }
 }
 
 .mobile-price .collapsing__text {
@@ -42,4 +54,12 @@
     top: 6px; 
     border: solid 3.5px var(--color-accent);
     border-radius: 50%;
+}
+
+.mobile-price .collapsing__container {
+  border: none;
+}
+
+.mobile-price .collapsing__container:first-of-type {
+  border-top: 1px solid var(--color-l-grey);
 }

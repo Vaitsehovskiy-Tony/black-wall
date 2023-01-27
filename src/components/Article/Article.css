@@ -1,9 +1,10 @@
-.article {
-    margin: 120px auto 0;
+.project-wrapper.article {
+    margin: 80px auto 0px;
 }
 
 .article__title {
     font: var(--font-h-l);
+    margin: 0;
 }
 
 @media screen and (max-width: 600px) {

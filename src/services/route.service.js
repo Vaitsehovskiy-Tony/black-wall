@@ -13,6 +13,10 @@ const routes = (name, id = null, lang = "ru") => {
         "&populate[about][populate[slide][populate]]=%2A&populate[newProjects][populate]=%2A&populate[ourTeam][populate]=%2A&populate[contactUs][populate]=%2A&populate[orderForm][populate]=%2A&populate[hero][populate]=%2A&populate[slides][populate]=%2A&populate[projectItem][populate]=%2A&populate[teamMember][populate]=%2A";
       break;
 
+    case "staticTexts":
+      url = baseUrl + "static-text" + locale + "&populate=%2A";
+      break;
+      
     case "header":
       url = baseUrl + "header" + locale + "&populate[header][populate]=%2A";
       break;
@@ -66,12 +70,12 @@ const routes = (name, id = null, lang = "ru") => {
         "&populate[hero][populate]=%2A&populate[slider][populate]=%2A&populate[aboutProject][populate]=%2A&populate[projectElement][populate]=%2A&populate[image-item][populate]=%2A&populate[gallery][populate]=%2A";
       break;
 
-      case "tags":
-        url = baseUrl + 'tags' + locale;
-        break;
+    case "tags":
+      url = baseUrl + "tags" + locale;
+      break;
 
-      default:
-        return null;
+    default:
+      return null;
   }
 
   return url;

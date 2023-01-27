@@ -6,5 +6,10 @@
 @media screen and (max-width: 600px) {
   .logo {
     opacity: .75;
+    height: 50px;
   }
+}
+
+.logo__img {
+  height: 100%;
 }

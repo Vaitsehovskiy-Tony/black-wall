@@ -1,4 +1,4 @@
-export const Workflow = ({content}) => {
+export const  Workflow = ({content}) => {
     const getNumber = (n) => n < 10 ? '0'+ n : n;
   return (
     <section className="workflow wrapper">

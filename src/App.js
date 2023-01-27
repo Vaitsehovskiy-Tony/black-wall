@@ -13,7 +13,7 @@ import { Modal } from "./components/Modal/Modal";
 import { useEffect } from "react";
 
 function App() {
-  // useEffect(() => window.scroll(0, 1000));
+  // useEffect(() => window.scroll(0, 6000));
 
   const { header, page } = PageStyles();
   const { state, content } = useMultiFetch();
@@ -71,6 +71,7 @@ function App() {
             <Project
               orderFormContent={content.orderForm}
               projectsListContent={content.projectsList}
+              staticTexts={content.staticTexts}
             />
           }
         ></Route>

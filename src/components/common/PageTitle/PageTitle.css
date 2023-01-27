@@ -6,6 +6,12 @@
   /*animation: hero-content ease-out 2s;*/
 }
 
+@media screen and (max-width: 600px) {
+  .page-title__content {
+    margin: 150px auto 0;
+  }
+}
+
 .page-title__content.fixed {
     margin: 0 auto;
     transform: translate(-50%, -50%);
@@ -22,7 +28,7 @@
 
 @media screen and (max-width: 600px) {
   .hero .page-title__content {
-    max-width: 100%;
+    max-width: 80%;
   }
 }
 

@@ -1,6 +1,6 @@
 .feature {
   border-top: 1px solid var(--color-l-grey);
-  margin: 0 15px;
+  margin: 0 15px 0 0;
 }
 
 .feature:first-of-type {
@@ -11,6 +11,16 @@
 .feature:last-of-type {
   border-top: 1px solid var(--color-l-grey);
   border-bottom: 1px solid var(--color-l-grey);
+}
+
+.feature__text p {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  transition: all 1s ease-out;
+  cursor: pointer;
+  font: var(--font-m);
+  line-height: 2;
 }
 
 .feature .collapsing__bottom-line  {

@@ -1,5 +1,5 @@
 .page-gallery {
-  margin: 5px 0px 0;
+  margin: 120px 0px 0;
   display: flex;
   flex-direction: column;
 }
@@ -11,7 +11,7 @@
 }
 
 .page-gallery__title {
-  margin: auto;
+  margin: 0;
   font: var(--font-h-l);
 }
 
@@ -22,10 +22,10 @@
 }
 
 .page-gallery__grid {
-  width: 60%;
-  margin: 50px auto;
+  width: 100%;
+  margin: 42px auto;
   display: grid;
-  grid-gap: 30px;
+  grid-gap: 20px;
   grid-auto-columns: 1fr;
   grid-auto-rows: 200px;
   justify-content: center;

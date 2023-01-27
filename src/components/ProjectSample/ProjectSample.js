@@ -7,7 +7,7 @@ export const ProjectSample = ({ projectItem, filter }) => {
   return (
     <Link
       to={`/project/` + projectItem.projectId}
-      className={`sample wrapper ${!!filter && filter !== itemTag ? "hidden" : ""}`}
+      className={`sample ${!!filter && filter !== itemTag ? "hidden" : ""}`}
     >
       <div className="sample__img-container">
         <img

@@ -1,8 +1,10 @@
 import { useState } from "react";
 
-export const ComparisonSlider = ({ element }) => {
-  const firstImage = `https://api.vaitstony.art${element.images.data[0].attributes.url}`;
-  const secondImage = `https://api.vaitstony.art${element.images.data[1].attributes.url}`;
+export const ComparisonSlider = ({ element, staticText }) => {
+  console.log(staticText);
+
+  const firstImage = `https://api.vaitstony.art${element.imageAfter.data.attributes.url}`;
+  const secondImage = `https://api.vaitstony.art${element.imageBefore.data.attributes.url}`;
   const [sliderValue, setSliderValue] = useState("500");
 
   const handleChange = (e) => {
@@ -39,7 +41,11 @@ export const ComparisonSlider = ({ element }) => {
         ></div>
       </div>
       <div className="comparison__description">
-        <span className="comparison__text">{element.textBefore}</span>
+        <span className="comparison__text">
+          {!!element.textBefore
+            ? element.textBefore
+            : staticText.comparisonSliderTextBefore}
+        </span>
         <input
           type="range"
           className="comparison__mini-slider"
@@ -47,7 +53,11 @@ export const ComparisonSlider = ({ element }) => {
           max="1000"
           value={sliderValue}
         />
-        <span className="comparison__text">{element.textAfter}</span>
+        <span className="comparison__text">
+          {!!element.textAfter
+            ? element.textAfter
+            : staticText.comparisonSliderTextAfter}
+        </span>
       </div>
     </section>
   );

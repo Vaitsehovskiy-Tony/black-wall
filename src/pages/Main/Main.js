@@ -18,8 +18,12 @@ export const Main = ({ content }) => {
       <NewProjects
         content={content.mainPage.newProjects}
         projectsList={content.projectsList}
+        staticText={content.staticTexts.textsMain}
       />
-      <OurTeam content={content.mainPage.ourTeam} members={content.mainPage.teamMember} />
+      <OurTeam
+        content={content.mainPage.ourTeam}
+        members={content.mainPage.teamMember}
+      />
       <ContactUs content={content.contactUs} />
       <OrderForm
         content={content.orderForm}

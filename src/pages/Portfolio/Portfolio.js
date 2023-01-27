@@ -48,7 +48,7 @@ export const Portfolio = ({ orderFormContent, projectsListContent }) => {
           </span>
         ))}
       </div>
-      <div className="portfolio__items-container">
+      <div className="portfolio__items-container wrapper">
         {projectsListContent.map((i) => (
           <ProjectSample
             projectItem={i}

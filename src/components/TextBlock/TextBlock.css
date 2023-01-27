@@ -1,8 +1,9 @@
 .text {
-  margin: 0;
+  margin: 30px 0 0;
   font: var(--font-ml);
   line-height: 1.6;
-  color: var(--color-dark-grey);
+  color: var(--color-dark-grey);  
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 600px) {
@@ -13,11 +14,13 @@
 
 
 .text h3 {
-  margin: 40px 0 0;
+  margin: 25px 0 10px;
+  padding: 0 100px 0 0;
   font: var(--font-h-m);
   line-height: 1.3;
   color: var(--color-black);
   letter-spacing: 0.03rem;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 600px) {
@@ -29,25 +32,33 @@
 
 .text p {
   margin: 16px 0 0;
+  padding: 0 100px 0 0;
 }
 
 .text strong {
   font-weight: 500;
 }
 
+.text ul, 
+.text ol {
+  margin: 0rem 0 0;
+  padding: 0 100px 0 0;
+}
+
 .text ul {
-  margin: 0.5rem 0 0;
   padding-left: 1rem;
+}
+
+.text ol {
+  padding-left: 1.56rem;
+}
+
+.text li {
+  margin: 9px 0 0;
 }
 
 .text li::marker {
   color: var(--color-accent);
-  margin: 0;
-}
-
-.text ol {
-  margin: 0.5rem 0 0;
-  padding-left: 1.56rem;
 }
 
 .text ol li::marker {
@@ -55,7 +66,7 @@
 }
 
 .text blockquote {
-  margin: 1rem 0 0;
+  margin: 20px 0 25px;
   padding: 0 0 0 2rem;
   border-left: solid 2px var(--color-accent);
   font-size: 1.625rem;
@@ -63,9 +74,13 @@
   line-height: 1.4;
 }
 
+.text blockquote p {
+  padding: 0;
+}
+
 @media screen and (max-width: 600px) {
   .text blockquote {
-    margin: 1rem 0 0;
+    margin: 16px 0 0;
     padding: 0;
     border: none;
     font-size: 1.25rem;

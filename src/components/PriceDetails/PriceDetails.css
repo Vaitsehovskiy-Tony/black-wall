@@ -10,7 +10,7 @@
 .rates__rates-container {
   display: flex;
   justify-content: space-between;
-  margin: 0 0 0 40%;
+  margin: 0 0 0 30%;
 }
 
 .rates__rate {
@@ -26,8 +26,8 @@
 }
 
 .rates__option-title {
-  width: 40%;
-  margin: auto auto auto 0;
+  width: 30%;
+  margin: 00;
   padding: 20px 0;
   font: var(--font-m);
 }
@@ -40,6 +40,7 @@
 
 .rates__option-pic {
   margin: auto;
+  padding: 0 20px 0 0;
 }
 
 

@@ -4,16 +4,18 @@
 }
 
 .field.name {
-    grid-area: name;
+  grid-area: name;
 }
 
 .field.email {
-    grid-area: contact;
+  grid-area: contact;
 }
 
-.field.country {
+@media screen and (min-width: 600px) {
+  .field.country {
     grid-area: country;
     margin: 30px 0 0 90px;
+  }
 }
 
 .field__input {
@@ -24,6 +26,12 @@
   border: none;
   color: var(--color-grey);
   border-bottom: 1px solid var(--color-grey);
+}
+
+@media screen and (max-width: 600px) {
+  .field__input {
+    margin: 0 0 18px;
+  }
 }
 
 .field__input:focus {
@@ -61,4 +69,10 @@
   opacity: 0.8;
   transition: all 0.25s ease-out;
   cursor: text;
+}
+
+@media screen and (max-width: 600px) {
+  .field__label {
+    font-size: 1rem;
+  }
 }

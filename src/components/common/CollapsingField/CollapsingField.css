@@ -1,4 +1,3 @@
-
 @keyframes invisiblyGrowFontSize {
   0% {
     font-size: 0;
@@ -33,13 +32,21 @@
   display: flex;
   justify-content: space-between;
   transition: all 0.25s ease-out;
-  font: var(--font-l);
+  font: var(--font-ml);
+  margin: 18px 0;
 }
 
 .collapsing__img {
   width: 14px;
   object-fit: contain;
   transition: all 0.25s ease-out;
+  margin: 0 110px 0 0;
+}
+
+@media screen and (max-width: 600px) {
+  .collapsing__img {
+    margin: 0;
+  }
 }
 .collapsing__text {
   display: flex;
@@ -72,6 +79,11 @@ details[open] .collapsing__title {
 
 .collapsing__bottom-line {
   display: block;
-  color: var(--color-l-grey);
-  margin: 10px 0 0;
+  border: none;
+  border-bottom: 1px solid var(--color-l-grey);
+  margin: 0 0 0;
+}
+
+.main-page .collapsing__bottom-line {
+  margin: 0;
 }

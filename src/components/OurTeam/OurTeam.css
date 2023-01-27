@@ -29,11 +29,18 @@
 @media screen and (max-width: 600px) {
   .our-team__title {
     font-size: 2.06rem;
+    margin: 0 0 45px;
   }
 }
 
 .our-team__member {
   margin: 0 10% 0 0;
+}
+
+@media screen and (max-width: 600px) {
+  .our-team__member {
+    margin: 0;
+  }
 }
 
 .our-team__member:first-of-type {
@@ -53,14 +60,15 @@
 
 @media screen and (max-width: 600px) {
   .our-team__member-name {
-    font-size: 1,25rem;
+    font-size: 1.25rem;
+    margin: 42px 0 0;
   }
 }
 
 .our-team__member-about {
   font: var(--font-m);
   color: var(--color-m-grey);
-  margin: 5px 0 0;
+  margin: 8px 0;
 }
 
 @media screen and (max-width: 600px) {
@@ -120,6 +128,7 @@
 @media screen and (max-width: 600px) {
   .our-team__photo {
     height: 420px;
+    margin: 0 0 10px;
   }
 }
 

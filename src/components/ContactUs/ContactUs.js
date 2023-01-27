@@ -1,4 +1,4 @@
-export const ContactUs = ({ content, extaClass }) => {
+export const ContactUs = ({ content, extaClass=null }) => {
   return (
     <section className={`contacts wrapper ${extaClass}`}>
       <h2 className="contacts__title">{content.title}</h2>

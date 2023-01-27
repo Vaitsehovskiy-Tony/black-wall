@@ -7,7 +7,7 @@ export const Logo = ({ headerStyle }) => {
 
   return (
     <Link to={"/"} className="logo">
-      <img src={logo} alt="page logo" />
+      <img className="logo__img" src={logo} alt="page logo" />
     </Link>
   );
 }

@@ -1,7 +1,7 @@
-export const GalleryBlock = ({ content }) => {
+export const GalleryBlock = ({ content, staticText }) => {
   return (
     <section className="page-gallery project-wrapper">
-      <h3 className="page-gallery__title">{content.title}</h3>
+      <h3 className="page-gallery__title">{content.title || staticText}</h3>
       <div className="page-gallery__grid">
         {content.gallery.data.map((e, i) => (
           <img
