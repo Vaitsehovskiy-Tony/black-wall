@@ -3,9 +3,21 @@
   margin: 0 15px 0 0;
 }
 
+@media screen and (max-width: 600px) {
+  .feature {
+    margin: 0;
+  }
+}
+
 .feature:first-of-type {
   border-top: 1px solid var(--color-l-grey);
   margin-top: 40px;
+}
+
+@media screen and (max-width: 600px) {
+  .feature:first-of-type {
+    margin-top: 30px;
+  }
 }
 
 .feature:last-of-type {
@@ -21,6 +33,12 @@
   cursor: pointer;
   font: var(--font-m);
   line-height: 2;
+}
+
+@media screen and (max-width: 600px) {
+  .feature__text p {
+    font: var(--font-xs);
+  }
 }
 
 .feature .collapsing__bottom-line  {

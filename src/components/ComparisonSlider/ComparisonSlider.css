@@ -16,6 +16,12 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .comparison__slider-container {
+    height: 212px;
+  }
+}
+
 .comparison__image {
   position: absolute;
   top: 0;

@@ -2,16 +2,16 @@
   margin: 30px 0 0;
   font: var(--font-ml);
   line-height: 1.6;
-  color: var(--color-dark-grey);  
+  color: var(--color-dark-grey);
   box-sizing: border-box;
 }
 
 @media screen and (max-width: 600px) {
   .text {
-    font: var(--font-m  );
+    font: var(--font-m);
+    margin: 15px 0 0;
   }
 }
-
 
 .text h3 {
   margin: 25px 0 10px;
@@ -25,24 +25,43 @@
 
 @media screen and (max-width: 600px) {
   .text h3 {
+    margin: 40px 0 0;
+    padding: 0;
     font-size: 1.5rem;
+    text-transform: lowercase;
+    display: inline-block;
+  }
+  .text h3:first-letter {
+    text-transform: uppercase;
   }
 }
-
 
 .text p {
   margin: 16px 0 0;
   padding: 0 100px 0 0;
 }
 
+@media screen and (max-width: 600px) {
+  .text p {
+    padding: 0;
+  }
+}
+
 .text strong {
   font-weight: 500;
 }
 
-.text ul, 
+.text ul,
 .text ol {
-  margin: 0rem 0 0;
+  margin: 0;
   padding: 0 100px 0 0;
+}
+
+@media screen and (max-width: 600px) {
+  .text ul,
+  .text ol {
+    padding: 0;
+  }
 }
 
 .text ul {
@@ -55,6 +74,12 @@
 
 .text li {
   margin: 9px 0 0;
+}
+
+@media screen and (max-width: 600px) {
+  .text li {
+    margin: 7px 0 0;
+  }
 }
 
 .text li::marker {
@@ -80,7 +105,7 @@
 
 @media screen and (max-width: 600px) {
   .text blockquote {
-    margin: 16px 0 0;
+    margin: 30px 0;
     padding: 0;
     border: none;
     font-size: 1.25rem;

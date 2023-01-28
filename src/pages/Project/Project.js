@@ -9,7 +9,6 @@ import { useParams } from "react-router-dom";
 import { OrderForm } from "../../components/OrderForm/OrderForm";
 
 export const Project = ({ orderFormContent, projectsListContent, staticTexts }) => {
-  console.log(staticTexts)
   const { id } = useParams();
   const projectPage = useFetch("projectPage", id);
 

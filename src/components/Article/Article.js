@@ -12,22 +12,23 @@ function getArticleElement(item, index, staticText) {
   } else if (!!item.title) {
     itemType = "feachure";
   }
+
   switch (itemType) {
     case "text":
       return <TextBlock element={item} key={index} />;
     case "image":
       return <ImageBlock element={item} key={index} />;
     case "slider":
-      return <ComparisonSlider element={item} key={index} staticText={staticText}/>;
+      return (
+        <ComparisonSlider element={item} key={index} staticText={staticText} />
+      );
     case "feachure":
       return <FeatureBlock element={item} key={index} />;
     default:
       return null;
   }
 }
-export const Article = ({ content, title, staticText=null }) => {
-  console.log(content)
-
+export const Article = ({ content, title, staticText = null }) => {
   return (
     <section className="article project-wrapper">
       <h2 className="article__title">{title}</h2>

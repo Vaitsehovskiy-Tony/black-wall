@@ -7,6 +7,7 @@
 @media screen and (max-width: 600px) {
     .img-block {
         height: 330px;
+        margin: 40px auto 70px;
     }
 }
 
@@ -21,4 +22,10 @@
     font: var(--font-xs);
     font-weight: 500;
     line-height: 1.6;
+}
+
+@media screen and (max-width: 600px) {
+    .img-block__description {
+        margin: 5px 0 0;
+    }
 }

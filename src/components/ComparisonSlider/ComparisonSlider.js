@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 export const ComparisonSlider = ({ element, staticText }) => {
-  console.log(staticText);
 
   const firstImage = `https://api.vaitstony.art${element.imageAfter.data.attributes.url}`;
   const secondImage = `https://api.vaitstony.art${element.imageBefore.data.attributes.url}`;

@@ -16,6 +16,12 @@
     padding: 0 15px;
 }
 
+@media screen and (max-width: 600px) {
+    .project-wrapper {
+        margin-bottom: 60px;
+    }
+}
+
 .project-page {
     color: var(--color-black);
 }
