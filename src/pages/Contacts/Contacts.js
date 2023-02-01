@@ -3,10 +3,15 @@ import { Preloader } from "../../components/common/Preloader/Preloader";
 import { Avatars } from "../../components/common/Avatars/Avatars";
 import { PageTitle } from "../../components/common/PageTitle/PageTitle";
 import { ContactUs } from "../../components/ContactUs/ContactUs";
+import { useLayoutEffect } from "react";
 
 export const Contacts = ({ orderFormContent, contactUsContent }) => {
   const contacts = useFetch("contactsPage");
-  console.log(contacts)
+  
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);
+
   if (contacts.isLoading) {
     return <Preloader />;
   }

@@ -13,7 +13,7 @@ import { Modal } from "./components/Modal/Modal";
 import { useEffect } from "react";
 
 function App() {
-  // useEffect(() => window.scroll(0, 6000));
+  // useEffect(() => window.scroll(0, 10000));
 
   const { header, page } = PageStyles();
   const { state, content } = useMultiFetch();

@@ -43,10 +43,14 @@
     backdrop-filter: blur(8px);
   }
 }
+
 .modal.active .form {
   padding: 40px;
 }
-
+@media screen and (min-width: 600px) {
+  .modal.active .form {
+    padding: 40px;
+  }}
 
 .modal.active .form__subtitle {
   width: 100%;
@@ -126,10 +130,12 @@
 @media screen and (min-width: 600px) {
   .modal__container {
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .modal__container {
     height: 100%;
     display: flex;

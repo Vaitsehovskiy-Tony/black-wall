@@ -1,5 +1,5 @@
 @import url('../../components/Hero/Hero.css');
-@import url('../../components/SliderBlock/SliderBlock.css');
+@import url('../../components/Carousel/Carousel.css');
 @import url('../../components/About/About.css');
 @import url("../../components/NewProjects/NewProjects.css");
 @import url("../../components/OrderForm/OrderForm.css");
@@ -7,6 +7,8 @@
 @import url("../../components/ProjectStages/ProjectStages.css");
 @import url("../../components/ContactUs/ContactUs.css");
 @import url("../../components/ProjectItem/ProjectItem.css");
+@import url("../../components/Instagram/Instagram.css");
+@import url("../../components/common/ProgressBar/ProgressBar.css");
 
 .main-page {
     background: var(--color-black);

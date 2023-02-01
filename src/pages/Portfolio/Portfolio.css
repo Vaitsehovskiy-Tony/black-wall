@@ -49,6 +49,13 @@
   gap: 90px 10px;
 }
 
+@media screen and (max-width: 1050px) {
+  .portfolio__items-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .portfolio__items-container {
     display: flex;
@@ -57,7 +64,9 @@
   }
 }
 
-.portfolio__items-container .sample:first-of-type,
-.portfolio__items-container .sample:nth-child(6) {
-  grid-column: span 2;
+@media screen and (min-width: 1050px) {
+  .portfolio__items-container .sample:first-of-type,
+  .portfolio__items-container .sample:nth-child(6) {
+    grid-column: span 2;
+  }
 }

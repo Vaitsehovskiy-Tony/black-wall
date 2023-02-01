@@ -10,7 +10,7 @@ const routes = (name, id = null, lang = "ru") => {
         baseUrl +
         "main-pages" +
         locale +
-        "&populate[about][populate[slide][populate]]=%2A&populate[newProjects][populate]=%2A&populate[ourTeam][populate]=%2A&populate[contactUs][populate]=%2A&populate[orderForm][populate]=%2A&populate[hero][populate]=%2A&populate[slides][populate]=%2A&populate[projectItem][populate]=%2A&populate[teamMember][populate]=%2A";
+        "&populate[about][populate[slide][populate]]=%2A&populate[newProjects][populate]=%2A&populate[ourTeam][populate]=%2A&populate[contactUs][populate]=%2A&populate[orderForm][populate]=%2A&populate[hero][populate]=%2A&populate[slides][populate]=%2A&populate[projectItem][populate]=%2A&populate[teamMember][populate]=%2A&populate[instagram][populate]";
       break;
 
     case "staticTexts":

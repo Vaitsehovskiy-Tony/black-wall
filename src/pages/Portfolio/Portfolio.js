@@ -4,12 +4,17 @@ import { OrderForm } from "../../components/OrderForm/OrderForm";
 import { useFetch } from "../../hooks/useFetch";
 import { useEffect, useState } from "react";
 import { Preloader } from "../../components/common/Preloader/Preloader";
+import { useLayoutEffect } from "react";
 
 export const Portfolio = ({ orderFormContent, projectsListContent }) => {
   const [filter, setFilter] = useState();
 
   const portfolio = useFetch("portfolioPage");
   const tagsArr = useFetch("tags");
+  
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);
 
   useEffect(() => {
     if (!tagsArr.isLoading && !!tagsArr.content && !filter) {

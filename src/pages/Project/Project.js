@@ -7,10 +7,15 @@ import { useFetch } from "../../hooks/useFetch";
 import { Preloader } from "../../components/common/Preloader/Preloader";
 import { useParams } from "react-router-dom";
 import { OrderForm } from "../../components/OrderForm/OrderForm";
+import { useLayoutEffect } from "react";
 
 export const Project = ({ orderFormContent, projectsListContent, staticTexts }) => {
   const { id } = useParams();
   const projectPage = useFetch("projectPage", id);
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);
 
   if (projectPage.isLoading) {
     return <Preloader />;
@@ -25,7 +30,7 @@ export const Project = ({ orderFormContent, projectsListContent, staticTexts }) 
         staticText={staticTexts.textsProject}
       />
       <GalleryBlock content={projectPage.content.gallery} staticText={staticTexts.textsProject.galleryTitle}/>
-      {/* <OtherProjects content={projectsListContent} staticText={staticTexts.textsProject.otherProjectsTitle} /> */}
+      <OtherProjects content={projectsListContent} staticText={staticTexts.textsProject.otherProjectsTitle} />
       <OrderForm content={orderFormContent} />
     </main>
   );

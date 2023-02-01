@@ -7,6 +7,7 @@
 @import url("../../components/OtherProjects/OtherProjects.css");
 @import url("../../components/DetailsBlock/DetailsBlock.css");
 @import url("../../components/Article/Article.css");
+@import url("../../components/common/ProgressBar/ProgressBar.css");
 
 
 .project-wrapper {

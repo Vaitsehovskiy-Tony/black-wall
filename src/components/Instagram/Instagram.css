@@ -1,0 +1,146 @@
+.instagram {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.instagram__title {
+  font: var(--font-h-l);
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+.instagram__title {
+  font-size: 2.06rem;
+}
+}
+
+.instagram__line {
+  margin: 30px auto 638px;
+  height: 120px;
+  width: 1px;
+  background-color: var(--color-accent);
+}
+
+@media screen and (max-width: 600px) {
+  .instagram__line {
+    margin: 15px auto 400px;
+    height: 60px;
+  }
+  }
+
+.instagram__slider {
+  position: absolute;
+  margin: 30px 0 0;
+  top: 250px;
+  display: flex;
+  transition: all 0.5s ease-out;
+  z-index: 1;
+  height: 608px;
+
+  --index: 1;
+  left: calc(-33vw + (var(--index) * -33vw));
+}
+
+@media screen and (max-width: 600px) {
+  .instagram__slider {
+    top: 150px;
+    height: 350px;
+    left: calc(10vw + (var(--index) * -80vw));
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .instagram__image:nth-child(2n + 1) {
+    height: 40vw;
+  }
+  }
+  
+
+.instagram__image {
+  width: 470px;
+  max-height: 608px;
+  display: flex;
+  margin: auto 1vw;
+  height: 30vw;
+  object-fit: contain;
+  /* padding: 0 2vw; */
+}
+
+@media screen and (max-width: 1000px) {
+  .instagram__image {
+    width: 76vw;
+    height: 50vw;
+    padding: 0 2vw;
+    margin: auto 0;
+    scale: 1;
+  }
+
+  .instagram__image:nth-child(2n + 1) {
+    height: 60vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .instagram__image {
+    width: 76vw;
+    height: 350px;
+    padding: 0 2vw;
+    margin: 0;
+    scale: 1;
+  }
+}
+
+
+.instagram__buttons {
+  position: absolute;
+  background-color: transparent;
+  z-index: 2;
+  border: 1px solid var(--color-white);
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-content: center;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  /* gap: 11px; */
+}
+
+@media screen and (max-width: 600px) {
+  .instagram__buttons {
+    display: none;
+  }
+}
+
+.instagram__button {
+  width: 7.8px;
+  object-fit: contain;
+  padding: 20px 10px;
+}
+
+.instagram__button-line {
+  background-color: var(--color-white);
+  height: 26px;
+  width: 1px;
+  margin: auto 0;
+}
+
+.instagram__link { 
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+.instagram__link {
+  display: block;
+  margin: 40px auto 0;
+  font: var(--font-xs);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--color-white);
+  cursor: pointer;
+  letter-spacing: 0.03rem;
+}}

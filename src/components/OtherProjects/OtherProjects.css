@@ -1,12 +1,128 @@
-.other-projects__items {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
+.carousel-projects {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: flex-start;
+  background: var(--color-black);
+  color: var(--color-white);
 }
 
 @media screen and (max-width: 600px) {
-    .other-projects__items {
-        display: flex;
-        flex-direction: column;
+  .carousel-projects {
+    min-height: 600px;
+    justify-content: space-between;
+  }
+}
+
+.carousel-projects__title {
+  max-width: 1440px;
+  margin: 120px 0 700px;
+  padding: 0 46px;
+  font: var(--font-h-l);
+}
+
+@media screen and (max-width: 600px) {
+  .carousel-projects__title {
+    font-size: 2.06rem;
+    margin: 120px 0 600px;
+  }
+}
+
+.carousel-projects__slides {
+  position: absolute;
+  top: 210px;
+  display: flex;
+  transition: all 0.5s ease-out;
+
+  --index: 1;
+  left: calc(20px + (var(--index) * -48vw));
+}
+
+@media screen and (max-width: 600px) {
+  .carousel-projects__slides {
+    left: calc(0vw + (var(--index) * -100vw));
+  }
+}
+
+.carousel-projects__slide {
+  width: 44vw;
+  height: 543px;
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+  padding: 0 2vw;
+}
+
+@media screen and (max-width: 600px) {
+  .carousel-projects__slide {
+    width: 96vw;
+    height: 580px;
+    padding: 0 2vw;
+  }
+}
+
+.carousel-projects__img {
+  width: 100%;
+  height: 75vw;
+  object-fit: cover;
+}
+
+.carousel-projects__description-title {
+  margin: 24px 0 5px;
+  font: var(--font-h-s);
+}
+
+@media screen and (max-width: 600px) {
+    .carousel-projects__description-title {
+        font-size: 1.25rem;
+      }
+}
+
+.carousel-projects__description {
+  font: var(--font-xs);
+  color: var(--color-grey);
+}
+
+.carousel-projects__bottom-wrapper {
+    max-width: 1440px;
+    padding: 0 46px;
+    margin: auto 0;
+    display: flex;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 600px) {
+    .carousel-projects__bottom-wrapper {
+        padding: 0 15px;
+      }
     }
+
+.carousel-projects .progress-bar {
+  width: 30%;
+  margin: auto 0 auto auto;
+}
+
+@media screen and (max-width: 600px) {
+.carousel-projects .progress-bar {
+    width: 100%;
+    margin: auto 0 auto auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+    .carousel-projects__controls {
+        display: none;
+    }
+}
+
+
+.carousel-projects__arrow {
+  height: 14px;
+  object-fit: contain;
+  padding: 23px 27px;
+  margin: 0 20px 0 0;
+  border: 1px solid var(--color-white);
+  border-radius: 50%;
 }

@@ -11,7 +11,7 @@
   grid-area: contact;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 900px) {
   .field.country {
     grid-area: country;
     margin: 30px 0 0 90px;
@@ -28,9 +28,16 @@
   border-bottom: 1px solid var(--color-grey);
 }
 
+@media screen and (max-width: 900px) {
+  .field__input {
+    width: 70%;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .field__input {
     margin: 0 0 18px;
+    width: 100%;
   }
 }
 

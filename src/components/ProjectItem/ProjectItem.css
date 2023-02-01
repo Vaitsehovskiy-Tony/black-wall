@@ -3,11 +3,18 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  letter-spacing: .1rem;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 1000px) {
 	.project-item {
-    letter-spacing: .1rem;
+    letter-spacing: .07rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+	.project-item {
+    letter-spacing: .05rem;
   }
 }
 
@@ -42,10 +49,9 @@
   margin: 24px 0 0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 	.project-item__link-container {
     margin: 16px 0 0;
-    letter-spacing: .1rem;
   }
 }
 

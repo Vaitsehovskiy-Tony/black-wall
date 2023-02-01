@@ -18,6 +18,13 @@
   grid-template-columns: repeat(4, 1fr);
 }
 
+@media screen and (max-width: 1350px) {
+  .price__cards {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 100px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .price__cards {
     margin: 80px auto;
@@ -104,11 +111,18 @@
   padding: 15px 30px;
   width: 100%;
   transition: all 0.2s ease-out;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.03rem;
+}
+
+@media screen and (max-width: 1350px) {
+  .price__button {
+    background-color: rgba(181, 177, 177, .1);
+  }
 }
 
 @media screen and (max-width: 600px) {
   .price__button {
+    background-color: var(--color-l-grey);
     font: var(--font-m);
     padding:10px 30px;
   }

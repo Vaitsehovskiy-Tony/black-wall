@@ -4,7 +4,7 @@ export const ComparisonSlider = ({ element, staticText }) => {
 
   const firstImage = `https://api.vaitstony.art${element.imageAfter.data.attributes.url}`;
   const secondImage = `https://api.vaitstony.art${element.imageBefore.data.attributes.url}`;
-  const [sliderValue, setSliderValue] = useState("500");
+  const [sliderValue, setSliderValue] = useState("50");
 
   const handleChange = (e) => {
     setSliderValue(e.target.value);
@@ -13,21 +13,21 @@ export const ComparisonSlider = ({ element, staticText }) => {
   return (
     <section className="comparison">
       <div className="comparison__slider-container">
-        <div
+      <img
           className="comparison__image"
-          style={{ backgroundImage: `url(${firstImage})` }}
-        ></div>
-        <div
-          className="comparison__image"
+          src={firstImage}
+        />
+        <img
+          className="comparison__image_finaly"
+          src={secondImage}
           style={{
-            width: `${sliderValue * 0.1}%`,
-            backgroundImage: `url(${secondImage})`,
+            '--exposure': `${sliderValue - .5}%`,
           }}
-        ></div>
+        />
         <input
           type="range"
           min="1"
-          max="1000"
+          max="100"
           value={sliderValue}
           className="comparison__slider"
           name="slider"
@@ -36,7 +36,7 @@ export const ComparisonSlider = ({ element, staticText }) => {
         />
         <div
           className="slider-button"
-          style={{ left: `calc(${sliderValue * 0.1}% - 15px)` }}
+          style={{ left: `calc(${sliderValue}% - (14px + .5vmin))` }}
         ></div>
       </div>
       <div className="comparison__description">
@@ -49,8 +49,9 @@ export const ComparisonSlider = ({ element, staticText }) => {
           type="range"
           className="comparison__mini-slider"
           min="1"
-          max="1000"
+          max="100"
           value={sliderValue}
+          onChange={handleChange}
         />
         <span className="comparison__text">
           {!!element.textAfter
