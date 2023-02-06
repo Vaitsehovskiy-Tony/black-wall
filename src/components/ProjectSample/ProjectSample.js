@@ -6,7 +6,7 @@ export const ProjectSample = ({ projectItem, filter }) => {
 
   return (
     <Link
-      to={`/project/` + projectItem.projectId}
+      to={`/project_` + projectItem.projectId}
       className={`sample ${!!filter && filter !== itemTag ? "hidden" : ""}`}
     >
       <div className="sample__img-container">

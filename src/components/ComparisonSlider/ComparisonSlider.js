@@ -1,10 +1,16 @@
 import { useState } from "react";
+import imageSample from "../../images/image-sample.webp";
 
 export const ComparisonSlider = ({ element, staticText }) => {
-
-  const firstImage = `https://api.vaitstony.art${element.imageAfter.data.attributes.url}`;
-  const secondImage = `https://api.vaitstony.art${element.imageBefore.data.attributes.url}`;
   const [sliderValue, setSliderValue] = useState("50");
+  const firstImage =
+    element && element.imageAfter
+      ? `https://api.vaitstony.art${element.imageBefore.data.attributes.url}`
+      : imageSample;
+  const secondImage =
+    element && element.imageAfter
+      ? `https://api.vaitstony.art${element.imageAfter.data.attributes.url}`
+      : imageSample;
 
   const handleChange = (e) => {
     setSliderValue(e.target.value);
@@ -13,15 +19,13 @@ export const ComparisonSlider = ({ element, staticText }) => {
   return (
     <section className="comparison">
       <div className="comparison__slider-container">
-      <img
-          className="comparison__image"
-          src={firstImage}
-        />
+        <img className="comparison__image" src={firstImage} alt="before" />
         <img
           className="comparison__image_finaly"
           src={secondImage}
+          alt="after"
           style={{
-            '--exposure': `${sliderValue - .5}%`,
+            "--exposure": `${sliderValue - 0.5}%`,
           }}
         />
         <input

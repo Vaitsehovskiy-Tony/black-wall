@@ -1,20 +1,23 @@
 .img-block {
     width: 100%;
-    height: 600px;
     margin: 40px auto 78px;
 }
 
 @media screen and (max-width: 600px) {
     .img-block {
-        height: 330px;
         margin: 40px auto 70px;
     }
 }
 
 .img-block__img {
     width: 100%;
-    height: 100%;
+    height: 600px;
     object-fit: cover;
+}
+@media screen and (max-width: 600px) {
+    .img-block__img {
+        margin: 40px auto 70px;
+    }
 }
 
 .img-block__description {

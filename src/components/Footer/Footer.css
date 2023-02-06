@@ -78,7 +78,13 @@
   margin: 0;
   letter-spacing: 0.07rem;
   text-transform: capitalize;
+  text-transform: lowercase;
+  display: inline-block;
   font: var(--font-h-m);
+
+}
+.footer__contacts-email:first-letter {
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 600px) {
@@ -123,6 +129,7 @@
 
 .footer__contacts-pic {
   margin: auto 10px auto 0;
+  height: 20px;
 }
 
 .footer__hr {

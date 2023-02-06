@@ -132,6 +132,7 @@
   margin: auto 20px;
   background: black;
   height: 1px;
+  -webkit-appearance: none;
 }
 
 .comparison__mini-slider::-webkit-slider-thumb {

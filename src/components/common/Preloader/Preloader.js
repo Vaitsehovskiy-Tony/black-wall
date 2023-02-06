@@ -1,4 +1,4 @@
-import logoLight from "../../../images/logo-white.svg";
+import logoLight from "../../../images/logo-white.webp";
 
 export const Preloader = () => {
   return (

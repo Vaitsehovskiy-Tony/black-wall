@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
-import rightArrow from "../../images/right-arrow.png";
-import leftArrow from "../../images/left-arrow.png";
+import rightArrow from "../../images/right-arrow.webp";
+import leftArrow from "../../images/left-arrow.webp";
 import { ProgressBar } from "../common/ProgressBar/ProgressBar";
 
 export const Carousel = ({ content }) => {

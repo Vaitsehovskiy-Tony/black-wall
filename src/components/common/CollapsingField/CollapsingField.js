@@ -1,6 +1,6 @@
 import { CollapsingData } from "./CollapsingData/CollapsingData";
-import whiteArrow from "../../../images/arrow_down.png";
-import blackArrow from "../../../images/arrow_down-black.png";
+import whiteArrow from "../../../images/arrow_down.webp";
+import blackArrow from "../../../images/arrow_down-black.webp";
 
 export const CollapsingField = ({ title, text, iconStyle='black', type }) => {
 

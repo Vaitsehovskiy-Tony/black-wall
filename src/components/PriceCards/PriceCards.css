@@ -13,21 +13,59 @@
 
 .price__cards {
   margin: 80px auto;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 1350px) {
   .price__cards {
+    padding: 0 100px;
+  }
+}
+
+.price__cards-title {
+  font: var(--font-h-l);
+  margin: 25px 0;
+}
+
+@media screen and (max-width: 1350px) {
+  .price__cards-title {
+    padding: 0 100px;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .price__cards-title {
+    font-size: 2.06rem;
+    margin: 25px 0 15px;
+    padding: 0;
+  }
+}
+
+/* @media screen and (max-width: 600px) {
+  .price__cards {
+  }
+} */
+
+.price__cards-container {
+  display: grid;
+  grid-gap: 10px;
+  margin: 50px 0 0;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 1350px) {
+  .price__cards-container {
     grid-template-columns: repeat(2, 1fr);
     padding: 0 100px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .price__cards {
-    margin: 80px auto;
+  .price__cards-container {
+    margin: 20px auto;
+    padding: 0;
     display: flex;
     gap: 10px;
     flex-direction: column;
@@ -116,7 +154,7 @@
 
 @media screen and (max-width: 1350px) {
   .price__button {
-    background-color: rgba(181, 177, 177, .1);
+    background-color: rgba(181, 177, 177, 0.1);
   }
 }
 
@@ -124,10 +162,9 @@
   .price__button {
     background-color: var(--color-l-grey);
     font: var(--font-m);
-    padding:10px 30px;
+    padding: 10px 30px;
   }
 }
-
 
 .price__button:hover {
   background-color: var(--color-accent);
@@ -148,7 +185,7 @@
   .price__options {
     margin: 0 0 20px;
   }
-}  
+}
 
 .price__option-container {
   margin: 15px 0 0;

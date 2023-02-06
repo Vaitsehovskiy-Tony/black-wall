@@ -50,19 +50,20 @@
 @media screen and (min-width: 600px) {
   .modal.active .form {
     padding: 40px;
-  }}
+  }
+}
 
 .modal.active .form__subtitle {
   width: 100%;
 }
 
 @media screen and (max-width: 600px) {
-.page_light .modal.active .form {
-  padding: 100px 40px;
-}
-.modal__container {
-  overflow-y: scroll;
-}
+  .page_light .modal.active .form {
+    padding: 100px 40px;
+  }
+  .modal__container {
+    overflow-y: scroll;
+  }
 }
 
 .modal .header__icon {
@@ -123,13 +124,13 @@
     color: var(--color-white);
   }
   .form__submit-arrow {
-    /* padding: 0 0 10px 120px; */
+    height: 12.8px;
   }
 }
 
 @media screen and (min-width: 600px) {
   .modal__container {
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     display: flex;
     flex-direction: column;
   }

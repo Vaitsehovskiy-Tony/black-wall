@@ -17,11 +17,20 @@ function App() {
 
   const { header, page } = PageStyles();
   const { state, content } = useMultiFetch();
-
+//   useEffect(() => {
+//     const handleContextmenu = e => {
+//         e.preventDefault()
+//     }
+//     document.addEventListener('contextmenu', handleContextmenu)
+//     return function cleanup() {
+//         document.removeEventListener('contextmenu', handleContextmenu)
+//     }
+// }, [ ])
   if (state === "loading") {
     return <Preloader />;
   }
 
+  
   return (
     <div className={`page page_${page}`}>
       <Header
@@ -66,7 +75,7 @@ function App() {
       <Routes>
         <Route
           exact
-          path={`/project/:id`}
+          path={`/project_:id`}
           element={
             <Project
               orderFormContent={content.orderForm}

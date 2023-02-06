@@ -8,13 +8,18 @@ import { Preloader } from "../../components/common/Preloader/Preloader";
 import { useParams } from "react-router-dom";
 import { OrderForm } from "../../components/OrderForm/OrderForm";
 import { useLayoutEffect } from "react";
+import imageSample from "../../images/image-sample.webp";
 
-export const Project = ({ orderFormContent, projectsListContent, staticTexts }) => {
+export const Project = ({
+  orderFormContent,
+  projectsListContent,
+  staticTexts,
+}) => {
   const { id } = useParams();
   const projectPage = useFetch("projectPage", id);
 
   useLayoutEffect(() => {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
   }, []);
 
   if (projectPage.isLoading) {
@@ -22,15 +27,26 @@ export const Project = ({ orderFormContent, projectsListContent, staticTexts }) 
   }
   return (
     <main className="project-page page__wrapper">
-      <Hero content={projectPage.content.hero} />
-      <DetailsBlock content={projectPage.content.aboutProject} staticText={staticTexts.textsProject.goToGalleryButton}/>
-      <Article
-        content={projectPage.content.projectElement}
-        title={projectPage.content.articleTitle  || ''}
+      <Hero content={projectPage.content.hero} imageSample={imageSample} />
+      <DetailsBlock
+        content={projectPage.content.aboutProject}
         staticText={staticTexts.textsProject}
       />
-      <GalleryBlock content={projectPage.content.gallery} staticText={staticTexts.textsProject.galleryTitle}/>
-      <OtherProjects content={projectsListContent} staticText={staticTexts.textsProject.otherProjectsTitle} />
+      <Article
+        content={projectPage.content.projectElement}
+        title={projectPage.content.articleTitle || ""}
+        staticText={staticTexts.textsProject}
+        imageSample={imageSample}
+      />
+      <GalleryBlock
+        content={projectPage.content.gallery}
+        staticText={staticTexts.textsProject.galleryTitle}
+        imageSample={imageSample}
+      />
+      <OtherProjects
+        content={projectsListContent}
+        staticText={staticTexts.textsProject.otherProjectsTitle}
+      />
       <OrderForm content={orderFormContent} />
     </main>
   );

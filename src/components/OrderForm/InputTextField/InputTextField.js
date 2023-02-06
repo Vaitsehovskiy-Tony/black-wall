@@ -7,10 +7,11 @@ export const InputTextField = ({ fieldData }) => {
         {...fieldData.register(fieldData.cssName)}
         name={fieldData.cssName}
         id={`form__${fieldData.cssName}`}
-        required
+        
         minLength={fieldData.minLength}
         maxLength={fieldData.maxLength}
-        placeholder=""
+        placeholder="."
+        required
         pattern={fieldData.pattern.source}
       />
       <label

@@ -93,11 +93,12 @@
   grid-row: span 1;
 }
 .page-gallery__grid :nth-child(7n + 6){
-  grid-column: span 2;
-  grid-row: 6 / span 1;
-}
-.page-gallery__grid :nth-child(7n + 7){
   grid-column: 3 / span 6;
   grid-row: span 2;
+}
+.page-gallery__grid :nth-child(7n + 7){
+
+  grid-column: span 2;
+  grid-row: span 1;
 }
 

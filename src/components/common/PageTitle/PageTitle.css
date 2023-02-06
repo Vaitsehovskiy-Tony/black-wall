@@ -3,7 +3,6 @@
   text-align: center;
   color: var(--color-black);
   z-index: 1;
-  /*animation: hero-content ease-out 2s;*/
 }
 
 @media screen and (max-width: 600px) {

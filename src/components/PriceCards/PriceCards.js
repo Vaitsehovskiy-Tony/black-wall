@@ -1,8 +1,8 @@
 import { ModalContext } from "../../utils/getModalContext";
 import { useContext } from "react";
-import checked from "../../images/checked.png";
+import checked from "../../images/checked.webp";
 
-export const PriceCards = ({ cards }) => {
+export const PriceCards = ({ cards, title }) => {
 
   const { handleModal, handleModalContent } =
     useContext(ModalContext);
@@ -13,6 +13,8 @@ export const PriceCards = ({ cards }) => {
 
   return (
     <section className="price__cards wrapper">
+      <h2 className="price__cards-title">{title}</h2>
+      <div className="price__cards-container">
       {cards.map((i) => (
         <div className="price__card" key={i.id}>
           <div className="price__top-wrapper">
@@ -37,6 +39,7 @@ export const PriceCards = ({ cards }) => {
           </div>
         </div>
       ))}
+      </div>
     </section>
   );
 };

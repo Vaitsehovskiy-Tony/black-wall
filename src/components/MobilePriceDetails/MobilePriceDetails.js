@@ -1,5 +1,5 @@
 import { CollapsingField } from "../common/CollapsingField/CollapsingField";
-import arrow from "../../images//arrow_down-black.png";
+import arrow from "../../images//arrow_down-black.webp";
 
 export const MobilePriceDetails = ({ pricesObj, title }) => {
   return (

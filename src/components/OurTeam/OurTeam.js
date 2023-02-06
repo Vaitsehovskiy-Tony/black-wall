@@ -2,6 +2,7 @@ import { CollapsingField } from "../common/CollapsingField/CollapsingField";
 
 export const OurTeam = ({ content, members }) => {
   const isNarrow = window.matchMedia("screen and (max-width: 750px)");
+  console.log(content, members)
 
   return (
     <section className="our-team wrapper">

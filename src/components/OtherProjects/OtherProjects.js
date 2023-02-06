@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import { ProgressBar } from "../common/ProgressBar/ProgressBar";
 import { ProjectSample } from "../ProjectSample/ProjectSample";
-import leftArrow from "../../images/arrow_l_mini.png";
-import rightArrow from "../../images/arrow_r_mini.png";
+import leftArrow from "../../images/arrow_l_mini.webp";
+import rightArrow from "../../images/arrow_r_mini.webp";
 
 export const OtherProjects = ({ content, staticText }) => {
 

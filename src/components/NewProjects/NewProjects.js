@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ProjectItem } from "../ProjectItem/ProjectItem";
-import arrow from "../../images/right-arrow.svg";
+import arrow from "../../images/right-arrow.webp";
 
 export const NewProjects = ({ content, projectsList, staticText }) => {
   const desktopList = projectsList.slice(0, 4);
@@ -23,7 +23,7 @@ export const NewProjects = ({ content, projectsList, staticText }) => {
         <span className="new-projects__link-text">
           {staticText.watchAllProjeects}
         </span>
-        <img className="new-projects__right-arrow" src={arrow} />
+        <img className="new-projects__right-arrow" src={arrow} alt="right arrow" />
       </Link>
     </section>
   );

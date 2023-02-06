@@ -48,12 +48,12 @@
 }
 
 .sample__content {
-  height: 200px;
+  height: auto;
 }
 
 @media screen and (max-width: 600px) {
   .sample__content {
-    height: 150px;
+    height: auto;
   }
 }
 

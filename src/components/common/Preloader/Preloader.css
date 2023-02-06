@@ -33,3 +33,7 @@
     transform: translate(0, -100%);
     animation: preloader 1s ease-out;
 }
+
+.preloader__img {
+    height: 60px;
+}

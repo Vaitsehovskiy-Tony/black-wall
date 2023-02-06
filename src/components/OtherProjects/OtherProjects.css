@@ -17,7 +17,8 @@
 
 .carousel-projects__title {
   max-width: 1440px;
-  margin: 120px 0 700px;
+  width: 100%;
+  margin: 120px auto 700px;
   padding: 0 46px;
   font: var(--font-h-l);
 }
@@ -64,7 +65,7 @@
 
 .carousel-projects__img {
   width: 100%;
-  height: 75vw;
+  height: 75%;
   object-fit: cover;
 }
 
@@ -86,8 +87,9 @@
 
 .carousel-projects__bottom-wrapper {
     max-width: 1440px;
+    width: 100%;
     padding: 0 46px;
-    margin: auto 0;
+    margin: auto;
     display: flex;
     align-items: center;
 }

@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { Avatars } from "../common/Avatars/Avatars";
 import { FormContainer } from "./FormContainer/FormContainer";
 import { PricesElement } from "../Modal/PricesElement/PricesElement";
-import arrow from "../../images/right-arrow.svg";
+import arrow from "../../images/right-arr.webp";
 import emailjs from "@emailjs/browser";
 
 export const OrderForm = ({ content, display, handleModal, prices }) => {

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Logo } from "../common/Logo/Logo";
-import tgIcon from "../../images/telegram (12) 1.svg";
-import wpIcon from "../../images/whatsapp (7) 1.svg";
+import tgIcon from "../../images/telegram (12) 1.webp";
+import wpIcon from "../../images/whatsapp (7) 1.webp";
 
 export const Footer = ({ content }) => {
   const icons = [tgIcon, wpIcon];

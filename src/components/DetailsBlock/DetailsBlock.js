@@ -5,7 +5,7 @@ export const DetailsBlock = ({ content, staticText }) => {
   };
   return (
     <section className="details project-wrapper">
-      <h2 className="details__title">{content.title}</h2>
+      <h2 className="details__title">{content.title ? content.title : staticText.aboutProjectTitle}</h2>
       <div className="details__container">
         {content.projectDetails.map((i) => (
           <div className="details__item-container" key={i.id}>
@@ -15,7 +15,7 @@ export const DetailsBlock = ({ content, staticText }) => {
         ))}
       </div>
       <button className="details__scroll" onClick={makeScroll}>
-        {staticText}
+        {staticText.goToGalleryButton}
       </button>
     </section>
   );

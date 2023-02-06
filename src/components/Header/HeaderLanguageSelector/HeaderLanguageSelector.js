@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { LangContext } from "../../../utils/getLangContext";
 import { useContext } from "react";
-import bottomArrow from "../../../images/bottom-arrow.svg";
-import bottomArrowDark from "../../../images/bottom-arrow-dark.png";
+import bottomArrow from "../../../images/bottom-arrow.webp";
+import bottomArrowDark from "../../../images/bottom-arrow-dark.webp";
 
 export const HeaderLanguageSelector = ({ headerStyle }) => {
   const [isActive, setIsActive] = useState(false);

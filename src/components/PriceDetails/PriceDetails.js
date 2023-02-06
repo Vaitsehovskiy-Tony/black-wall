@@ -1,4 +1,4 @@
-import checked from "../../images/checked.png";
+import checked from "../../images/checked.webp";
 
 export const PriceDetails = ({ pricesObj, details }) => {
 

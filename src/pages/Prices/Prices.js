@@ -14,6 +14,7 @@ export const Prices = ({ prices, orderFormContent }) => {
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
   }, []);
+  console.log(prices)
 
   return (
     <main className="prices page__wrapper">
@@ -21,8 +22,8 @@ export const Prices = ({ prices, orderFormContent }) => {
         description={prices.pageTitle.description}
         title={prices.pageTitle.title}
       />
-      <PriceCards cards={prices.priceCard}  orderForm={orderFormContent}/>
       <Workflow content={prices.workflow} />
+      <PriceCards cards={prices.priceCard} title={prices.priceCardsTitle}/>
       {isNarrow.matches ? (
         <MobilePriceDetails
           pricesObj={priceObj}

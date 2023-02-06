@@ -1,7 +1,7 @@
-import whiteBurger from "../../../images/burger_white.png";
-import blackBurger from "../../../images/burger_black.png";
-import whiteCross from "../../../images/close_white.png";
-import blackCross from "../../../images/close_black.png";
+import whiteBurger from "../../../images/burger_white.webp";
+import blackBurger from "../../../images/burger_black.webp";
+import whiteCross from "../../../images/close_white.webp";
+import blackCross from "../../../images/close_black.webp";
 
 export const HeaderBurger = ({ headerStyle, modalState, handleModal, handleModalContent }) => {
   const burger = headerStyle === "light" ? whiteBurger : blackBurger;
