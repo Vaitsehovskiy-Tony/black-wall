@@ -28,7 +28,7 @@ export const makeInstagramFetch = async () => {
   };
 
   const inst = await fetchMediaFields();
-  console.log(inst)
+
   // fetch(
   //   "https://v1.nocodeapi.com/tonyvaits/instagram/kkcoNxSVssSmoysI",
   //   requestOptions

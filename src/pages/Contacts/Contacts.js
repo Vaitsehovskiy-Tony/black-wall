@@ -4,20 +4,29 @@ import { Avatars } from "../../components/common/Avatars/Avatars";
 import { PageTitle } from "../../components/common/PageTitle/PageTitle";
 import { ContactUs } from "../../components/ContactUs/ContactUs";
 import { useLayoutEffect } from "react";
+import { SEO } from "../../components/common/SEO/SEO";
 
 export const Contacts = ({ orderFormContent, contactUsContent }) => {
   const contacts = useFetch("contactsPage");
-  
+
   useLayoutEffect(() => {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
   }, []);
 
   if (contacts.isLoading) {
     return <Preloader />;
   }
+  
+  const seoData = {
+    title: "Black Wall",
+    description: "BLACK WALL is an interior design and architecture studio. Our team designs residential and public interiors individually designed.",
+    keywords: "Design, Interior, Architecture",
+    image: "https://api.vaitstony.art/uploads/091_A1640_522f5c2e62.webp"
+  }
 
   return (
     <main className="contacts-page page__wrapper">
+      <SEO seoData={seoData} />
       <div className="contacts__wrapper">
         <PageTitle
           description={contacts.content.description}

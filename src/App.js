@@ -11,28 +11,39 @@ import { Preloader } from "./components/common/Preloader/Preloader";
 import { useMultiFetch } from "./hooks/useMultiFetch";
 import { Modal } from "./components/Modal/Modal";
 import { useEffect } from "react";
+import {SEO} from "./components/common/SEO/SEO";
 
 function App() {
-  // useEffect(() => window.scroll(0, 10000));
-
   const { header, page } = PageStyles();
   const { state, content } = useMultiFetch();
-//   useEffect(() => {
-//     const handleContextmenu = e => {
-//         e.preventDefault()
-//     }
-//     document.addEventListener('contextmenu', handleContextmenu)
-//     return function cleanup() {
-//         document.removeEventListener('contextmenu', handleContextmenu)
-//     }
-// }, [ ])
+  console.log(content)
+
   if (state === "loading") {
     return <Preloader />;
   }
 
-  
+  // useEffect(() => window.scroll(0, 10000));
+
+  //   useEffect(() => {
+  //     const handleContextmenu = e => {
+  //         e.preventDefault()
+  //     }
+  //     document.addEventListener('contextmenu', handleContextmenu)
+  //     return function cleanup() {
+  //         document.removeEventListener('contextmenu', handleContextmenu)
+  //     }
+  // }, [ ])
+
+  const seoData = {
+    title: "Black Wall",
+    description: "BLACK WALL is an interior design and architecture studio. Our team designs residential and public interiors individually designed.",
+    keywords: "Design, Interior, Architecture",
+    image: "https://api.vaitstony.art/uploads/091_A1640_522f5c2e62.webp"
+  }
+
   return (
     <div className={`page page_${page}`}>
+      <SEO seoData={seoData} />
       <Header
         headerStyle={header}
         content={content.header}

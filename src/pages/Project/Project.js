@@ -8,6 +8,7 @@ import { Preloader } from "../../components/common/Preloader/Preloader";
 import { useParams } from "react-router-dom";
 import { OrderForm } from "../../components/OrderForm/OrderForm";
 import { useLayoutEffect } from "react";
+import { SEO } from "../../components/common/SEO/SEO";
 import imageSample from "../../images/image-sample.webp";
 
 export const Project = ({
@@ -25,8 +26,17 @@ export const Project = ({
   if (projectPage.isLoading) {
     return <Preloader />;
   }
+
+  const seoData = {
+    title: "Black Wall",
+    description:
+      "BLACK WALL is an interior design and architecture studio. Our team designs residential and public interiors individually designed.",
+    keywords: "Design, Interior, Architecture",
+    image: "https://api.vaitstony.art/uploads/091_A1640_522f5c2e62.webp",
+  };
   return (
     <main className="project-page page__wrapper">
+      <SEO seoData={seoData} />
       <Hero content={projectPage.content.hero} imageSample={imageSample} />
       <DetailsBlock
         content={projectPage.content.aboutProject}

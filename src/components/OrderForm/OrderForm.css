@@ -29,9 +29,13 @@
     "subtitle form"
     "avatar form"
     "avatar form";
-  justify-content: center;
+    justify-content: space-between;
   padding: 240px 46px 240px;
+  max-width: 1440px;
+  margin: auto;
+  /* box-sizing: border-box; */
 }
+
 @media screen and (max-width: 900px) {
   .form__wrapper {
     display: flex;
@@ -42,7 +46,13 @@
 }
 @media screen and (max-width: 600px) {
   .form__wrapper {
-    padding: 180px 0 180px;
+    padding: 100px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main-page .form__wrapper {
+    padding: 180px 0;
   }
 }
 

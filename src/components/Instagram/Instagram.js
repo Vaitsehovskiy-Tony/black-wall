@@ -57,8 +57,6 @@ export const Instagram = ({ content }) => {
     }
   };
 
-  console.log(photos)
-
   return (
     <section className="instagram wrapper">
       <h2 className="instagram__title">{content.title}</h2>

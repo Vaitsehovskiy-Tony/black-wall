@@ -40,7 +40,7 @@
   width: 14px;
   object-fit: contain;
   transition: all 0.25s ease-out;
-  margin: 0
+  margin: 10px 0 0;
 }
 
 .collapsing__text {
@@ -66,10 +66,6 @@ details[open] .collapsing__text {
 
 details[open] .collapsing__img {
   transform: rotate(180deg);
-}
-
-details[open] .collapsing__title {
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .collapsing__bottom-line {
