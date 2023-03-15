@@ -1,28 +1,34 @@
 @import url(./NavBarModal/NavBarModal.css);
+@import url(./GalleryModal/GalleryModal.css);
+@import url(./DetailsModal/DetailsModal.css);
 @import url(./OrderModal/OrderModal.css);
 @import url(./PricesElement/PricesElement.css);
+@import url(./SimpleModal/SimpleModal.css);
 
-@keyframes dropdown-show {
+
+@keyframes modala {
   0% {
-    opacity: 0;
+    transform: translateX(100%);
   }
-  33% {
+  /* 33% {
     opacity: 0.6;
   }
   66% {
     opacity: 0.75;
-  }
+  } */
   100% {
-    opacity: 1;
+    transform: translateX(0);
   }
 }
 
 .modal {
+  display: flex;
   position: fixed;
   width: 100vw;
   height: 100vh;
-  display: none;
-  background: var(--color-black);
+  visibility: hidden;
+  opacity: 0;
+  /* background: var(--color-black); */
   flex-direction: column;
   justify-content: center;
   z-index: 4;
@@ -39,8 +45,8 @@
 
 @media screen and (min-width: 600px) {
   .modal {
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(8px);
+    /* background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px); */
   }
 }
 
@@ -70,6 +76,7 @@
   position: absolute;
   top: 20px;
   right: 20px;
+  z-index: 1;
 }
 
 @media screen and (max-width: 600px) {
@@ -79,25 +86,34 @@
 }
 
 .page_light .modal {
-  background: rgba(0, 0, 0, 0.4);
+  /* background: rgba(0, 0, 0, 0.4); */
   color: var(--color-black);
 }
+
 @media screen and (max-width: 600px) {
   .page_light .modal {
     background: var(--color-white3);
   }
 }
 
+.modal.hidden {
+  transform: translateX(100%);
+  transition: all .5s ease-out;
+}
+
 .modal.active {
-  display: flex;
-  animation: dropdown-show 0.25s ease-out;
+  visibility: visible;
+  transform: translateX(0%);
+    transition: all .5s ease-out;
+  opacity: 1;
 }
 
 @media screen and (min-width: 600px) {
   .modal.active .form {
     width: fit-content;
   }
-  .modal.active .form__wrapper {
+  .modal.active .form__wrapper,
+  .modal.hidden .form__wrapper {
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -110,6 +126,10 @@
     background: var(--color-accent);
     padding: 18px 0;
     margin: 60px 0 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;    
   }
   .modal__container .form__submit-container {
     background: var(--color-accent);
@@ -130,9 +150,9 @@
 
 @media screen and (min-width: 600px) {
   .modal__container {
-    /* overflow-y: scroll; */
     display: flex;
     flex-direction: column;
+    height: 100%;    
   }
 }
 

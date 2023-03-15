@@ -7,18 +7,6 @@
 @import url(./HeaderBurger/HeaderBurger.css);
 @import url(../Modal/Modal.css);
 
-@keyframes header {
-  0% {
-    transform: translateY(-100%);
-  }
-  67% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
-
 .header {
   position: fixed;
   top: 0;
@@ -28,25 +16,11 @@
   font: var(--font-s);
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 500ms;
-  background: linear-gradient(
-    rgba(25, 25, 25, 0.8) 50%,
-    rgba(25, 25, 25, 0.7),
-    rgba(25, 25, 25, 0.6),
-    rgba(25, 25, 25, 0)
-  );
+  transition: top .5s ease-out;
 }
 
 .header.hide {
   top: -80px;
-}
-
-@media screen and (max-width: 600px) {
-  .header {
-    font: var(--font-m);
-  }
 }
 
 .header.header_light {
@@ -55,11 +29,49 @@
 
 .header.header_dark {
   color: var(--color-black);
-  background: linear-gradient(
+}
+
+/* gradient on scroll top */
+.header.header_light::before,
+.header.header_dark::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+}
+
+.header.header_light::before {
+  background-image: linear-gradient(
+    rgba(25, 25, 25, 0.8) 50%,
+    rgba(25, 25, 25, 0.7),
+    rgba(25, 25, 25, 0.6),
+    rgba(25, 25, 25, 0)
+  );
+}
+
+.header.header_dark::before {
+  background-image: linear-gradient(
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.35),
     rgba(0, 0, 0, 0)
   );
+}
+
+.header.header_light.show::before,
+.header.header_dark.show::before {
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    font: var(--font-m);
+  }
 }
 
 .header__wrapper {

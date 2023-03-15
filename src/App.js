@@ -12,11 +12,24 @@ import { useMultiFetch } from "./hooks/useMultiFetch";
 import { Modal } from "./components/Modal/Modal";
 import { useEffect } from "react";
 import {SEO} from "./components/common/SEO/SEO";
+import { animationInspector } from "./services/animationInspector";
+
+
 
 function App() {
   const { header, page } = PageStyles();
   const { state, content } = useMultiFetch();
   console.log(content)
+  // animationInspector();
+
+  useEffect(() => {
+    const onScroll = () => {
+      animationInspector()
+    };
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   if (state === "loading") {
     return <Preloader />;
@@ -40,6 +53,20 @@ function App() {
     keywords: "Design, Interior, Architecture",
     image: "https://api.vaitstony.art/uploads/091_A1640_522f5c2e62.webp"
   }
+
+  // const handleScroll = () => {
+  //   useEffect(() => animationInspector());
+  // }
+
+  // useEffect(() => {
+  //   const onScroll = () => {
+  //     animationInspector()
+  //   };
+  //   window.addEventListener("scroll", onScroll);
+
+  //   return () => window.removeEventListener("scroll", onScroll);
+  // }, []);
+
 
   return (
     <div className={`page page_${page}`}>

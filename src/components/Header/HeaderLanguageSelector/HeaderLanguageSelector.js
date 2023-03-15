@@ -12,7 +12,7 @@ export const HeaderLanguageSelector = ({ headerStyle }) => {
   const handleLangSwitch = () => setIsActive(!isActive);
 
   return (
-    <div className="header-lang" onMouseLeave={handleLangSwitch}>
+    <div className="header-lang" onMouseLeave={() => setIsActive(false)}>
       <div className="header-lang__item-container" onClick={handleLangSwitch}>
         <span className="header-lang__item">{locales.activeLocale}</span>
         <img
@@ -21,7 +21,7 @@ export const HeaderLanguageSelector = ({ headerStyle }) => {
           alt="bottom arrow"
         />
       </div>
-      <ul className={`header-lang__options ${isActive ? "active" : ""}`}>
+      <ul className={`header-lang__options ${isActive ? "active" : ""}`}> 
         {locales.localeOptions.map((locale, index) => (
           <li
             className="header-lang__options-item"

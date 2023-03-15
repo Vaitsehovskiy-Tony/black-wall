@@ -41,6 +41,14 @@
   }
 }
 
+.field__input:-webkit-autofill,
+.field__input:-webkit-autofill:hover,
+.field__input:-webkit-autofill:focus,
+.field__input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: var(--color-grey) !important;
+}
+
 .field__input:focus {
   border: none;
   border-bottom: 1px solid var(--color-accent);
@@ -70,6 +78,11 @@
   color: transparent;
   opacity: 0.8;
   color: var(--color-grey);
+  transition: border-bottom 0.25s ease-out;
+}
+
+.field__input:hover:placeholder-shown {
+  border-bottom: 1px solid var(--color-l-grey);
 }
 
 .field__label {

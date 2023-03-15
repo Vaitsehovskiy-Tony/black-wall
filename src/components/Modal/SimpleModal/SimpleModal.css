@@ -1,0 +1,45 @@
+.simple-modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-black);
+  flex-direction: column;
+  justify-content: center;
+  z-index: 4;
+  color: var(--color-white);
+  font: var(--font-ml);
+}
+
+.simple-modal.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .simple-modal {
+    z-index: 2;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .simple-modal {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+  }
+}
+
+.simple-modal__close-bttn {
+  position: absolute;
+  width: 32px;
+  object-fit: cover;
+  top: 45px;
+  right: 45px;
+  cursor: pointer;
+}

@@ -87,7 +87,14 @@
   width: fit-content;
   background: transparent;
   cursor: pointer;
+  transition: all .25s ease-out
 }
+
+.details__scroll:hover {
+  color: var(--color-accent);
+  border-bottom: 1px dashed var(--color-accent);
+}
+
 
 @media screen and (max-width: 600px) {
   .details__scroll {

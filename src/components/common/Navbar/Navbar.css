@@ -13,9 +13,14 @@
 .header__navbar-item {
   margin: auto;
   padding: 0 10px;
-  /* color: var(--color-header); */
+  transition: all .3s ease-out;
 }
 
 .header__navbar-item:hover {
-  color: var(--color-black-hover);
+  color: var(--color-accent);
+}
+
+.header__navbar-item.current {
+  font: var(--font-s);
+  color: var(--color-visited);
 }

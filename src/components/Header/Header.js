@@ -4,12 +4,17 @@ import { HeaderCTABtn } from "./HeaderCTABtn/HeaderCTABtn";
 import { HeaderLanguageSelector } from "./HeaderLanguageSelector/HeaderLanguageSelector";
 import { useScrollDirection } from "../../hooks/useScrollDirection";
 
-export const Header = ({
-  headerStyle,
-  content
-}) => {
+export const Header = ({ headerStyle, content }) => {
+  const scrollDirection = useScrollDirection();
+  let headerAnimation = "show";
 
-    const scrollDirection = useScrollDirection();
+  switch (scrollDirection) {
+    case "down":
+      headerAnimation = "hide";
+      break;
+    case "unset":
+      headerAnimation = "transparent";
+  }
 
   // const handleModal = (type) => {
   //   if (type === "orderForm") {
@@ -23,9 +28,7 @@ export const Header = ({
 
   return (
     <header
-      className={`header header_${headerStyle} ${
-        scrollDirection === "down" ? "hide" : "show"
-      }`}
+      className={`header header_${headerStyle} ${headerAnimation}`}
     >
       <div className="header__wrapper">
         <Logo headerStyle={headerStyle || "light"} />

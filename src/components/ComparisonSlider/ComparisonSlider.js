@@ -3,10 +3,12 @@ import imageSample from "../../images/image-sample.webp";
 
 export const ComparisonSlider = ({ element, staticText }) => {
   const [sliderValue, setSliderValue] = useState("50");
+
   const firstImage =
     element && element.imageAfter
       ? `https://api.vaitstony.art${element.imageBefore.data.attributes.url}`
       : imageSample;
+
   const secondImage =
     element && element.imageAfter
       ? `https://api.vaitstony.art${element.imageAfter.data.attributes.url}`
@@ -14,6 +16,39 @@ export const ComparisonSlider = ({ element, staticText }) => {
 
   const handleChange = (e) => {
     setSliderValue(e.target.value);
+  };
+
+  const switchImages = () => {
+    let id = null;
+    let value;
+
+    const frameForward = () => {
+      if (value === 100) {
+        clearInterval(id);
+      } else {
+        value++;
+        setSliderValue(value);
+      }
+    };
+
+    const frameBackward = () => {
+      if (value === 0) {
+        clearInterval(id);
+      } else {
+        value--;
+        setSliderValue(value);
+      }
+    };
+
+    if (sliderValue > 50) {
+      value = sliderValue;
+      clearInterval(id);
+      id = setInterval(frameBackward, 10);
+    } else {
+      value = sliderValue;
+      clearInterval(id);
+      id = setInterval(frameForward, 10);
+    }
   };
 
   return (
@@ -40,11 +75,19 @@ export const ComparisonSlider = ({ element, staticText }) => {
         />
         <div
           className="slider-button"
-          style={{ left: `calc(${sliderValue}% - (14px + .5vmin))` }}
+          style={{
+            left: `calc(${sliderValue}% + (${
+              (sliderValue - 50) / 15
+            }px - 5px ))`,
+          }}
         ></div>
       </div>
-      <div className="comparison__description">
-        <span className="comparison__text">
+      <div
+        className={`comparison__description ${
+          sliderValue <= 50 ? "before_active" : "after_active"
+        }`}
+      >
+        <span className="comparison__text_first" onClick={switchImages}>
           {!!element.textBefore
             ? element.textBefore
             : staticText.comparisonSliderTextBefore}
@@ -57,7 +100,7 @@ export const ComparisonSlider = ({ element, staticText }) => {
           value={sliderValue}
           onChange={handleChange}
         />
-        <span className="comparison__text">
+        <span className="comparison__text_second" onClick={switchImages}>
           {!!element.textAfter
             ? element.textAfter
             : staticText.comparisonSliderTextAfter}

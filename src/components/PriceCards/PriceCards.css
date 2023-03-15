@@ -82,7 +82,7 @@
   transition: all 0.2s ease-out;
 }
 
-.price__card:hover {
+.price__card:last-of-type {
   background-color: var(--color-black);
   color: var(--color-white);
 }
@@ -150,6 +150,7 @@
   width: 100%;
   transition: all 0.2s ease-out;
   letter-spacing: 0.03rem;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1350px) {
@@ -167,8 +168,17 @@
 }
 
 .price__button:hover {
+  color: var(--color-white);
+  background-color: var(--color-accent);
+}
+
+.price__card:last-of-type .price__button {
   background-color: var(--color-accent);
   color: var(--color-white);
+}
+
+.price__card:last-of-type .price__button:hover {
+  color: var(--color-black);
 }
 
 .price__text {

@@ -27,8 +27,12 @@
   top: 0;
   display: flex;
   transition: all 0.5s ease-out;
-
+  left: 120vw;
   --index: 1;
+  transition: left 1s ease-out;
+}
+
+.carousel__slides.active {
   left: calc(-10vw + (var(--index) * -48vw));
 }
 
@@ -53,23 +57,39 @@
   }
 }
 
+.carousel____img-wrapper {
+  overflow: hidden;
+}
+
+
 .carousel__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform .4s ease-out;
+}
+
+.carousel__img:hover {
+  transform: scale(1.2);
 }
 
 .carousel__description-container {
   display: flex;
-  justify-content: flex-start;
-  writing-mode: vertical-rl;
+  flex-direction: row;
+  writing-mode: vertical-lr;
   transform: rotate(180deg);
+  height: 100%;
+  padding: 0 15px 0 0;
+  transition: all .4s ease-out;
 }
 
 .carousel__description {
-  margin: 50px 20px 0 0px;
   font: var(--font-ml);
-  position: relative;
+  transition: all .4s ease-out;
+}
+
+.carousel__slide:hover .carousel__description {
+ color: var(--color-accent);
 }
 
 @media screen and (max-width: 600px) {
@@ -78,15 +98,38 @@
   }
 }
 
-.carousel__description::before {
-  content: "";
-  top: -50px;
-  left: 10px;
-  display: block;
-  position: absolute;
+.carousel__description-line {
   width: 1px;
-  height: 40px;
-  background: var(--color-accent);
+  border-top: 1px solid var(--color-white);
+  height: 45px;
+  background-color: var(--color-white);
+  margin: 0 auto 22px;
+  transition: all .4s ease-out;
+}
+
+.carousel__slide:hover .carousel__description-line {
+  height: 0px;
+  background-color: var(--color-accent);
+  opacity: 0;
+  margin: 0 auto 0;
+}
+
+.carousel__description-line_after {
+  width: 1px;
+  border-top: 1px solid var(--color-white);
+  height: 0px;
+  opacity: 0;
+  background-color: var(--color-white);
+  margin: 0 auto 22px;
+  transition: all .4s ease-out;
+  border: none;
+}
+
+.carousel__slide:hover .carousel__description-line_after {
+  height: 45px;
+  opacity: 1;
+  margin: 22px auto 0;
+  background-color: var(--color-accent);
 }
 
 .carousel__index-container {
@@ -101,9 +144,7 @@
   .carousel__index-container {
     display: none;
   }
-  
 }
-
 
 .carousel__index-item {
   font: var(--font-xs);

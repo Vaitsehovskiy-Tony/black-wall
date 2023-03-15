@@ -25,7 +25,7 @@ export const FormContainer = ({ formParametrs }) => {
   const emailField = {
     label: content.formData.contactText,
     pattern:
-      /(\(?\+[0-9]{1,3}\)? ?-?[0-9]{1,3} ?-?[0-9]{3,5} ?-?[0-9]{4}( ?-?[0-9]{3})? ?(\w{1,10}\s?\d{1,6})?)||(\(?\+[0-9]{1,3}\)? ?-?[0-9]{1,3} ?-?[0-9]{3,5} ?-?[0-9]{4}( ?-?[0-9]{3})? ?(\w{1,10}\s?\d{1,6})?)/,
+      /(\(?\+[0-9]{1,3}\)? ?-?[0-9]{1,3} ?-?[0-9]{3,5} ?-?[0-9]{4}( ?-?[0-9]{3})? ?(\w{1,10}\s?\d{1,6})?)||(^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$)/,
     cssName: "email",
     minLength: 7,
     maxLength: 30,
@@ -60,7 +60,7 @@ export const FormContainer = ({ formParametrs }) => {
             value="Квартира"
             checked
           />
-          {content.formData.array[0]}
+          <span className="form__radio-label">{content.formData.array[0]}</span>
         </label>
         <label className="form__radio-container_2">
           <input
@@ -69,7 +69,7 @@ export const FormContainer = ({ formParametrs }) => {
             type="radio"
             value="Иное"
           />
-          {content.formData.array[1]}
+          <span className="form__radio-label">{content.formData.array[1]} </span> 
         </label>
       </div>
       <div className="form__submit-wrapper">

@@ -1,15 +1,19 @@
 import { useEffect, useState } from "react";
 
 export const useScrollDirection = () => {
-  const [scrollDirection, setScrollDirection] = useState(null);
+  const [scrollDirection, setScrollDirection] = useState("unset");
 
   useEffect(() => {
+    // debugger;
     let lastScrollY = window.pageYOffset;
 
     const updateScrollDirection = () => {
       const scrollY = window.pageYOffset;
       const direction = scrollY > lastScrollY ? "down" : "up";
-      if (
+
+      if (scrollY === 0) {
+        setScrollDirection("unset");
+      } else if (
         direction !== scrollDirection &&
         (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10)
       ) {
@@ -22,6 +26,6 @@ export const useScrollDirection = () => {
       window.removeEventListener("scroll", updateScrollDirection); // clean up
     };
   }, [scrollDirection]);
-
+  console.log(scrollDirection)
   return scrollDirection;
 };

@@ -22,6 +22,15 @@
   }
 }
 
+@keyframes project-hero-fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .hero {
   height: 900px;
   position: relative;
@@ -33,6 +42,9 @@
   }
 }
 
+.project-page .hero {
+  animation: project-hero-fadein .25s ease-out forwards;
+}
 
 .hero__bg {
   width: 100vw;

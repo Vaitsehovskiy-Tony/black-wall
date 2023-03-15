@@ -5,7 +5,6 @@ import { ModalContext } from "../../utils/getModalContext";
 import { useContext } from "react";
 
 export const Modal = ({ navbar, orderForm, prices, headerStyle }) => {
-
   const { modalState, handleModal, modalContent, handleModalContent } =
     useContext(ModalContext);
 
@@ -27,6 +26,10 @@ export const Modal = ({ navbar, orderForm, prices, headerStyle }) => {
             prices={prices}
           />
         );
+      // case "gallery":
+      //   return <GalleryModal />;
+      // case "details":
+      //   return <DetailsModal />;
       default:
         return (
           <NavBarModal
@@ -36,7 +39,7 @@ export const Modal = ({ navbar, orderForm, prices, headerStyle }) => {
           />
         );
     }
-  }
+  };
 
   return (
     <section className={`modal ${!!modalState ? "active" : "hidden"}`}>

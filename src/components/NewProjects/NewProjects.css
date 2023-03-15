@@ -39,9 +39,10 @@
   }
 }
 
-.new-projects__item-container .project-item__img {
+.new-projects__item-container .project-item__img-wrapper {
   display: block;
   width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-width: 800px) {
@@ -59,7 +60,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .new-projects__item-container .project-item__img {
+  .new-projects__item-container .project-item__img-wrapper {
     display: block;
     width: 100%;
     height: 330px;

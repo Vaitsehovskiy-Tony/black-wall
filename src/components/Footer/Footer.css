@@ -81,19 +81,11 @@
   text-transform: lowercase;
   display: inline-block;
   font: var(--font-h-m);
-
+  text-align: end;
 }
+
 .footer__contacts-email:first-letter {
   text-transform: uppercase;
-}
-
-@media screen and (max-width: 600px) {
-  .footer__contacts-email {
-    font: var(--font-l);
-    font-size: clamp(.75rem, 5vw, 1.25rem);
-    color: var(--color-white);
-    margin: 0 0 20px;
-  }
 }
 
 .footer__contacts-link {
@@ -115,6 +107,23 @@
   }
 }
 
+
+@media screen and (max-width: 600px) {
+  .footer__contacts-email {
+    font-size: 1.2rem;
+    color: var(--color-white);
+    margin: 0 0 20px;
+    width: fit-content;
+  }
+}
+
+
+.footer__contacts-pic {
+  margin: auto 10px auto 0;
+  height: 20px;
+}
+
+
 @media screen and (max-width: 600px) {
   .footer__contacts-link {
     font-size: 0.75rem;
@@ -124,12 +133,8 @@
 
   .footer__contacts-pic {
     width: 15px;
+    height: 15px;
   }
-}
-
-.footer__contacts-pic {
-  margin: auto 10px auto 0;
-  height: 20px;
 }
 
 .footer__hr {

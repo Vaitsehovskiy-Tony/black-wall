@@ -6,7 +6,6 @@ import leftArrow from "../../images/arrow_l_mini.webp";
 import rightArrow from "../../images/arrow_r_mini.webp";
 
 export const OtherProjects = ({ content, staticText }) => {
-
   const [current, setCurrent] = useState(0);
   const isLoop = false;
   const swipeHandlers = useSwipeable({
@@ -32,9 +31,7 @@ export const OtherProjects = ({ content, staticText }) => {
     } else if (event.keyCode === 39) {
       nextSlide();
     }
-  };  
-
-  console.log(content, staticText )
+  };
 
   return (
     <section className="carousel-projects">
@@ -50,9 +47,17 @@ export const OtherProjects = ({ content, staticText }) => {
       >
         {content.map((item, index) => (
           <div className={`carousel-projects__slide `} key={index}>
-            <img className="carousel-projects__img" src={getImg(item)} alt="slide img" />
+            <div className="carousel-projects__img-wrapper">
+              <img
+                className="carousel-projects__img"
+                src={getImg(item)}
+                alt="slide img"
+              />
+            </div>
             <div className="carousel-projects__description-container">
-              <h6 className="carousel-projects__description-title">{item.title}</h6>
+              <h6 className="carousel-projects__description-title">
+                {item.title}
+              </h6>
               <span className="carousel-projects__description">
                 {item.subtitle}
               </span>
@@ -62,10 +67,20 @@ export const OtherProjects = ({ content, staticText }) => {
       </div>
       <div className="carousel-projects__bottom-wrapper">
         <div className="carousel-projects__controls">
-          <img src={leftArrow} onClick={previousSlide} className="carousel-projects__arrow" alt="arrow"/>
-          <img src={rightArrow} onClick={nextSlide} className="carousel-projects__arrow" alt="arrow"/>
+          <img
+            src={leftArrow}
+            onClick={previousSlide}
+            className="carousel-projects__arrow"
+            alt="arrow"
+          />
+          <img
+            src={rightArrow}
+            onClick={nextSlide}
+            className="carousel-projects__arrow"
+            alt="arrow"
+          />
         </div>
-        <ProgressBar length={content.length - 1} index={current}/>
+        <ProgressBar length={content.length - 1} index={current} />
       </div>
     </section>
   );

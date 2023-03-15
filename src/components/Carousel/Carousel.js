@@ -35,7 +35,7 @@ export const Carousel = ({ content }) => {
   return (
     <div className="carousel wrapper">
       <div
-        className="carousel__slides"
+        className="carousel__slides animate"
         style={{
           "--index": current,
         }}
@@ -45,11 +45,19 @@ export const Carousel = ({ content }) => {
       >
         {content.map((item, index) => (
           <figure className={`carousel__slide `} key={index}>
-            <img className="carousel__img" src={getImg(item)} alt="slide img" />
+            <div className="carousel____img-wrapper">
+              <img
+                className="carousel__img"
+                src={getImg(item)}
+                alt="slide img"
+              />
+            </div>
             <figcaption className="carousel__description-container">
+              <div className="carousel__description-line" />
               <span className="carousel__description">
                 {item.sliderDescription}
               </span>
+              <div className="carousel__description-line_after" />
             </figcaption>
           </figure>
         ))}

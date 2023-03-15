@@ -3,17 +3,22 @@ import blackBurger from "../../../images/burger_black.webp";
 import whiteCross from "../../../images/close_white.webp";
 import blackCross from "../../../images/close_black.webp";
 
-export const HeaderBurger = ({ headerStyle, modalState, handleModal, handleModalContent }) => {
+export const HeaderBurger = ({
+  headerStyle,
+  modalState,
+  handleModal,
+  handleModalContent,
+}) => {
   const burger = headerStyle === "light" ? whiteBurger : blackBurger;
   const cross = headerStyle === "light" ? whiteCross : blackCross;
-  
+
   if (!!modalState) {
     return (
       <img
         className="header__icon"
         src={cross}
         onClick={handleModal}
-        alt='cross'
+        alt="cross"
       />
     );
   } else {
@@ -21,8 +26,11 @@ export const HeaderBurger = ({ headerStyle, modalState, handleModal, handleModal
       <img
         className="header__icon"
         src={burger}
-        onClick={()=>{handleModalContent("navbar"); handleModal()}}
-        alt='burger'
+        onClick={() => {
+          handleModalContent("navbar");
+          handleModal();
+        }}
+        alt="burger"
       />
     );
   }

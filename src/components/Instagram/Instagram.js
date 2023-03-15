@@ -62,7 +62,7 @@ export const Instagram = ({ content }) => {
       <h2 className="instagram__title">{content.title}</h2>
       <div className="instagram__line" />
       <div
-        className="instagram__slider"
+        className="instagram__slider animate"
         style={{
           "--index": current,
         }}
