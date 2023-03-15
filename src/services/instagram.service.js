@@ -2,7 +2,7 @@ import axios from "axios";
 const fetchMediaFields = (accessToken, fields) => {
   
   const params = new URLSearchParams();
-  const token = "IGQVJWYmlyNmhVM0FZARWhyXzJFN2pwTjhhRGZAaNkFpWnhkeGJXUzdQVW5VTU1udEUtQWt3aXJVeVllWW9lSS03UEgxc2ZA1elllUC1JYnYxckpwN0pTcEpoXzNEdHZACMmpncDRoNmVWRWc0LXJCeW9CcgZDZD";
+  const token = "";
 
   params.append("access_token", token);
   params.append("fields", ["media_url", "permalink", "media_type"].join(","));
@@ -18,7 +18,7 @@ const fetchMediaFields = (accessToken, fields) => {
 };
 
 export const makeInstagramFetch = async () => {
-  const token = "IGQVJWYmlyNmhVM0FZARWhyXzJFN2pwTjhhRGZAaNkFpWnhkeGJXUzdQVW5VTU1udEUtQWt3aXJVeVllWW9lSS03UEgxc2ZA1elllUC1JYnYxckpwN0pTcEpoXzNEdHZACMmpncDRoNmVWRWc0LXJCeW9CcgZDZD";
+  const token = "";
   const requestOptions = {
     method: "get",
     headers: {
