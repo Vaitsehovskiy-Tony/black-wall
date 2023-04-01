@@ -1,10 +1,16 @@
+import { useEffect } from "react";
 import { PageTitle } from "../common/PageTitle/PageTitle";
 
-export const Hero = ({ content, imageSample }) => {
+export const Hero = ({ content, imageSample, handleHeroState }) => {
   const image =
     content && content.picture
       ? `https://api.vaitstony.art${content.picture.data.attributes.url}`
       : imageSample;
+  // useEffect(() => {
+  //   //preloading image
+  //     const img = new Image();
+  //     img.src = image;
+  // }, []);
 
   return (
     <section className="hero">

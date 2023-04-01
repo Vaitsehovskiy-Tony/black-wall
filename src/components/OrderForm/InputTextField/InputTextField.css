@@ -26,7 +26,16 @@
   border: none;
   color: var(--color-grey);
   border-bottom: 1px solid var(--color-grey);
+  position: relative;
+  z-index: 2;
 }
+
+@media screen and (min-width:750px) {
+  .modal__container .field__input {
+    width: 100%;
+  }
+}
+
 
 @media screen and (max-width: 900px) {
   .field__input {
@@ -37,7 +46,7 @@
 @media screen and (max-width: 600px) {
   .field__input {
     margin: 0 0 18px;
-    width: 100%;
+    width: 95%;
   }
 }
 

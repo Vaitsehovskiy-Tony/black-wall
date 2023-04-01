@@ -1,6 +1,18 @@
 @import url("../common/Avatars/Avatars.css");
 @import url("./InputTextField/InputTextField.css");
 
+@keyframes successForm {
+  0% {
+    color: initial;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: initial;
+  }
+}
+
 .form {
   margin: auto;
   background-color: var(--color-black);
@@ -16,13 +28,12 @@
 @media screen and (max-width: 600px) {
   .main-page .form {
     margin: 0 auto;
-    padding: 0 15px ;
+    padding: 0 15px;
   }
 }
 
-
 @media screen and (max-width: 600px) {
- .form {
+  .form {
     margin: 0 auto;
     padding: 60px 15px 120px;
   }
@@ -35,10 +46,12 @@
     "subtitle form"
     "avatar form"
     "avatar form";
-    justify-content: space-between;
+  justify-content: space-between;
   padding: 240px 46px 240px;
   max-width: 1440px;
   margin: auto;
+  transition: all 0.25s ease-out;
+  box-sizing: border-box;
   /* box-sizing: border-box; */
 }
 
@@ -215,12 +228,14 @@
 .form__radio-container_1 {
   font-size: 1.125rem;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .form__radio-container_2 {
   margin: 0 0 0 35px;
   font-size: 1.125rem;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
@@ -238,8 +253,8 @@
   background-color: transparent;
   border: 0.32rem solid var(--color-black);
   outline: 0.125rem solid var(--color-grey);
-    border-radius: 50%;
-    transition: all .25s ease-out;
+  border-radius: 50%;
+  transition: all 0.25s ease-out;
 }
 
 .form__radio:hover {
@@ -255,16 +270,57 @@
 
 .form__radio-label {
   color: var(--color-grey);
+  transition: all 0.25s ease-out;
 }
 .form__radio-label:hover {
   color: var(--color-l-grey);
 }
 .form__radio:checked ~ .form__radio-label {
-  color: #F0F3F5;
+  color: #f0f3f5;
+}
+
+@media screen and (min-width: 750px) {
+  .page_light .modal .form__radio {
+    border: 0.32rem solid var(--color-white3);
+    cursor: pointer;
+  }
+
+  .page_light .modal-prices__item-container:hover .form__radio,
+  .page_light .modal .form__radio-container_1:hover .form__radio,
+  .page_light .modal .form__radio-container_2:hover .form__radio {
+    outline: 0.125rem solid var(--color-grey);
+    border: 0.32rem solid var(--color-white3);
+  }
+
+  .page_light .modal .form__radio:checked {
+    border: 0.32rem solid var(--color-white3);
+    background-color: var(--color-accent);
+    outline: 0.125rem solid var(--color-accent);
+  }
+
+  .page_light .modal .form__radio-label {
+    color: var(--color-grey);
+  }
+
+  .page_light .modal .form__radio-label:hover {
+    color: var(--color-accent);
+  }
+
+  .page_light .modal .form__radio:checked ~ .form__radio-label {
+    color: var(--color-black);
+  }
+
+  .page_light .modal .field__input {
+    color: var(--color-black);
+  }
 }
 
 .form__submit-wrapper {
   grid-area: submit;
+}
+
+.page__wrapper > .form .form__submit-wrapper_go-to {
+  display: none;
 }
 
 .form__submit-container {
@@ -277,6 +333,11 @@
   white-space: nowrap;
   padding: 0 0 9px;
   cursor: pointer;
+  transition: all 0.25s ease-out;
+}
+
+.form__submit-container:hover {
+  border-bottom: 1px solid var(--color-accent);
 }
 
 .form__submit {
@@ -289,7 +350,7 @@
   text-align: start;
   line-height: 1;
   cursor: pointer;
-  transition: color .25s ease-out;
+  transition: color 0.25s ease-out;
 }
 
 .form__submit-container:hover .form__submit {
@@ -313,6 +374,53 @@
 }
 
 .form__submit-arrow {
-  margin: auto 0;
-  height: 12.8px;
+  background-image: url(../../images/right-arr.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.25s ease-out;
+}
+
+.form__submit-arrow:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url(../../images/right-arr_hover.webp);
+  background-color: #191919;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.page__wrapper .form__submit-container:hover .form__submit-arrow {
+  margin: 0 0 0 9px;
+}
+
+.form__submit-container:hover .form__submit-arrow:after {
+  opacity: 1;
+}
+
+.form__container.price__options {
+  grid-template-areas:
+    "price-options price-options"
+    "name    name     "
+    "contact   country  "
+    "choose-type choose-type"
+    "types     .      "
+    "submit    submit   ";
+}
+
+.modal-prices {
+  grid-area: price-options;
+  margin: 0 0 40px;
 }

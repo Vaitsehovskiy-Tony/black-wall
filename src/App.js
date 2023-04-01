@@ -10,28 +10,56 @@ import { PageStyles } from "./utils/getPageStyle";
 import { Preloader } from "./components/common/Preloader/Preloader";
 import { useMultiFetch } from "./hooks/useMultiFetch";
 import { Modal } from "./components/Modal/Modal";
-import { useEffect } from "react";
-import {SEO} from "./components/common/SEO/SEO";
+import { useEffect, useState } from "react";
+import { SEO } from "./components/common/SEO/SEO";
 import { animationInspector } from "./services/animationInspector";
 
+function createImage(source) {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.onload = resolve;
+    image.onerror = reject;
+    image.src = source;
+  });
+}
 
 
 function App() {
   const { header, page } = PageStyles();
   const { state, content } = useMultiFetch();
-  console.log(content)
-  // animationInspector();
+  const [heroState, setHeroState] = useState(false);
+  const handleHeroState = () => {
+    setHeroState(!heroState);
+  };
+
+  // This will run after the page has mounted
+  // useEffect(() => {
+  //   const image = new Image();
+  //   image.src =
+  //     "https://api.vaitstony.art/uploads/hero_Rubinshtejna_ffc22a16df.webp";
+  //   image.onload = () => {
+  //     console.log(image, heroState);
+  //     setHeroState(true);
+  //   };
+  // }, [setHeroState]);
+
+  createImage(
+    "https://api.vaitstony.art/uploads/hero_Rubinshtejna_ffc22a16df.webp"
+  ).then((results) => {
+    setHeroState(true);
+    // console.log("finished", results);
+  });
 
   useEffect(() => {
     const onScroll = () => {
-      animationInspector()
+      animationInspector();
     };
     window.addEventListener("scroll", onScroll);
 
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  if (state === "loading") {
+  if (state === "loading" || !heroState) {
     return <Preloader />;
   }
 
@@ -49,27 +77,14 @@ function App() {
 
   const seoData = {
     title: "Black Wall",
-    description: "BLACK WALL is an interior design and architecture studio. Our team designs residential and public interiors individually designed.",
+    description:
+      "BLACK WALL is an interior design and architecture studio. Our team designs residential and public interiors individually designed.",
     keywords: "Design, Interior, Architecture",
-    image: "https://api.vaitstony.art/uploads/091_A1640_522f5c2e62.webp"
-  }
-
-  // const handleScroll = () => {
-  //   useEffect(() => animationInspector());
-  // }
-
-  // useEffect(() => {
-  //   const onScroll = () => {
-  //     animationInspector()
-  //   };
-  //   window.addEventListener("scroll", onScroll);
-
-  //   return () => window.removeEventListener("scroll", onScroll);
-  // }, []);
-
+    image: "https://api.vaitstony.art/uploads/091_A1640_522f5c2e62.webp",
+  };
 
   return (
-    <div className={`page page_${page}`}>
+    <div className={`page page_${page} ${heroState ? "animate" : ""}`}>
       <SEO seoData={seoData} />
       <Header
         headerStyle={header}
@@ -77,14 +92,18 @@ function App() {
         orderFormContent={content.orderForm}
         pricesModal={content.prices.priceCard}
       />
-      <Modal
-        navbar={content.header.navbar}
-        orderForm={content.orderForm}
-        prices={content.prices.priceCard}
-        headerStyle={header}
-      />
       <Routes>
-        <Route exact path={"/"} element={<Main content={content} />}></Route>
+        <Route
+          exact
+          path={"/"}
+          element={
+            <Main
+              content={content}
+              heroState={heroState}
+              handleHeroState={handleHeroState}
+            />
+          }
+        ></Route>
       </Routes>
       <Routes>
         <Route
@@ -135,6 +154,12 @@ function App() {
           }
         ></Route>
       </Routes>
+      <Modal
+        navbar={content.header.navbar}
+        orderForm={content.orderForm}
+        prices={content.prices.priceCard}
+        headerStyle={header}
+      />
       <Footer content={content.footer} />
     </div>
   );

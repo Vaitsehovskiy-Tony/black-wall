@@ -1,10 +1,13 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
-import rightArrow from "../../images/right-arrow.webp";
-import leftArrow from "../../images/left-arrow.webp";
 import { ProgressBar } from "../common/ProgressBar/ProgressBar";
 
-export const Carousel = ({ content }) => {
+export const Carousel = ({ content, projectsList }) => {
+
+  const projects = projectsList.slice(0, 9);
+
+
   const [current, setCurrent] = useState(-1);
   const isLoop = false;
   const swipeHandlers = useSwipeable({
@@ -13,7 +16,7 @@ export const Carousel = ({ content }) => {
   });
 
   const nextSlide = () => {
-    return current < content.length - 2 ? setCurrent(current + 1) : "";
+    return current < projects.length - 2 ? setCurrent(current + 1) : "";
   };
 
   const previousSlide = () => {
@@ -21,7 +24,7 @@ export const Carousel = ({ content }) => {
   };
 
   const getImg = (i) => {
-    return `https://api.vaitstony.art${i.sliderImage.data.attributes.url}`;
+    return `https://api.vaitstony.art${i.coverImage.data.attributes.url}`;
   };
 
   const handleKeyPress = (event) => {
@@ -43,30 +46,30 @@ export const Carousel = ({ content }) => {
         onKeyDown={handleKeyPress}
         tabIndex={0}
       >
-        {content.map((item, index) => (
-          <figure className={`carousel__slide `} key={index}>
-            <div className="carousel____img-wrapper">
-              <img
-                className="carousel__img"
-                src={getImg(item)}
-                alt="slide img"
-              />
-            </div>
-            <figcaption className="carousel__description-container">
-              <div className="carousel__description-line" />
-              <span className="carousel__description">
-                {item.sliderDescription}
-              </span>
-              <div className="carousel__description-line_after" />
-            </figcaption>
-          </figure>
+        {projects.map((item, index) => (
+          <Link to={`/project_` + item.projectId}>
+            <figure className={`carousel__slide `} key={index}>
+              <div className="carousel____img-wrapper">
+                <img
+                  className="carousel__img"
+                  src={getImg(item)}
+                  alt="slide img"
+                />
+              </div>
+              <figcaption className="carousel__description-container">
+                <div className="carousel__description-line" />
+                <span className="carousel__description">
+                  {item.title}
+                </span>
+                <div className="carousel__description-line_after" />
+              </figcaption>
+            </figure>
+          </Link>
         ))}
       </div>
       <div className="carousel__index-container">
-        <img
-          src={leftArrow}
-          alt=""
-          className="carousel__arrow"
+        <div
+          className="carousel__arrow carousel__arrow_left"
           onClick={previousSlide}
         />
         <span className="carousel__index-item">
@@ -74,16 +77,14 @@ export const Carousel = ({ content }) => {
         </span>
         <hr className="carousel__index-line" />
         <span className="carousel__index-item">
-          {current < 10 ? `0${content.length}` : content.length}
+          {current < 10 ? `0${projects.length}` : projects.length}
         </span>
-        <img
-          src={rightArrow}
-          alt="carousel arrow"
-          className="carousel__arrow"
+        <div
+          className="carousel__arrow carousel__arrow_right"
           onClick={nextSlide}
         />
       </div>
-      <ProgressBar length={content.length} index={current + 1} />
+      <ProgressBar length={projects.length} index={current + 1} />
     </div>
   );
 };

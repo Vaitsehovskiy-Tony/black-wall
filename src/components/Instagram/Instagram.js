@@ -93,11 +93,15 @@ export const Instagram = ({ content }) => {
           alt="instagram button"
         />
       </div>
-      <a
+      <a className="instagram__link-container">
+      <span
         className="instagram__link"
         href={"https://www.instagram.com/blackwall.interior/"}
+        
       >
         {"Instagram black wall"}
+      </span>
+      <div className="form__submit-arrow"/>
       </a>
     </section>
   );

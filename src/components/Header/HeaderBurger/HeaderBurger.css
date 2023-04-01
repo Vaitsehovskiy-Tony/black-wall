@@ -5,3 +5,9 @@
     opacity: 0.85;
     cursor: pointer;
 }
+
+@media screen and (min-width: 750px) {
+    .modal.hidden .header__icon {
+        display: none;
+    }    
+}

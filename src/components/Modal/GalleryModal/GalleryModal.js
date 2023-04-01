@@ -4,7 +4,6 @@ import { useState,useLayoutEffect, useDebugValue } from "react";
 import { useSwipeable } from "react-swipeable";
 
 export const GalleryModal = ({ modalProps }) => {
-  console.log(1);
   const [current, setCurrent] = useState();
 
   useLayoutEffect(() => {

@@ -1,8 +1,8 @@
 import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
+import { PricesElement } from "../../Modal/PricesElement/PricesElement";
 import { InputTextField } from "../InputTextField/InputTextField";
-
-export const FormContainer = ({ formParametrs }) => {
+export const FormContainer = ({ formParametrs, prices }) => {
   const {
     handleSubmit,
     content,
@@ -15,13 +15,13 @@ export const FormContainer = ({ formParametrs }) => {
 
   const nameField = {
     label: content.formData.nameText,
-    pattern: /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%^&*(){}|~<>;:[\]]{2,}$/,
+    pattern: /^[\p{L}\s\p{M}'-]{0,50}$/,
     cssName: "name",
     minLength: 1,
     maxLength: 20,
     register,
   };
-  
+
   const emailField = {
     label: content.formData.contactText,
     pattern:
@@ -34,7 +34,7 @@ export const FormContainer = ({ formParametrs }) => {
 
   const countryField = {
     label: content.formData.countryText,
-    pattern: /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%^&*(){}|~<>;:[\]]{2,}$/,
+    pattern: /^[\p{L}\s\p{M}'-]{0,50}$/,
     cssName: "country",
     minLength: 2,
     maxLength: 30,
@@ -44,9 +44,10 @@ export const FormContainer = ({ formParametrs }) => {
   return (
     <form
       ref={form}
-      onSubmit={handleSubmit(sendEmail)}
-      className="form__container"
+      onSubmit={(e) => handleSubmit(sendEmail(e))}
+      className={`form__container ${!!prices ? "price__options" : ""}`}
     >
+      {!!prices ? <PricesElement prices={prices} register={register}/> : ""}
       <InputTextField fieldData={nameField} />
       <InputTextField fieldData={emailField} />
       <InputTextField fieldData={countryField} />
@@ -57,7 +58,7 @@ export const FormContainer = ({ formParametrs }) => {
             {...register("Тип объекта", { required: true })}
             className="form__radio"
             type="radio"
-            value="Квартира"
+            value={content.formData.array[0]}
             checked
           />
           <span className="form__radio-label">{content.formData.array[0]}</span>
@@ -67,24 +68,26 @@ export const FormContainer = ({ formParametrs }) => {
             {...register("Тип объекта", { required: true })}
             className="form__radio"
             type="radio"
-            value="Иное"
+            value={content.formData.array[1]}
           />
-          <span className="form__radio-label">{content.formData.array[1]} </span> 
+          <span className="form__radio-label">
+            {content.formData.array[1]}{" "}
+          </span>
         </label>
       </div>
       <div className="form__submit-wrapper">
         <div
           className="form__submit-container"
-          onClick={() => {
-            handleSubmit(sendEmail);
-          }}
+          // onClick={
+          //   handleSubmit((event) => sendEmail(event))
+          // }
         >
           <input
             className="form__submit"
             type="submit"
             value={dynamicContent.buttonText}
           />
-          <img src={arrow} alt="right arrow" className="form__submit-arrow" />
+          <div className="form__submit-arrow" />
         </div>
       </div>
     </form>

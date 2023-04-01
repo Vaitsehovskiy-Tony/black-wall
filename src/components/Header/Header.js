@@ -3,10 +3,30 @@ import { Navbar } from "../common/Navbar/Navbar";
 import { HeaderCTABtn } from "./HeaderCTABtn/HeaderCTABtn";
 import { HeaderLanguageSelector } from "./HeaderLanguageSelector/HeaderLanguageSelector";
 import { useScrollDirection } from "../../hooks/useScrollDirection";
+import { useContext, useEffect } from "react";
+import { ElementsContext } from "../../utils/getElementsContext";
+import { useLocation } from "react-router-dom";
 
 export const Header = ({ headerStyle, content }) => {
   const scrollDirection = useScrollDirection();
+  const { modalState, handleModal } = useContext(ElementsContext).modal;
+  const isNarrow = window.matchMedia("screen and (max-width: 750px)");
+  const { pathname } = useLocation();
+  const cssClass = pathname.split('_')[0].substring(1) || 'main';
   let headerAnimation = "show";
+  let dynamicHeaderStyle = "light";
+
+  useEffect(() => {
+    if (!!modalState) {
+      handleModal();
+    }
+  }, [pathname]);
+
+  if (!!modalState && isNarrow.matches) {
+    dynamicHeaderStyle = "light";
+  } else {
+    dynamicHeaderStyle = headerStyle || "light";
+  }
 
   switch (scrollDirection) {
     case "down":
@@ -16,27 +36,17 @@ export const Header = ({ headerStyle, content }) => {
       headerAnimation = "transparent";
   }
 
-  // const handleModal = (type) => {
-  //   if (type === "orderForm") {
-  //     setModalState({ state: modalState.state, content: "orderForm" });
-  //   } else if (type === "orderFormFullscreen") {
-  //     setModalState({ state: !modalState.state, content: "orderForm"});
-  //   } else {
-  //     setModalState({ state: !modalState.state, content: "navbar" });
-  //   }
-  // };
-
   return (
     <header
-      className={`header header_${headerStyle} ${headerAnimation}`}
+      className={`header header_${dynamicHeaderStyle} ${headerAnimation} ${cssClass}`}
     >
       <div className="header__wrapper">
-        <Logo headerStyle={headerStyle || "light"} />
+        <Logo headerStyle={dynamicHeaderStyle || "light"} />
         <Navbar navbar={content.navbar} />
-        <HeaderLanguageSelector headerStyle={headerStyle || "light"} />
+        <HeaderLanguageSelector headerStyle={dynamicHeaderStyle || "light"} />
         <HeaderCTABtn
           bttnText={content.orderProject}
-          headerStyle={headerStyle || "light"}
+          headerStyle={dynamicHeaderStyle || "light"}
         />
       </div>
     </header>

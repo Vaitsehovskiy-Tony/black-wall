@@ -14,15 +14,10 @@
   margin: auto 0;
 }
 
-.page_light .modal .form {
-  background: var(--color-white3);
-  color: var(--color-black);
-}
 
-.page_light .modal .form__radio:checked {
-  border: 0.32rem solid var(--color-white3);
-}
-
-.page_light .modal .form__submit {
-  color: var(--color-black);
+@media screen and (min-width: 750px) {
+  .page_light .modal .form {
+    background: var(--color-white3);
+    color: var(--color-black);
+  }
 }

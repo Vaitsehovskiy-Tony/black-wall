@@ -6,19 +6,19 @@ import { OrderForm } from "../../components/OrderForm/OrderForm";
 import { Carousel } from "../../components/Carousel/Carousel";
 import { ContactUs } from "../../components/ContactUs/ContactUs";
 import { Instagram } from "../../components/Instagram/Instagram";
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useState } from "react";
 
-export const Main = ({ content }) => {
+export const Main = ({ content, handleHeroState }) => {
+
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
   }, []);
 
   return (
-    <main className="main-page page__wrapper">
-      <Hero content={content.mainPage.hero} />
+    <main className={`main-page page__wrapper`}>
+      <Hero content={content.mainPage.hero} handleHeroState={handleHeroState}/>
       <About content={content.mainPage.about} />
       <Carousel
-        content={content.mainPage.slides}
         projectsList={content.projectsList}
       />
       <NewProjects
@@ -35,7 +35,6 @@ export const Main = ({ content }) => {
       <OrderForm
         content={content.orderForm}
         display={"none"}
-        onClick={() => console.log("click")}
       />
     </main>
   );

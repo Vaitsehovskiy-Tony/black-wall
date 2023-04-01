@@ -17,7 +17,7 @@
   border-bottom: none;
 }
 
-.modal-prices__input {
+/* .modal-prices__input {
   appearance: none;
   transform: translateY(0.075rem);
   width: 1rem;
@@ -31,12 +31,13 @@
   background-color: var(--color-accent);
   border: 0.32rem solid var(--color-white3);
   outline: 0.125rem solid var(--color-accent);
-}
+} */
 .modal-price__item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  cursor: pointer;
 }
 .modal-prices__title {
   font: var(--font-h-s);

@@ -26,6 +26,5 @@ export const useScrollDirection = () => {
       window.removeEventListener("scroll", updateScrollDirection); // clean up
     };
   }, [scrollDirection]);
-  console.log(scrollDirection)
   return scrollDirection;
 };

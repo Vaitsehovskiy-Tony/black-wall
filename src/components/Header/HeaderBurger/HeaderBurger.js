@@ -2,6 +2,7 @@ import whiteBurger from "../../../images/burger_white.webp";
 import blackBurger from "../../../images/burger_black.webp";
 import whiteCross from "../../../images/close_white.webp";
 import blackCross from "../../../images/close_black.webp";
+import { useLocation } from "react-router-dom";
 
 export const HeaderBurger = ({
   headerStyle,
@@ -9,8 +10,12 @@ export const HeaderBurger = ({
   handleModal,
   handleModalContent,
 }) => {
+  const location = useLocation();
   const burger = headerStyle === "light" ? whiteBurger : blackBurger;
-  const cross = headerStyle === "light" ? whiteCross : blackCross;
+  const cross =
+    headerStyle === "light" && !location.pathname.includes("project")
+      ? whiteCross
+      : blackCross;
 
   if (!!modalState) {
     return (

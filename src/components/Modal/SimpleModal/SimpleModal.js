@@ -3,7 +3,6 @@ import { DetailsModal } from "../DetailsModal/DetailsModal";
 import whiteCross from "../../../images/close_white.webp";
 
 const simpleModalType = (modalProps) => {
-  console.log(modalProps.type);
 
   switch (modalProps.type) {
     case "gallery":

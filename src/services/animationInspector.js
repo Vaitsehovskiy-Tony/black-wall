@@ -1,4 +1,4 @@
-const animOnScroll = (animItems) => {
+const animOnScroll = (animItems = []) => {
   for (let i = 0; i < animItems.length; i++) {
     const animItem = animItems[i];
     const animItemHeight = animItem.offsetHeight;

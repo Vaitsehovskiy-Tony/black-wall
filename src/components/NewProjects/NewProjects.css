@@ -36,6 +36,8 @@
   .new-projects__container {
     display: flex;
     flex-direction: column;
+    padding: 0;
+    grid-gap: 0;
   }
 }
 
@@ -86,6 +88,13 @@
 
 .new-projects__right-arrow {
   margin: 0 0 0 13px;
+}
+
+@media screen and (max-width: 600px) {
+  .new-projects__right-arrow {
+      width: 16px;
+      object-fit: contain;
+  }
 }
 
 @media screen and (min-width: 600px) {

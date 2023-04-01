@@ -16,9 +16,9 @@
 }
 
 @media screen and (max-width: 600px) {
-.instagram__title {
-  font-size: 2.06rem;
-}
+  .instagram__title {
+    font-size: 2.06rem;
+  }
 }
 
 .instagram__line {
@@ -33,7 +33,7 @@
     margin: 15px auto 400px;
     height: 60px;
   }
-  }
+}
 
 .instagram__slider {
   position: absolute;
@@ -63,8 +63,7 @@
   .instagram__image:nth-child(2n + 1) {
     height: 40vw;
   }
-  }
-  
+}
 
 .instagram__image {
   width: 470px;
@@ -100,7 +99,6 @@
     align-self: center;
   }
 }
-
 
 .instagram__buttons {
   position: absolute;
@@ -138,17 +136,74 @@
   margin: auto 0;
 }
 
-.instagram__link { 
+.instagram__link-container {
+  display: flex;
+  width: fit-content;
+  margin: 40px auto 0;
+  cursor: pointer;
+}
+
+.instagram__link {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
 .instagram__link {
-  display: block;
-  margin: 40px auto 0;
+  display: inline-block;
+  align-items: center;
+  margin: 0 10px 0 0;
   font: var(--font-xs);
   text-transform: uppercase;
-  border-bottom: 1px solid var(--color-white);
-  cursor: pointer;
   letter-spacing: 0.03rem;
-}}
+  transition: color 0.5s ease-out;
+  color: #0000;
+  background: linear-gradient(90deg, #bba187 50%, var(--color-white) 0)
+    var(--_p, 100%) / 200% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: 0.4s;
+}
+
+.instagram__link-container:hover {
+  --_p: 0%;
+}
+
+.instagram__link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  padding: 0 25px 0 0;
+  height: 1px;
+  background: var(--color-white);
+  transition: all 0.3s ease-out;
+}
+
+.instagram__link-container:hover .instagram__link::after {
+  width: 0;
+  opacity: 0;
+}
+
+.instagram__link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background: var(--color-accent);
+  transition: width 0.3s;
+}
+.instagram__link-container:hover .instagram__link::before {
+  width: 230px;
+}
+
+.instagram__link-container .form__submit-arrow {
+  opacity: 0;
+  background-image: url(http://localhost:3000/static/media/right-arr_hover.cf888592aac66565cd78.webp);
+}
+
+.instagram__link-container:hover .form__submit-arrow {
+  opacity: 1;
+  transition: all 0.3s ease-out;
+  transform: translateX(10px);
+  margin: 1px auto auto;
+}

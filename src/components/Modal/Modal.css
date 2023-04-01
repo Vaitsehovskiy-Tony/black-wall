@@ -5,19 +5,18 @@
 @import url(./PricesElement/PricesElement.css);
 @import url(./SimpleModal/SimpleModal.css);
 
-
-@keyframes modala {
+@keyframes modal {
   0% {
-    transform: translateX(100%);
+    opacity: 1;
+    visibility: visible;
+
   }
-  /* 33% {
-    opacity: 0.6;
+  99% {
+    opacity: 1;
   }
-  66% {
-    opacity: 0.75;
-  } */
   100% {
-    transform: translateX(0);
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -28,7 +27,6 @@
   height: 100vh;
   visibility: hidden;
   opacity: 0;
-  /* background: var(--color-black); */
   flex-direction: column;
   justify-content: center;
   z-index: 4;
@@ -37,26 +35,16 @@
   top: 0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
   .modal {
     z-index: 2;
+    background: var(--color-black);
+    transition: all 0.5s ease-out;
   }
 }
 
-@media screen and (min-width: 600px) {
-  .modal {
-    /* background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(8px); */
-  }
-}
-
-.modal.active .form {
+.modal .form {
   padding: 40px;
-}
-@media screen and (min-width: 600px) {
-  .modal.active .form {
-    padding: 40px;
-  }
 }
 
 .modal.active .form__subtitle {
@@ -85,32 +73,33 @@
   }
 }
 
-.page_light .modal {
-  /* background: rgba(0, 0, 0, 0.4); */
-  color: var(--color-black);
-}
-
-@media screen and (max-width: 600px) {
-  .page_light .modal {
-    background: var(--color-white3);
-  }
-}
-
-.modal.hidden {
-  transform: translateX(100%);
-  transition: all .5s ease-out;
-}
-
 .modal.active {
   visibility: visible;
-  transform: translateX(0%);
-    transition: all .5s ease-out;
   opacity: 1;
 }
 
 @media screen and (min-width: 600px) {
-  .modal.active .form {
+  .modal.hidden {
+    animation: modal .5s ease-out;
+  }
+
+  .modal.active {
+    visibility: visible;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .modal .form {
     width: fit-content;
+    position: absolute;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-out;
+    right: 0;
+  }
+
+  .modal.active .form {
+    transition: transform .5s ease-out;
+    transform: translateX(0%);
   }
   .modal.active .form__wrapper,
   .modal.hidden .form__wrapper {
@@ -129,7 +118,8 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 100%;    
+    width: 100%;
+    cursor: pointer;
   }
   .modal__container .form__submit-container {
     background: var(--color-accent);
@@ -146,13 +136,30 @@
   .form__submit-arrow {
     height: 12.8px;
   }
+  .modal__container .form__submit-container:hover {
+    border-bottom: 1px solid var(--color-black);
+  }
+
+  .modal__container .form__submit-container:hover .form__submit {
+    color: var(--color-black);
+  }
+
+  .modal__container .form__submit-arrow:after {
+    background-image: url(../../images/right-arr_black.webp);
+    background-color: var(--color-accent);
+  }
 }
 
 @media screen and (min-width: 600px) {
   .modal__container {
     display: flex;
     flex-direction: column;
-    height: 100%;    
+    height: 100%;
+    background-color: rgba(0,0,0,0);
+    transition: background-color .5s ease-out;
+  }
+  .active .modal__container {
+    background-color: rgba(0,0,0,.5);
   }
 }
 

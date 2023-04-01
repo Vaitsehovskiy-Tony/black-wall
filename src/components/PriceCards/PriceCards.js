@@ -1,4 +1,4 @@
-import { ModalContext } from "../../utils/getModalContext";
+import { ElementsContext } from "../../utils/getElementsContext";
 import { useContext, useState } from "react";
 import checked from "../../images/checked.webp";
 
@@ -9,7 +9,7 @@ export const PriceCards = ({ cards, title }) => {
     setSimpleModal(!simpleModal);
   };
 
-  const { handleModal, handleModalContent } = useContext(ModalContext);
+  const { handleModal, handleModalContent } = useContext(ElementsContext).modal;
   
   const makeScroll = () => {
     const gallery = document.querySelector(".mobile-price");

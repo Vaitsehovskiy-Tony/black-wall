@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ProjectItem } from "../ProjectItem/ProjectItem";
-import arrow from "../../images/right-arrow.webp";
+import arrow from "../../images/right-arr.webp";
 
 export const NewProjects = ({ content, projectsList, staticText }) => {
   const desktopList = projectsList.slice(0, 4);

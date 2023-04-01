@@ -1,6 +1,6 @@
-@import url('../../components/Hero/Hero.css');
-@import url('../../components/Carousel/Carousel.css');
-@import url('../../components/About/About.css');
+@import url("../../components/Hero/Hero.css");
+@import url("../../components/Carousel/Carousel.css");
+@import url("../../components/About/About.css");
 @import url("../../components/NewProjects/NewProjects.css");
 @import url("../../components/OrderForm/OrderForm.css");
 @import url("../../components/OurTeam/OurTeam.css");
@@ -10,7 +10,10 @@
 @import url("../../components/Instagram/Instagram.css");
 @import url("../../components/common/ProgressBar/ProgressBar.css");
 
+
+
 .main-page {
-    background: var(--color-black);
-    color: var(--color-white);
+  background: var(--color-black);
+  color: var(--color-white);
 }
+

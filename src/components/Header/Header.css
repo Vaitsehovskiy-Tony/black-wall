@@ -7,6 +7,7 @@
 @import url(./HeaderBurger/HeaderBurger.css);
 @import url(../Modal/Modal.css);
 
+
 .header {
   position: fixed;
   top: 0;
@@ -17,6 +18,7 @@
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   transition: top .5s ease-out;
+  /* animation: header ease-out 1s; */
 }
 
 .header.hide {

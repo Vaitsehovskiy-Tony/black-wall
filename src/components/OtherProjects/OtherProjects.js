@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import { ProgressBar } from "../common/ProgressBar/ProgressBar";
 import { ProjectSample } from "../ProjectSample/ProjectSample";
@@ -12,6 +13,7 @@ export const OtherProjects = ({ content, staticText }) => {
     onSwipedLeft: () => nextSlide(),
     onSwipedRight: () => previousSlide(),
   });
+  const {pathname} = useLocation();
 
   const nextSlide = () => {
     return current < content.length - 2 ? setCurrent(current + 1) : "";
@@ -33,6 +35,16 @@ export const OtherProjects = ({ content, staticText }) => {
     }
   };
 
+  const makeScroll = (id) => {
+    if(`/project_` + id !== pathname) {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    }
+  }
+
   return (
     <section className="carousel-projects">
       <h3 className="carousel-projects__title">{staticText}</h3>
@@ -42,11 +54,12 @@ export const OtherProjects = ({ content, staticText }) => {
           "--index": current,
         }}
         {...swipeHandlers}
-        onKeyDown={handleKeyPress}
+        onKeyDown={(e) => handleKeyPress(e)}
         tabIndex={0}
       >
         {content.map((item, index) => (
-          <div className={`carousel-projects__slide `} key={index}>
+              <Link className="carousel-projects__slide" key={index} to={`/project_` + item.projectId}       onClick={()=>makeScroll(item.projectId)}
+              >
             <div className="carousel-projects__img-wrapper">
               <img
                 className="carousel-projects__img"
@@ -62,7 +75,7 @@ export const OtherProjects = ({ content, staticText }) => {
                 {item.subtitle}
               </span>
             </div>
-          </div>
+            </Link>
         ))}
       </div>
       <div className="carousel-projects__bottom-wrapper">

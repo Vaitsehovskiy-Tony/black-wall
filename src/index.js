@@ -5,7 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
 import { LangContextProvider } from "./utils/getLangContext";
-import { ModalContextProvider } from "./utils/getModalContext";
+import { ElementsContextProvider } from "./utils/getElementsContext";
 import { QueryClientProvider, QueryClient } from "react-query";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -14,13 +14,13 @@ const queryClient = new QueryClient();
 root.render(
   <React.StrictMode>
     <LangContextProvider>
-      <ModalContextProvider>
+      <ElementsContextProvider>
         <Router>
           <QueryClientProvider client={queryClient}>
             <App />
           </QueryClientProvider>
         </Router>
-      </ModalContextProvider>
+      </ElementsContextProvider>
     </LangContextProvider>
   </React.StrictMode>
 );

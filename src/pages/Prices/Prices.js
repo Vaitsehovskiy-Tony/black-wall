@@ -31,7 +31,6 @@ export const Prices = ({ prices, orderFormContent }) => {
         description={prices.pageTitle.description}
         title={prices.pageTitle.title}
       />
-      <Workflow content={prices.workflow} />
       <PriceCards cards={prices.priceCard} title={prices.priceCardsTitle} />
       {isNarrow.matches ? (
         <MobilePriceDetails
@@ -41,6 +40,8 @@ export const Prices = ({ prices, orderFormContent }) => {
       ) : (
         <PriceDetails pricesObj={priceObj} details={prices.priceDetails} />
       )}
+            <Workflow content={prices.workflow} />
+
     </main>
   );
 };

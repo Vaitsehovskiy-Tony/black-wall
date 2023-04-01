@@ -55,7 +55,6 @@
 }
 
 @media screen and (max-width: 600px) {
-
   .footer__contacts-container {
     order: 1;
     align-items: flex-start;
@@ -92,6 +91,18 @@
   display: flex;
 }
 
+.footer__nav-item,
+.footer__contacts-email,
+.footer__contacts-link {
+  color: inherit;
+  transition: color 0.25s ease-out;
+}
+
+.footer__nav-item:hover,
+.footer__contacts-email:hover,
+.footer__contacts-link:hover {
+  color: var(--color-accent);
+}
 
 @media screen and (max-width: 1000px) {
   .footer__nav-item {
@@ -103,10 +114,9 @@
   }
   .footer__contacts-email {
     font: var(--font-l);
-    font-size: clamp(.75rem, 2vw, 1.25rem);
+    font-size: clamp(0.75rem, 2vw, 1.25rem);
   }
 }
-
 
 @media screen and (max-width: 600px) {
   .footer__contacts-email {
@@ -117,12 +127,10 @@
   }
 }
 
-
 .footer__contacts-pic {
   margin: auto 10px auto 0;
   height: 20px;
 }
-
 
 @media screen and (max-width: 600px) {
   .footer__contacts-link {
@@ -141,6 +149,8 @@
   margin: auto;
   padding: 0 46px;
   max-width: 1990px;
+  border: none;
+  border-top: 1px solid var(--color-grey);
 }
 
 @media screen and (max-width: 600px) {
@@ -160,6 +170,13 @@
 .footer__terms {
   text-transform: capitalize;
   letter-spacing: normal;
+  color: inherit;
+  transition: color 0.25s ease-out;
+  cursor: pointer;
+}
+
+.footer__terms:hover {
+  color: var(--color-accent);
 }
 
 @media screen and (max-width: 600px) {
