@@ -3,10 +3,10 @@
 }
 
 @media screen and (max-width: 600px) {
-.prices.page__wrapper .wrapper {
-  margin: 120px 0 120px;
-}}
-
+  .prices.page__wrapper .wrapper {
+    margin: 120px 0 120px;
+  }
+}
 
 @media screen and (max-width: 600px) {
   .mobile-price__tile {
@@ -48,12 +48,12 @@
 }
 
 .mobile-price .collapsing__text.collapsing__text_dots::before {
-    content: ""; 
-    position: absolute; 
-    left: 0; 
-    top: 6px; 
-    border: solid 3.5px var(--color-accent);
-    border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  border: solid 3.5px var(--color-accent);
+  border-radius: 50%;
 }
 
 .mobile-price .collapsing__container {

@@ -2,9 +2,23 @@ import { Link } from "react-router-dom";
 import { Logo } from "../common/Logo/Logo";
 import tgIcon from "../../images/telegram (12) 1.webp";
 import wpIcon from "../../images/whatsapp (7) 1.webp";
+import { SimpleModal } from "../Modal/SimpleModal/SimpleModal";
+import { useState } from "react";
 
-export const Footer = ({ content }) => {
+export const Footer = ({ content, terms }) => {
   const icons = [tgIcon, wpIcon];
+  const [simpleModal, setSimpleModal] = useState(false);
+
+  const handleSimleModal = () => {
+    setSimpleModal(!simpleModal);
+  };
+
+  const modalProps = {
+    modalState: simpleModal,
+    type: "terms",
+    content: terms,
+    handleSimleModal,
+  };
 
   return (
     <footer className="footer">
@@ -47,8 +61,16 @@ export const Footer = ({ content }) => {
       <hr className="footer__hr" />
       <div className="wrapper">
         <span className="footer__copyright">{content.copyright}</span>
-        <div className="footer__terms">{content.termsAndConditions}</div>
+        <div
+          className="footer__terms"
+          onClick={() => {
+            handleSimleModal();
+          }}
+        >
+          {content.termsAndConditions}
+        </div>
       </div>
+      <SimpleModal modalProps={modalProps} />
     </footer>
   );
 };

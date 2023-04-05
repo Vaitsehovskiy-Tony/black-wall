@@ -3,8 +3,7 @@
 }
 
 .page__wrapper .rates.wrapper {
-  margin:80px auto 120px;
-
+  margin: 80px auto 120px;
 }
 
 .rates__rates-container {
@@ -43,7 +42,6 @@
   padding: 0 20px 0 0;
   height: 13.5px;
 }
-
 
 .prices-page .collapsing__bottom-line {
   margin: 0;

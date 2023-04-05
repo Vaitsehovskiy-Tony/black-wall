@@ -4,18 +4,17 @@
 @import url("../../components/MobilePriceDetails/MobilePriceDetails.css");
 
 .prices {
-    margin: 0 auto;
-    width: 100%;
-    background-color: var(--color-white3);
+  margin: 0 auto;
+  width: 100%;
+  background-color: var(--color-white3);
 }
 
 @media screen and (max-width: 600px) {
-    .prices{
-        width: auto;
-        margin: 0 15px;
-    }
+  .prices {
+    width: auto;
+    margin: 0 15px;
+  }
 }
 
 .prices.page__wrapper {
-    
 }

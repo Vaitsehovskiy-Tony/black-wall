@@ -21,22 +21,21 @@ export const OrderForm = ({ content, display, handleModal, prices }) => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    debugger
+    debugger;
     sessionStorage.setItem("formSend", true);
     setSubmitState(true);
     // console.log("error", error);
     // console.log("watch", watch);
     // console.log(form.current);
-    debugger
+    debugger;
 
     const templateParams = {
-      name: 'James',
-      notes: 'Check this out!',
+      name: "James",
+      notes: "Check this out!",
       // obj: form.current[3].checked ? form.current[3].value : form.current[4].value
-  };
+    };
     emailjs
       .sendForm(
-        
         "service_j3ba6er",
         "template_we8mn3e",
         form.current,
@@ -85,14 +84,20 @@ export const OrderForm = ({ content, display, handleModal, prices }) => {
         <Avatars display={display} members={content.formAvatars} />
         {/* {!!prices ? <PricesElement prices={prices} formParametrs={formParametrs}/> : ""} */}
         {submitState ? (
-          <div className="form__submit-wrapper  form__submit-wrapper_go-to" onClick={handleModal}>
+          <div
+            className="form__submit-wrapper  form__submit-wrapper_go-to"
+            onClick={handleModal}
+          >
             <div className="form__submit-container">
               <span className="form__submit">{dynamicContent.buttonText}</span>
-              <div className="form__submit-arrow"/>
+              <div className="form__submit-arrow" />
             </div>
           </div>
         ) : (
-          <FormContainer formParametrs={formParametrs} prices={!!prices ? prices : null}/>
+          <FormContainer
+            formParametrs={formParametrs}
+            prices={!!prices ? prices : null}
+          />
         )}
       </div>
     </section>

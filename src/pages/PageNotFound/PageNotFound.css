@@ -1,0 +1,20 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+  margin: auto;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.not-found__img {
+  width: 250px;
+  margin: 0 auto;
+}
+.not-found__description {
+}
+.not-found__title {
+}
+.not-found__text {
+}

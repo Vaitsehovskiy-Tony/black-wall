@@ -4,13 +4,14 @@ import { makeInstagramFetch } from "../services/instagram.service";
 export const useInstagram = () => {
   // debugger
 
-  const { isLoading, data, status, error } = useQuery("response",
+  const { isLoading, data, status, error } = useQuery(
+    "response",
     makeInstagramFetch,
     {
       keepPreviousData: true,
     }
   );
-    
+
   let res = null;
 
   if (status === "success") {
@@ -18,7 +19,7 @@ export const useInstagram = () => {
   }
 
   if (status === "error") {
-    console.error(error)
+    console.error(error);
   }
 
   return { isLoading, res };

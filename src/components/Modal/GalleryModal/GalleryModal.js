@@ -1,15 +1,15 @@
 import rightArrow from "../../../images/right-arrow.webp";
 import leftArrow from "../../../images/left-arrow.webp";
-import { useState,useLayoutEffect, useDebugValue } from "react";
+import { useState, useLayoutEffect, useDebugValue } from "react";
 import { useSwipeable } from "react-swipeable";
 
 export const GalleryModal = ({ modalProps }) => {
   const [current, setCurrent] = useState();
 
   useLayoutEffect(() => {
-    setCurrent(modalProps.index)
-  }, [modalProps.index])
-  
+    setCurrent(modalProps.index);
+  }, [modalProps.index]);
+
   const isLoop = false;
   const swipeHandlers = useSwipeable({
     onSwipedLeft: () => nextSlide(),
@@ -56,7 +56,7 @@ export const GalleryModal = ({ modalProps }) => {
         }}
         {...swipeHandlers}
         onKeyDown={handleKeyPress}
-        tabIndex={0}
+        // tabIndex={0}
       >
         {modalProps.content.gallery.data.map((item, index) => (
           <div className="gallery-modal__img-container">

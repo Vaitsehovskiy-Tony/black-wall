@@ -15,7 +15,7 @@
       "title title"
       "jane photo"
       "alex photo";*/
-  } 
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -26,7 +26,7 @@
       "photo"
       "jane"
       "alex";*/
-  } 
+  }
 }
 
 .our-team__member-container {
@@ -42,7 +42,6 @@
   }
 }
 
-
 .our-team__member-icon {
   width: 20%;
   padding: 50px;
@@ -55,7 +54,6 @@
   }
 }
 
-
 @media screen and (max-width: 950px) {
   .our-team__member-icon {
     width: 30%;
@@ -65,10 +63,8 @@
 @media screen and (max-width: 750px) {
   .our-team__member-icon {
     padding: 40px 0 0 0;
-    }
+  }
 }
-
-
 
 .our-team__title {
   grid-area: title;

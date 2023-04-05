@@ -17,8 +17,8 @@
 
 @media screen and (max-width: 600px) {
   .details__title {
-  font-size: 2.06rem;
-}
+    font-size: 2.06rem;
+  }
 }
 
 .details__container {
@@ -87,14 +87,13 @@
   width: fit-content;
   background: transparent;
   cursor: pointer;
-  transition: all .25s ease-out
+  transition: all 0.25s ease-out;
 }
 
 .details__scroll:hover {
   color: var(--color-accent);
   border-bottom: 1px dashed var(--color-accent);
 }
-
 
 @media screen and (max-width: 600px) {
   .details__scroll {

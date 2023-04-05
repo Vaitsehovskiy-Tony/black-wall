@@ -12,7 +12,6 @@ const ElementsContextProvider = ({ children }) => {
   const handleModal = () => setModalState(!modalState);
   const handleModalContent = (contentType) => setModalContent(contentType);
 
-
   const state = {
     modal: { modalState, handleModal, modalContent, handleModalContent },
   };

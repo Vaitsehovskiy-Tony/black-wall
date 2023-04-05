@@ -13,6 +13,7 @@ import { Modal } from "./components/Modal/Modal";
 import { useEffect, useState } from "react";
 import { SEO } from "./components/common/SEO/SEO";
 import { animationInspector } from "./services/animationInspector";
+import { PageNotFound } from "./pages/PageNotFound/PageNotFound";
 
 function createImage(source) {
   return new Promise((resolve, reject) => {
@@ -22,7 +23,6 @@ function createImage(source) {
     image.src = source;
   });
 }
-
 
 function App() {
   const { header, page } = PageStyles();
@@ -76,9 +76,9 @@ function App() {
   // }, [ ])
 
   const seoData = {
-    title: "Black Wall",
+    title: "Студия дизайна интерьера и архитектуры | Black Wall",
     description:
-      "BLACK WALL is an interior design and architecture studio. Our team designs residential and public interiors individually designed.",
+      "BLACK WALL – это дизайна интерьера и архитектуры. Наша команда занимаемся проектированием жилых и общественных интерьеров индивидуального исполнения...",
     keywords: "Design, Interior, Architecture",
     image: "https://api.vaitstony.art/uploads/091_A1640_522f5c2e62.webp",
   };
@@ -153,6 +153,10 @@ function App() {
             />
           }
         ></Route>
+        <Route
+          path="*"
+          element={<PageNotFound notFound={content.notFound} />}
+        />
       </Routes>
       <Modal
         navbar={content.header.navbar}
@@ -160,7 +164,7 @@ function App() {
         prices={content.prices.priceCard}
         headerStyle={header}
       />
-      <Footer content={content.footer} />
+      <Footer content={content.footer} terms={content.terms} />
     </div>
   );
 }

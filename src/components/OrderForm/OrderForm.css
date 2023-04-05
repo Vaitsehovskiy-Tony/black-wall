@@ -15,14 +15,14 @@
 
 .form {
   margin: auto;
-  background-color: var(--color-black);
   color: var(--color-white);
+  background-color: var(--color-black);
 }
 
 .modal .form {
+  position: relative;
   margin: 0 0 0 auto;
   height: 100%;
-  position: relative;
 }
 
 @media screen and (max-width: 600px) {
@@ -41,26 +41,26 @@
 
 .form__wrapper {
   display: grid;
+  transition: all 0.25s ease-out;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 240px 46px 240px;
   grid-template-areas:
     "title form"
     "subtitle form"
     "avatar form"
     "avatar form";
   justify-content: space-between;
-  padding: 240px 46px 240px;
   max-width: 1440px;
-  margin: auto;
-  transition: all 0.25s ease-out;
-  box-sizing: border-box;
   /* box-sizing: border-box; */
 }
 
 @media screen and (max-width: 900px) {
   .form__wrapper {
     display: flex;
+    padding: 180px 46px 180px;
     flex-direction: column;
     justify-content: center;
-    padding: 180px 46px 180px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -76,9 +76,9 @@
 }
 
 .form__title {
+  margin: 0;
   font: var(--font-h-l);
   grid-area: title;
-  margin: 0;
 }
 
 @media screen and (max-width: 600px) {
@@ -90,24 +90,24 @@
 
 .form__subtitle {
   margin: 24px 0 8px;
-  grid-area: subtitle;
   width: 70%;
-  font: var(--font-ml);
   line-height: 1.6;
+  grid-area: subtitle;
+  font: var(--font-ml);
 }
 
 @media screen and (max-width: 600px) {
   .form__subtitle {
+    margin: 18px 0 8px;
     width: 100%;
     font: var(--font-m);
-    margin: 18px 0 8px;
   }
 }
 
 .form__container {
-  grid-area: form;
   display: grid;
   margin: 0 0 0 10px;
+  grid-area: form;
   grid-template-areas:
     "name name"
     "contact country"
@@ -131,10 +131,10 @@
 
 .form_text-style {
   margin: 0 0 24px;
-  line-height: 1.5;
-  font-size: 1.125rem;
-  background: transparent;
   border: none;
+  background: transparent;
+  font-size: 1.125rem;
+  line-height: 1.5;
   color: var(--color-grey);
   border-bottom: 1px solid var(--color-grey);
 }
@@ -149,8 +149,8 @@
   outline: 1px solid transparent;
 }
 .form__name {
-  grid-area: name;
   position: relative;
+  grid-area: name;
 }
 
 .form__contact {
@@ -165,10 +165,10 @@
   position: absolute;
   top: 4px;
   left: 4px;
-  font-size: 1.125rem;
-  color: var(--color-grey);
   opacity: 0.8;
   transition: all 0.25s ease-out;
+  font-size: 1.125rem;
+  color: var(--color-grey);
 }
 
 .form__name_input:focus ~ .form_text-style_label,
@@ -183,9 +183,13 @@
 }
 
 .form__name_input:placeholder-shown {
-  border-bottom: 1px solid var(--color-grey);
-  color: transparent;
   opacity: 0.8;
+  color: transparent;
+  border-bottom: 1px solid var(--color-grey);
+}
+
+.field__input_surname {
+  display: none;
 }
 
 .form__country {
@@ -201,8 +205,8 @@
 
 .form__choose-type {
   margin: 20px 0 15px;
-  grid-area: choose-type;
   font-size: 1.125rem;
+  grid-area: choose-type;
 }
 
 @media screen and (max-width: 600px) {
@@ -213,29 +217,29 @@
 
 .form__radio-container {
   display: flex;
-  grid-area: types;
   margin: 0;
+  grid-area: types;
 }
 
 @media screen and (max-width: 600px) {
   .form__radio-container {
     display: flex;
-    flex-direction: column;
     margin: 7px 0;
+    flex-direction: column;
   }
 }
 
 .form__radio-container_1 {
+  cursor: pointer;
   font-size: 1.125rem;
   white-space: nowrap;
-  cursor: pointer;
 }
 
 .form__radio-container_2 {
   margin: 0 0 0 35px;
+  cursor: pointer;
   font-size: 1.125rem;
   white-space: nowrap;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
@@ -245,16 +249,16 @@
 }
 
 .form__radio {
-  appearance: none;
-  margin: 0 8px 0 0;
   transform: translateY(0.075rem);
+  transition: all 0.25s ease-out;
+  margin: 0 8px 0 0;
+  border: 0.32rem solid var(--color-black);
+  border-radius: 50%;
   width: 1rem;
   height: 1rem;
+  appearance: none;
   background-color: transparent;
-  border: 0.32rem solid var(--color-black);
   outline: 0.125rem solid var(--color-grey);
-  border-radius: 50%;
-  transition: all 0.25s ease-out;
 }
 
 .form__radio:hover {
@@ -263,14 +267,14 @@
 }
 
 .form__radio:checked {
-  background-color: var(--color-accent);
   border: 0.32rem solid var(--color-black);
+  background-color: var(--color-accent);
   outline: 0.125rem solid var(--color-accent);
 }
 
 .form__radio-label {
-  color: var(--color-grey);
   transition: all 0.25s ease-out;
+  color: var(--color-grey);
 }
 .form__radio-label:hover {
   color: var(--color-l-grey);
@@ -288,8 +292,8 @@
   .page_light .modal-prices__item-container:hover .form__radio,
   .page_light .modal .form__radio-container_1:hover .form__radio,
   .page_light .modal .form__radio-container_2:hover .form__radio {
-    outline: 0.125rem solid var(--color-grey);
     border: 0.32rem solid var(--color-white3);
+    outline: 0.125rem solid var(--color-grey);
   }
 
   .page_light .modal .form__radio:checked {
@@ -324,16 +328,16 @@
 }
 
 .form__submit-container {
-  margin: 60px 0 0 0;
   display: flex;
-  align-items: center;
-  border-bottom: 1px solid var(--color-grey);
-  height: min-content;
+  transition: all 0.25s ease-out;
+  margin: 60px 0 0 0;
   width: fit-content;
-  white-space: nowrap;
+  height: min-content;
   padding: 0 0 9px;
   cursor: pointer;
-  transition: all 0.25s ease-out;
+  align-items: center;
+  border-bottom: 1px solid var(--color-grey);
+  white-space: nowrap;
 }
 
 .form__submit-container:hover {
@@ -341,16 +345,16 @@
 }
 
 .form__submit {
-  margin: auto 13px auto 0;
-  text-transform: uppercase;
-  font-size: 1.125rem;
-  background: transparent;
-  border: none;
-  color: var(--color-grey);
-  text-align: start;
-  line-height: 1;
-  cursor: pointer;
   transition: color 0.25s ease-out;
+  margin: auto 13px auto 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.125rem;
+  line-height: 1;
+  text-align: start;
+  text-transform: uppercase;
+  color: var(--color-grey);
 }
 
 .form__submit-container:hover .form__submit {
@@ -359,30 +363,30 @@
 
 @media screen and (max-width: 600px) {
   .form__submit-container {
-    padding: 0 0 1px;
     margin: 35px 0 0 0;
+    padding: 0 0 1px;
   }
 }
 
 @media screen and (max-width: 600px) {
   .form__submit {
+    font-weight: 500;
+    color: var(--color-white);
     font: var(--font-xs);
     letter-spacing: 0.03rem;
-    color: var(--color-white);
-    font-weight: 500;
   }
 }
 
 .form__submit-arrow {
+  position: relative;
+  transition: all 0.25s ease-out;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
   background-image: url(../../images/right-arr.webp);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-  position: relative;
-  transition: all 0.25s ease-out;
 }
 
 .form__submit-arrow:after {
@@ -392,14 +396,14 @@
   bottom: 0;
   left: 0;
   right: 0;
+  opacity: 0;
+  transition: all 0.3s ease-out;
   width: 100%;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   background-image: url(../../images/right-arr_hover.webp);
   background-color: #191919;
-  opacity: 0;
-  transition: all 0.3s ease-out;
 }
 
 .page__wrapper .form__submit-container:hover .form__submit-arrow {
@@ -421,6 +425,6 @@
 }
 
 .modal-prices {
-  grid-area: price-options;
   margin: 0 0 40px;
+  grid-area: price-options;
 }

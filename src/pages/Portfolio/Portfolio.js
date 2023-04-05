@@ -42,7 +42,7 @@ export const Portfolio = ({ orderFormContent, projectsListContent }) => {
     keywords: "Design, Interior, Architecture",
     image: "https://api.vaitstony.art/uploads/091_A1640_522f5c2e62.webp",
   };
-  
+
   return (
     <main className="portfolio page__wrapper">
       <SEO seoData={seoData} />

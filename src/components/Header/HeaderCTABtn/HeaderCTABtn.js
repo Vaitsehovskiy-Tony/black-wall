@@ -3,10 +3,9 @@ import { ElementsContext } from "../../../utils/getElementsContext";
 import { useContext } from "react";
 
 export const HeaderCTABtn = ({ bttnText, headerStyle }) => {
-
   const { modalState, handleModal, handleModalContent } =
     useContext(ElementsContext).modal;
-    
+
   const isNarrow = window.matchMedia("screen and (max-width: 750px)");
 
   return (

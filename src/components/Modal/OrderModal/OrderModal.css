@@ -3,7 +3,7 @@
 }
 
 .modal .form__container {
-  margin: 40px 0 0 ;
+  margin: 40px 0 0;
 }
 
 .modal .field.name {
@@ -13,7 +13,6 @@
 .modal__container.orderForm {
   margin: auto 0;
 }
-
 
 @media screen and (min-width: 750px) {
   .page_light .modal .form {

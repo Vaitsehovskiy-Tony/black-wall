@@ -5,7 +5,7 @@ export const Preloader = () => {
     <section className="preloader">
       <div className="preloader__content">
         <div className="preloader__overlay"></div>
-        <img className="preloader__img" src={logoLight} alt="preloader"/>
+        <img className="preloader__img" src={logoLight} alt="preloader" />
       </div>
     </section>
   );

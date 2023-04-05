@@ -9,20 +9,19 @@
 @import url("../../components/Article/Article.css");
 @import url("../../components/common/ProgressBar/ProgressBar.css");
 
-
 .project-wrapper {
-    max-width: 900px;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0 15px;
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 15px;
 }
 
 @media screen and (max-width: 600px) {
-    .project-wrapper {
-        margin-bottom: 60px;
-    }
+  .project-wrapper {
+    margin-bottom: 60px;
+  }
 }
 
 .project-page {
-    color: var(--color-black);
+  color: var(--color-black);
 }

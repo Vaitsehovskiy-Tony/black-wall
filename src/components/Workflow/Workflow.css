@@ -1,12 +1,12 @@
-.prices.page__wrapper .workflow.wrapper{
-margin: 0 auto 240px;
+.prices.page__wrapper .workflow.wrapper {
+  margin: 0 auto 240px;
 }
 
 @media screen and (max-width: 750px) {
-  .prices.page__wrapper .workflow.wrapper{
-  margin: 0 auto 120px;
+  .prices.page__wrapper .workflow.wrapper {
+    margin: 0 auto 120px;
   }
-  }
+}
 
 .workflow__tile {
   font: var(--font-h-l);

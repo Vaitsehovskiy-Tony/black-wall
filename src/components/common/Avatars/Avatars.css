@@ -28,7 +28,7 @@
   .form__avatar {
     width: 80px;
     height: 80px;
-    }
+  }
 }
 
 .form__text-block {
@@ -42,7 +42,7 @@
 @media screen and (max-width: 600px) {
   .form__text-block {
     margin: 17px 0 17px 10px;
-    }
+  }
 }
 
 .form__avatar-title {

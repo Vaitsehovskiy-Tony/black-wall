@@ -9,18 +9,15 @@ import { Instagram } from "../../components/Instagram/Instagram";
 import { useLayoutEffect, useState } from "react";
 
 export const Main = ({ content, handleHeroState }) => {
-
   useLayoutEffect(() => {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
   }, []);
 
   return (
     <main className={`main-page page__wrapper`}>
-      <Hero content={content.mainPage.hero} handleHeroState={handleHeroState}/>
+      <Hero content={content.mainPage.hero} handleHeroState={handleHeroState} />
       <About content={content.mainPage.about} />
-      <Carousel
-        projectsList={content.projectsList}
-      />
+      <Carousel projectsList={content.projectsList} />
       <NewProjects
         content={content.mainPage.newProjects}
         projectsList={content.projectsList}
@@ -32,10 +29,7 @@ export const Main = ({ content, handleHeroState }) => {
       />
       <Instagram content={content.mainPage.instagram} />
       <ContactUs content={content.contactUs} />
-      <OrderForm
-        content={content.orderForm}
-        display={"none"}
-      />
+      <OrderForm content={content.orderForm} display={"none"} />
     </main>
   );
 };

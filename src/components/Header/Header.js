@@ -12,7 +12,7 @@ export const Header = ({ headerStyle, content }) => {
   const { modalState, handleModal } = useContext(ElementsContext).modal;
   const isNarrow = window.matchMedia("screen and (max-width: 750px)");
   const { pathname } = useLocation();
-  const cssClass = pathname.split('_')[0].substring(1) || 'main';
+  const cssClass = pathname.split("_")[0].substring(1) || "main";
   let headerAnimation = "show";
   let dynamicHeaderStyle = "light";
 

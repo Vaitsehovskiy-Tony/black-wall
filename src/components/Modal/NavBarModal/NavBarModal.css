@@ -1,9 +1,9 @@
 .modal__container.navbar {
-    margin: auto 0;
-    transform: translateY(-40px);
-    display: flex;
-    flex-direction: column;
-  }
+  margin: auto 0;
+  transform: translateY(-40px);
+  display: flex;
+  flex-direction: column;
+}
 
 .modal .header__navbar {
   display: flex;

@@ -4,9 +4,7 @@ import { useSwipeable } from "react-swipeable";
 import { ProgressBar } from "../common/ProgressBar/ProgressBar";
 
 export const Carousel = ({ content, projectsList }) => {
-
   const projects = projectsList.slice(0, 9);
-
 
   const [current, setCurrent] = useState(-1);
   const isLoop = false;
@@ -44,7 +42,7 @@ export const Carousel = ({ content, projectsList }) => {
         }}
         {...swipeHandlers}
         onKeyDown={handleKeyPress}
-        tabIndex={0}
+        // tabIndex={0}
       >
         {projects.map((item, index) => (
           <Link to={`/project_` + item.projectId}>
@@ -58,9 +56,7 @@ export const Carousel = ({ content, projectsList }) => {
               </div>
               <figcaption className="carousel__description-container">
                 <div className="carousel__description-line" />
-                <span className="carousel__description">
-                  {item.title}
-                </span>
+                <span className="carousel__description">{item.title}</span>
                 <div className="carousel__description-line_after" />
               </figcaption>
             </figure>

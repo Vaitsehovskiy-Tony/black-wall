@@ -16,13 +16,14 @@ export const Contacts = ({ orderFormContent, contactUsContent }) => {
   if (contacts.isLoading) {
     return <Preloader />;
   }
-  
+
   const seoData = {
     title: "Black Wall",
-    description: "BLACK WALL is an interior design and architecture studio. Our team designs residential and public interiors individually designed.",
+    description:
+      "BLACK WALL is an interior design and architecture studio. Our team designs residential and public interiors individually designed.",
     keywords: "Design, Interior, Architecture",
-    image: "https://api.vaitstony.art/uploads/091_A1640_522f5c2e62.webp"
-  }
+    image: "https://api.vaitstony.art/uploads/091_A1640_522f5c2e62.webp",
+  };
 
   return (
     <main className="contacts-page page__wrapper">

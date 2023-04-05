@@ -1,5 +1,4 @@
 export const PricesElement = ({ prices, register }) => {
-
   return (
     <div className="modal-prices">
       {prices.map((i, index) => (
@@ -9,7 +8,7 @@ export const PricesElement = ({ prices, register }) => {
             id={`input_${i.id}`}
             className="modal-prices__input form__radio"
             name="modal-label"
-            checked 
+            checked
             {...register("Тариф", { required: true })}
             value={i.title}
           />

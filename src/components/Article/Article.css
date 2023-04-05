@@ -1,14 +1,14 @@
 .project-wrapper.article {
-    margin: 80px auto 0px;
+  margin: 80px auto 0px;
 }
 
 .article__title {
-    font: var(--font-h-l);
-    margin: 0;
+  font: var(--font-h-l);
+  margin: 0;
 }
 
 @media screen and (max-width: 600px) {
-    .article__title {
-        font-size: 2.06rem;
-    }
+  .article__title {
+    font-size: 2.06rem;
+  }
 }

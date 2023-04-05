@@ -15,4 +15,4 @@ export const PageTitle = ({ description, title }) => {
       <h1 className="page-title__title">{title}</h1>
     </div>
   );
-}
+};

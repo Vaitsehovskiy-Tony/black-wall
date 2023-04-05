@@ -92,8 +92,8 @@ a {
 }
 
 .page {
-  font-family: var(--primary-font-family);
   display: flex;
+  font-family: var(--primary-font-family);
   flex-direction: column;
   justify-content: center;
   max-width: 100%;
@@ -129,7 +129,6 @@ a {
     padding: 0 15px;
   }
 }
-
 
 @keyframes header {
   0% {
@@ -194,14 +193,14 @@ a {
 .main ~ .main-page .page-title__content {
   animation: hero-content ease-out 2s;
 }
-.main .header {
+.main.header {
   animation: header ease-out 2.8s;
 }
 
 .main ~ .main-page .hero__overlay {
   animation: hero-overlay ease-out 2s;
-} 
+}
 /* 
 .project-page .hero {
   animation: project-hero-fadein 0.25s ease-out forwards;
-} */    
+} */

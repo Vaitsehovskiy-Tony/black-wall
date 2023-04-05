@@ -23,7 +23,11 @@ export const NewProjects = ({ content, projectsList, staticText }) => {
         <span className="new-projects__link-text">
           {staticText.watchAllProjeects}
         </span>
-        <img className="new-projects__right-arrow" src={arrow} alt="right arrow" />
+        <img
+          className="new-projects__right-arrow"
+          src={arrow}
+          alt="right arrow"
+        />
       </Link>
     </section>
   );

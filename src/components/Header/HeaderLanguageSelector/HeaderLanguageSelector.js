@@ -21,7 +21,7 @@ export const HeaderLanguageSelector = ({ headerStyle }) => {
           alt="bottom arrow"
         />
       </div>
-      <ul className={`header-lang__options ${isActive ? "active" : ""}`}> 
+      <ul className={`header-lang__options ${isActive ? "active" : ""}`}>
         {locales.localeOptions.map((locale, index) => (
           <li
             className="header-lang__options-item"

@@ -2,8 +2,7 @@ import { CollapsingData } from "./CollapsingData/CollapsingData";
 import whiteArrow from "../../../images/arrow_down.webp";
 import blackArrow from "../../../images/arrow_down-black.webp";
 
-export const CollapsingField = ({ title, text, iconStyle='black', type }) => {
-
+export const CollapsingField = ({ title, text, iconStyle = "black", type }) => {
   const icon = iconStyle === "white" ? whiteArrow : blackArrow;
 
   return (
@@ -13,7 +12,7 @@ export const CollapsingField = ({ title, text, iconStyle='black', type }) => {
           <h4 className="collapsing__title">{title}</h4>
           <img className="collapsing__img" alt="arrow down" src={icon} />
         </summary>
-        <CollapsingData text={text} type={type}/>
+        <CollapsingData text={text} type={type} />
       </details>
       <hr className="collapsing__bottom-line" />
     </>

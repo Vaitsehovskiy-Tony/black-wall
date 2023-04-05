@@ -47,10 +47,19 @@ export const FormContainer = ({ formParametrs, prices }) => {
       onSubmit={(e) => handleSubmit(sendEmail(e))}
       className={`form__container ${!!prices ? "price__options" : ""}`}
     >
-      {!!prices ? <PricesElement prices={prices} register={register}/> : ""}
+      {!!prices ? <PricesElement prices={prices} register={register} /> : ""}
       <InputTextField fieldData={nameField} />
       <InputTextField fieldData={emailField} />
       <InputTextField fieldData={countryField} />
+      <input
+        className="field__input_surname"
+        type="text"
+        name="surname"
+        minlength="1"
+        maxLength="20"
+        placeholder="surname"
+        pattern="^[\p{L}\s\p{M}'-]{0,50}$"
+      />
       <span className="form__choose-type">{content.formData.arrayTitle}</span>
       <div className="form__radio-container">
         <label className="form__radio-container_1">

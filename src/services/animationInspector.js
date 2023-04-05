@@ -16,7 +16,7 @@ const animOnScroll = (animItems = []) => {
     ) {
       animItem.classList.add("active");
     } else if (animItem.classList.contains("animate_cyclically")) {
-       {
+      {
         animItem.classList.remove("active");
       }
     }

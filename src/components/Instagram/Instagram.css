@@ -198,7 +198,7 @@
 
 .instagram__link-container .form__submit-arrow {
   opacity: 0;
-  background-image: url(http://localhost:3000/static/media/right-arr_hover.cf888592aac66565cd78.webp);
+  background-image: url(../../images/right-arr_hover.webp);
 }
 
 .instagram__link-container:hover .form__submit-arrow {

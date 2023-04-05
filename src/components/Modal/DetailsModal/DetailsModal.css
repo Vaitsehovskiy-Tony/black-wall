@@ -1,8 +1,8 @@
 .details-modal {
-    max-width: 80%;
-    background-color: var(--color-white);
-    color: var(--color-black);
-    border-radius: 50px;
-    padding: 50px;
-    margin: auto;
+  max-width: 80%;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-radius: 50px;
+  padding: 50px;
+  margin: auto;
 }

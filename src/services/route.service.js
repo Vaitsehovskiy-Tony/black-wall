@@ -23,7 +23,12 @@ const routes = (name, id = null, lang = "ru") => {
     case "footer":
       url = baseUrl + "footer" + locale + "&populate[footer][populate]=%2A";
       break;
-
+    case "terms":
+      url = baseUrl + "terms-and-condition" + locale;
+      break;
+    case "notFound":
+      url = baseUrl + "not-found" + locale;
+      break;
     case "orderForm":
       url =
         baseUrl +

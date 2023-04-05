@@ -13,7 +13,7 @@ export const OtherProjects = ({ content, staticText }) => {
     onSwipedLeft: () => nextSlide(),
     onSwipedRight: () => previousSlide(),
   });
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
 
   const nextSlide = () => {
     return current < content.length - 2 ? setCurrent(current + 1) : "";
@@ -36,14 +36,14 @@ export const OtherProjects = ({ content, staticText }) => {
   };
 
   const makeScroll = (id) => {
-    if(`/project_` + id !== pathname) {
+    if (`/project_` + id !== pathname) {
       window.scrollTo({
         top: 0,
         left: 0,
         behavior: "smooth",
       });
     }
-  }
+  };
 
   return (
     <section className="carousel-projects">
@@ -58,8 +58,12 @@ export const OtherProjects = ({ content, staticText }) => {
         tabIndex={0}
       >
         {content.map((item, index) => (
-              <Link className="carousel-projects__slide" key={index} to={`/project_` + item.projectId}       onClick={()=>makeScroll(item.projectId)}
-              >
+          <Link
+            className="carousel-projects__slide"
+            key={index}
+            to={`/project_` + item.projectId}
+            onClick={() => makeScroll(item.projectId)}
+          >
             <div className="carousel-projects__img-wrapper">
               <img
                 className="carousel-projects__img"
@@ -75,7 +79,7 @@ export const OtherProjects = ({ content, staticText }) => {
                 {item.subtitle}
               </span>
             </div>
-            </Link>
+          </Link>
         ))}
       </div>
       <div className="carousel-projects__bottom-wrapper">

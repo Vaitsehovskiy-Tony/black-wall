@@ -12,8 +12,8 @@
 }
 
 .page-title__content.fixed {
-    margin: 0 auto;
-    transform: translate(-50%, -50%);
+  margin: 0 auto;
+  transform: translate(-50%, -50%);
 }
 
 .hero .page-title__content {
@@ -39,9 +39,9 @@
 }
 
 @media screen and (max-width: 600px) {
-	.page-title__description {
-    font-size: .75rem;
-    letter-spacing: .7px;
+  .page-title__description {
+    font-size: 0.75rem;
+    letter-spacing: 0.7px;
   }
 }
 
@@ -51,7 +51,7 @@
 }
 
 @media screen and (max-width: 600px) {
-	.page-title__title {
+  .page-title__title {
     font-size: 2.3rem;
   }
 }

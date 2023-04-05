@@ -1,7 +1,5 @@
 export const CollapsingData = ({ text, type }) => {
-
   switch (type) {
-
     case "html":
       return (
         <div

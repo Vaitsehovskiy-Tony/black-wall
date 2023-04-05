@@ -6,10 +6,10 @@ export const getProjectsList = (arr) => {
     return element.attributes.portfolioItem || {};
   });
   newArr.sort((a, b) => {
-    if (a.orderInLine === b.orderInLine ) {
+    if (a.orderInLine === b.orderInLine) {
       return b.id - a.id;
     }
-    return a.orderInLine - b.orderInLine
+    return a.orderInLine - b.orderInLine;
   });
   return newArr;
 };

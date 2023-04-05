@@ -1,8 +1,8 @@
 import axios from "axios";
 const fetchMediaFields = (accessToken, fields) => {
-  
   const params = new URLSearchParams();
-  const token = "";
+  const token =
+    "";
 
   params.append("access_token", token);
   params.append("fields", ["media_url", "permalink", "media_type"].join(","));
@@ -18,25 +18,18 @@ const fetchMediaFields = (accessToken, fields) => {
 };
 
 export const makeInstagramFetch = async () => {
-  const token = "";
+  const token =
+    "";
   const requestOptions = {
     method: "get",
     headers: {
-        "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
     redirect: "follow",
   };
 
   const inst = await fetchMediaFields();
-
-  // fetch(
-  //   "https://v1.nocodeapi.com/tonyvaits/instagram/kkcoNxSVssSmoysI",
-  //   requestOptions
-  // )
-  //   .then((response) => response.json())
-  //   .catch((error) => console.error("error", error));
-
-    return inst;
+  return inst;
 };
 
 export const getPhotos = (arr) => {
@@ -45,11 +38,13 @@ export const getPhotos = (arr) => {
   }
   let photosArray = [];
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i].media_type === "CAROUSEL_ALBUM" || arr[i].media_type === "IMAGE") {
+    if (
+      arr[i].media_type === "CAROUSEL_ALBUM" ||
+      arr[i].media_type === "IMAGE"
+    ) {
       photosArray.push(arr[i].media_url);
     }
   }
-
 
   return photosArray;
 };

@@ -45,7 +45,12 @@ export const useFetch = (name, id) => {
       case "header":
         content = data.data.attributes.header;
         break;
-
+      case "terms":
+        content = data.data.attributes.termsAndConditions;
+        break;
+      case "notFound":
+        content = data.data.attributes;
+        break;
       case "footer":
         content = data.data.attributes.footer;
         break;

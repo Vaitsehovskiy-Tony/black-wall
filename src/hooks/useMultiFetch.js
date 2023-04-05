@@ -9,6 +9,8 @@ export const useMultiFetch = () => {
 
   const headerContent = useFetch("header");
   const orderFormContent = useFetch("orderForm");
+  const termsContent = useFetch("terms");
+  const notFound = useFetch("notFound");
   const projectsListContent = useFetch("projectList");
   const mainPageContent = useFetch("mainPage");
   const contactUsContent = useFetch("contactUs");
@@ -18,6 +20,8 @@ export const useMultiFetch = () => {
 
   if (
     headerContent.isLoading ||
+    termsContent.isLoading ||
+    notFound.isLoading ||
     orderFormContent.isLoading ||
     projectsListContent.isLoading ||
     mainPageContent.isLoading ||
@@ -40,7 +44,9 @@ export const useMultiFetch = () => {
     contactUs: contactUsContent.content,
     prices: pricesContent.content,
     footer: footerContent.content,
-    staticTexts: staticTextsContent.content
+    terms: termsContent.content,
+    notFound: notFound.content,
+    staticTexts: staticTextsContent.content,
   };
 
   return result;

@@ -10,10 +10,7 @@
 @import url("../../components/Instagram/Instagram.css");
 @import url("../../components/common/ProgressBar/ProgressBar.css");
 
-
-
 .main-page {
   background: var(--color-black);
   color: var(--color-white);
 }
-

@@ -1,13 +1,13 @@
 .header__icon {
-    width: 20px;
-    height: 20px;
-    margin: auto 0 auto 15px;
-    opacity: 0.85;
-    cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin: auto 0 auto 15px;
+  opacity: 0.85;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 750px) {
-    .modal.hidden .header__icon {
-        display: none;
-    }    
+  .modal.hidden .header__icon {
+    display: none;
+  }
 }

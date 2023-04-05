@@ -14,7 +14,7 @@ export const GalleryBlock = ({ content, staticText }) => {
     type: "gallery",
     content,
     index,
-    handleSimleModal
+    handleSimleModal,
   };
 
   return (

@@ -10,7 +10,7 @@ export const PriceCards = ({ cards, title }) => {
   };
 
   const { handleModal, handleModalContent } = useContext(ElementsContext).modal;
-  
+
   const makeScroll = () => {
     const gallery = document.querySelector(".mobile-price");
     gallery.scrollIntoView({ behavior: "smooth" });

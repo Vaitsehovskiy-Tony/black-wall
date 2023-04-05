@@ -10,4 +10,4 @@ export const Logo = ({ headerStyle }) => {
       <img className="logo__img" src={logo} alt="page logo" />
     </Link>
   );
-}
+};

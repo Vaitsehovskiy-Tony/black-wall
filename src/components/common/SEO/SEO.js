@@ -4,7 +4,7 @@ import { LangContext } from "../../../utils/getLangContext";
 
 export const SEO = ({ seoData }) => {
   const seoImage = seoData.image;
-//   const seoImage = `https://api.vaitstony.art${seoData.image.data.attributes.url}`;
+  //   const seoImage = `https://api.vaitstony.art${seoData.image.data.attributes.url}`;
   const seoSiteName = "Black Wall";
   const seoTwitterCard = "summary_large_image";
   const seoFacebookType = "website";

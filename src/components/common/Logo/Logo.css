@@ -5,7 +5,7 @@
 
 @media screen and (max-width: 600px) {
   .logo {
-    opacity: .75;
+    opacity: 0.75;
     height: 50px;
   }
 }

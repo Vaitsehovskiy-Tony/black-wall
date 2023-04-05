@@ -5,20 +5,14 @@ export const PageStyles = () => {
   const styles = {};
 
   if (location.pathname === "/portfolio" || location.pathname === "/prices") {
-
     styles.header = "dark";
-    styles.page = "light"
-
+    styles.page = "light";
   } else if (location.pathname.includes("/project")) {
-    
     styles.header = "light";
-    styles.page = "light"
-
+    styles.page = "light";
   } else {
-
     styles.header = "light";
-    styles.page = "dark"
-
+    styles.page = "dark";
   }
 
   return styles;

@@ -78,3 +78,7 @@ details[open] .collapsing__img {
 .main-page .collapsing__bottom-line {
   margin: 0;
 }
+
+.our-team__quote-text {
+  transition: padding 0.5s ease-out;
+}

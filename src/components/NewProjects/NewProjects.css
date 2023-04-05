@@ -69,8 +69,6 @@
   }
 }
 
-
-
 /* go to all projects link */
 .new-projects__link-container {
   display: flex;
@@ -92,8 +90,8 @@
 
 @media screen and (max-width: 600px) {
   .new-projects__right-arrow {
-      width: 16px;
-      object-fit: contain;
+    width: 16px;
+    object-fit: contain;
   }
 }
 

@@ -68,11 +68,11 @@
   margin: 24px 0 0;
   font: var(--font-h-s);
   text-overflow: ellipsis;
-  transition: color .25s ease-out;
+  transition: color 0.25s ease-out;
 }
 
 .sample:hover .sample__title {
-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 @media screen and (max-width: 600px) {

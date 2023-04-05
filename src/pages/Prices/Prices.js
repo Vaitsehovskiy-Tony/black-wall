@@ -23,7 +23,7 @@ export const Prices = ({ prices, orderFormContent }) => {
     keywords: "Design, Interior, Architecture",
     image: "https://api.vaitstony.art/uploads/091_A1640_522f5c2e62.webp",
   };
-  
+
   return (
     <main className="prices page__wrapper">
       <SEO seoData={seoData} />
@@ -40,8 +40,7 @@ export const Prices = ({ prices, orderFormContent }) => {
       ) : (
         <PriceDetails pricesObj={priceObj} details={prices.priceDetails} />
       )}
-            <Workflow content={prices.workflow} />
-
+      <Workflow content={prices.workflow} />
     </main>
   );
 };
