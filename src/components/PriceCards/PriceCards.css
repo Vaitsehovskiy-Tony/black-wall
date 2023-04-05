@@ -1,20 +1,20 @@
 .prices.page__wrapper .wrapper {
-  margin: 80px auto 0;
   box-sizing: border-box;
+  margin: 80px auto 0;
 }
 
 @media screen and (max-width: 600px) {
   .prices.page__wrapper .wrapper {
-    margin: 40px auto 0;
     box-sizing: border-box;
+    margin: 40px auto 0;
     padding: 0;
   }
 }
 
 .price__cards {
-  margin: 80px auto;
   display: flex;
   flex-direction: column;
+  margin: 80px auto;
 }
 
 @media screen and (max-width: 1350px) {
@@ -24,8 +24,8 @@
 }
 
 .price__cards-title {
-  font: var(--font-h-l);
   margin: 25px 0;
+  font: var(--font-h-l);
 }
 
 @media screen and (max-width: 1350px) {
@@ -36,9 +36,9 @@
 
 @media screen and (max-width: 600px) {
   .price__cards-title {
-    font-size: 2.06rem;
     margin: 25px 0 15px;
     padding: 0;
+    font-size: 2.06rem;
   }
 }
 
@@ -48,10 +48,10 @@
 } */
 
 .price__cards-container {
-  display: grid;
   grid-gap: 10px;
-  margin: 50px 0 0;
+  display: grid;
   grid-template-columns: repeat(4, 1fr);
+  margin: 50px 0 0;
 }
 
 @media screen and (max-width: 1350px) {
@@ -63,22 +63,22 @@
 
 @media screen and (max-width: 600px) {
   .price__cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     margin: 20px auto;
     padding: 0;
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
   }
 }
 
 .price__card {
   display: flex;
-  padding: 20px;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: var(--color-white);
-  color: var(--color-dark-grey);
   transition: all 0.2s ease-out;
+  background-color: var(--color-white);
+  padding: 20px;
+  color: var(--color-dark-grey);
 }
 
 .price__card:last-of-type {
@@ -100,18 +100,18 @@
 @media screen and (max-width: 600px) {
   .price__scroll-button {
     display: block;
-    color: var(--color-grey);
-    border-bottom: 1px solid var(--color-grey);
-    font-size: 0.75rem;
-    padding: 5px 0 0px;
-    margin: auto 0;
     cursor: pointer;
+    margin: auto 0;
+    border-bottom: 1px solid var(--color-grey);
+    padding: 5px 0 0px;
+    color: var(--color-grey);
+    font-size: 0.75rem;
   }
 }
 
 .price__title {
-  font: var(--font-h-s);
   margin: 3px 0 0;
+  font: var(--font-h-s);
 }
 
 .price__price-container {
@@ -121,8 +121,8 @@
 
 .price__number {
   margin: 25px 0 0 5px;
-  font-size: 2.75rem;
   font-weight: 600;
+  font-size: 2.75rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -138,18 +138,18 @@
 }
 
 .price__button {
+  transition: all 0.2s ease-out;
+  cursor: pointer;
   margin: 35px 0 0;
-  color: var(--color-grey);
-  background-color: var(--color-l-grey);
   border: none;
-  font: var(--font-ml);
-  font-weight: 500;
-  text-transform: uppercase;
+  background-color: var(--color-l-grey);
   padding: 15px 30px;
   width: 100%;
-  transition: all 0.2s ease-out;
+  color: var(--color-grey);
+  font: var(--font-ml);
+  font-weight: 500;
   letter-spacing: 0.03rem;
-  cursor: pointer;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 1350px) {
@@ -161,14 +161,14 @@
 @media screen and (max-width: 600px) {
   .price__button {
     background-color: var(--color-l-grey);
-    font: var(--font-m);
     padding: 10px 30px;
+    font: var(--font-m);
   }
 }
 
 .price__button:hover {
-  color: var(--color-white);
   background-color: var(--color-accent);
+  color: var(--color-white);
 }
 
 .price__card:last-of-type .price__button {
@@ -186,8 +186,8 @@
 }
 
 .price__options {
-  font: var(--font-h-s);
   margin: 0;
+  font: var(--font-h-s);
 }
 
 @media screen and (max-width: 600px) {
@@ -197,18 +197,18 @@
 }
 
 .price__option-container {
-  margin: 15px 0 0;
-  font: var(--font-h-s);
   display: flex;
-  width: fit-content;
   justify-content: space-between;
   gap: 7px;
+  margin: 15px 0 0;
+  width: fit-content;
+  font: var(--font-h-s);
 }
 
 .price__icon {
-  font: var(--font-h-s);
   width: 14px;
   object-fit: contain;
+  font: var(--font-h-s);
 }
 
 .price__option {

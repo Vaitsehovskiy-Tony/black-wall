@@ -1,6 +1,6 @@
 .logo {
-  height: 60px;
   margin: auto auto auto 0;
+  height: 60px;
 }
 
 @media screen and (max-width: 600px) {

@@ -1,8 +1,8 @@
 .modal__container.navbar {
-  margin: auto 0;
-  transform: translateY(-40px);
   display: flex;
   flex-direction: column;
+  transform: translateY(-40px);
+  margin: auto 0;
 }
 
 .modal .header__navbar {
@@ -23,13 +23,13 @@
 }
 
 .modal__order-button {
-  margin: 20px 0 auto;
-  font: var(--font-s);
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  background: transparent;
-  border: none;
   /* todo - make dynamic, same to whole element */
   cursor: pointer;
+  margin: 20px 0 auto;
+  border: none;
+  background: transparent;
   color: inherit;
+  font: var(--font-s);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
 }

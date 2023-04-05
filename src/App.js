@@ -14,6 +14,7 @@ import { useEffect, useState } from "react";
 import { SEO } from "./components/common/SEO/SEO";
 import { animationInspector } from "./services/animationInspector";
 import { PageNotFound } from "./pages/PageNotFound/PageNotFound";
+import { UnderConstruction } from "./pages/UnderConstruction/UnderConstruction";
 
 function createImage(source) {
   return new Promise((resolve, reject) => {
@@ -32,23 +33,13 @@ function App() {
     setHeroState(!heroState);
   };
 
-  // This will run after the page has mounted
-  // useEffect(() => {
-  //   const image = new Image();
-  //   image.src =
-  //     "https://api.vaitstony.art/uploads/hero_Rubinshtejna_ffc22a16df.webp";
-  //   image.onload = () => {
-  //     console.log(image, heroState);
-  //     setHeroState(true);
-  //   };
-  // }, [setHeroState]);
-
   createImage(
     "https://api.vaitstony.art/uploads/hero_Rubinshtejna_ffc22a16df.webp"
-  ).then((results) => {
-    setHeroState(true);
-    // console.log("finished", results);
-  });
+  )
+    .then((res) => {
+      setHeroState(true);
+    })
+    .catch((err) => console.error(err));
 
   useEffect(() => {
     const onScroll = () => {
@@ -59,21 +50,11 @@ function App() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  if (state === "loading" || !heroState) {
+  if (state === "loading") {
     return <Preloader />;
+  } else if (state === "error") {
+    return <UnderConstruction />;
   }
-
-  // useEffect(() => window.scroll(0, 10000));
-
-  //   useEffect(() => {
-  //     const handleContextmenu = e => {
-  //         e.preventDefault()
-  //     }
-  //     document.addEventListener('contextmenu', handleContextmenu)
-  //     return function cleanup() {
-  //         document.removeEventListener('contextmenu', handleContextmenu)
-  //     }
-  // }, [ ])
 
   const seoData = {
     title: "Студия дизайна интерьера и архитектуры | Black Wall",
@@ -103,9 +84,7 @@ function App() {
               handleHeroState={handleHeroState}
             />
           }
-        ></Route>
-      </Routes>
-      <Routes>
+        />
         <Route
           exact
           path={"/portfolio"}
@@ -115,9 +94,7 @@ function App() {
               projectsListContent={content.projectsList}
             />
           }
-        ></Route>
-      </Routes>
-      <Routes>
+        />
         <Route
           exact
           path={"/prices"}
@@ -127,9 +104,8 @@ function App() {
               orderFormContent={content.orderForm}
             />
           }
-        ></Route>
-      </Routes>
-      <Routes>
+        />
+        
         <Route
           exact
           path={`/project_:id`}
@@ -140,9 +116,7 @@ function App() {
               staticTexts={content.staticTexts}
             />
           }
-        ></Route>
-      </Routes>
-      <Routes>
+        />
         <Route
           exact
           path={"/contacts"}
@@ -152,7 +126,7 @@ function App() {
               contactUsContent={content.contactUs}
             />
           }
-        ></Route>
+        />
         <Route
           path="*"
           element={<PageNotFound notFound={content.notFound} />}

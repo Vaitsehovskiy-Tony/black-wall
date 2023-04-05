@@ -1,6 +1,6 @@
 .feature {
-  border-top: 1px solid var(--color-l-grey);
   margin: 0 15px 0 0;
+  border-top: 1px solid var(--color-l-grey);
 }
 
 @media screen and (max-width: 600px) {
@@ -10,8 +10,8 @@
 }
 
 .feature:first-of-type {
-  border-top: 1px solid var(--color-l-grey);
   margin-top: 40px;
+  border-top: 1px solid var(--color-l-grey);
 }
 
 @media screen and (max-width: 600px) {
@@ -27,10 +27,10 @@
 
 .feature__text p {
   display: flex;
-  padding: 0;
-  margin: 0;
   transition: all 1s ease-out;
   cursor: pointer;
+  margin: 0;
+  padding: 0;
   font: var(--font-m);
   line-height: 2;
 }
@@ -50,7 +50,7 @@
 }
 
 details[open] .feature__text * {
-  animation-name: invisiblyGrowFontSize, fadeIn;
   animation-duration: 500ms, 200ms;
   animation-delay: 0ms, 500ms;
+  animation-name: invisiblyGrowFontSize, fadeIn;
 }

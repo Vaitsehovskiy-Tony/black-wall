@@ -1,5 +1,4 @@
 .our-team {
-  margin: 240px 46px 0;
   /* display: grid;
   grid-template-columns: 7fr 5fr;
   grid-template-areas:
@@ -7,6 +6,7 @@
     "jane photo"
     "alex photo"; */
   box-sizing: border-box;
+  margin: 240px 46px 0;
 }
 
 @media screen and (max-width: 1300px) {
@@ -32,8 +32,8 @@
 .our-team__member-container {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
   align-content: center;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 750px) {
@@ -43,8 +43,8 @@
 }
 
 .our-team__member-icon {
-  width: 20%;
   padding: 50px;
+  width: 20%;
   object-fit: contain;
 }
 
@@ -68,8 +68,8 @@
 
 .our-team__title {
   grid-area: title;
-  font: var(--font-h-l);
   margin: 0 10% 30px 0;
+  font: var(--font-h-l);
 }
 
 @media screen and (max-width: 1300px) {
@@ -80,8 +80,8 @@
 
 @media screen and (max-width: 750px) {
   .our-team__title {
-    font-size: 2.06rem;
     margin: 0 0 25px;
+    font-size: 2.06rem;
   }
 }
 
@@ -113,22 +113,22 @@
 
 @media screen and (max-width: 1200px) {
   .our-team__member-name {
-    font-size: 1.5rem;
     margin: 15px 0 0;
+    font-size: 1.5rem;
   }
 }
 
 @media screen and (max-width: 600px) {
   .our-team__member-name {
-    font-size: 1.25rem;
     margin: 42px 0 0;
+    font-size: 1.25rem;
   }
 }
 
 .our-team__member-about {
-  font: var(--font-m);
-  color: var(--color-m-grey);
   margin: 8px 0;
+  color: var(--color-m-grey);
+  font: var(--font-m);
 }
 
 @media screen and (max-width: 600px) {
@@ -138,31 +138,31 @@
 }
 
 .our-team .collapsing__text {
-  font: var(--font-xs);
-  padding: 10px 0 10px 16px;
   border-left: 1px solid var(--color-accent);
+  padding: 10px 0 10px 16px;
+  font: var(--font-xs);
 }
 
 .our-team__quote-text {
+  border-left: 1px solid var(--color-accent);
   padding: 10px 0 10px 16px;
   font: var(--font-ml);
-  border-left: 1px solid var(--color-accent);
   line-height: 1.6;
 }
 
 @media screen and (max-width: 600px) {
   .our-team .collapsing__title {
-    font: var(--font-l);
     margin: 18px 0 8px;
+    font: var(--font-l);
   }
 }
 
 @media screen and (max-width: 600px) {
   .our-team__collapse-line {
     display: block;
-    color: var(--color-dark-grey);
-    height: 1px;
     margin: 0;
+    height: 1px;
+    color: var(--color-dark-grey);
   }
 }
 
@@ -173,9 +173,9 @@
 @media screen and (max-width: 600px) {
   .our-team__collapse-line {
     display: block;
-    color: var(--color-dark-grey);
-    height: 1px;
     margin: 0;
+    height: 1px;
+    color: var(--color-dark-grey);
   }
 }
 

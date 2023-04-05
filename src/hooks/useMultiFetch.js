@@ -18,21 +18,27 @@ export const useMultiFetch = () => {
   const pricesContent = useFetch("pricesPage");
   const staticTextsContent = useFetch("staticTexts");
 
-  if (
-    headerContent.isLoading ||
-    termsContent.isLoading ||
-    notFound.isLoading ||
-    orderFormContent.isLoading ||
-    projectsListContent.isLoading ||
-    mainPageContent.isLoading ||
-    contactUsContent.isLoading ||
-    footerContent.isLoading ||
-    pricesContent.isLoading ||
-    staticTextsContent.isLoading
-  ) {
+  const results = [
+    headerContent,
+    termsContent,
+    notFound,
+    orderFormContent,
+    projectsListContent,
+    mainPageContent,
+    contactUsContent,
+    footerContent,
+    pricesContent,
+    staticTextsContent,
+  ];
+
+  if (results.some((i) => i.isLoading)) {
     result.state = "loading";
     return result;
+  } else if (results.some((i) => i.error)) {
+    result.state = "error";
+    return result;
   }
+
   const projectsList = getProjectsList(projectsListContent.content);
 
   result.state = "success";

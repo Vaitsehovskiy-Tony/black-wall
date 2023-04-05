@@ -1,6 +1,6 @@
 .page__wrapper .about.wrapper {
-  margin: 160px auto 0;
   display: flex;
+  margin: 160px auto 0;
 }
 
 @media screen and (max-width: 1200px) {
@@ -17,8 +17,8 @@
 
 .about__side-text-container {
   align-self: end;
-  width: 19%;
   margin: 0 35px 0 50px;
+  width: 19%;
 }
 
 @media screen and (max-width: 1000px) {
@@ -28,10 +28,10 @@
 }
 
 .about__side-text-title {
-  font: var(--font-h-l);
-  font-size: 4.125rem;
-  font-weight: 700;
   margin: 0 0 10px;
+  font: var(--font-h-l);
+  font-weight: 700;
+  font-size: 4.125rem;
 }
 
 @media screen and (max-width: 1400px) {
@@ -47,19 +47,19 @@
 }
 
 .about__side-text-subtitle {
-  font: var(--font-m);
   margin: 25px 0 0;
+  font: var(--font-m);
 }
 
 .about__text-container {
-  width: 62%;
   margin: 0 0 0 35px;
+  width: 62%;
 }
 
 @media screen and (max-width: 1000px) {
   .about__text-container {
-    width: 90%;
     margin: 0 auto 0;
+    width: 90%;
   }
 }
 
@@ -71,21 +71,21 @@
 
 @media screen and (max-width: 600px) {
   .about__text-container {
-    width: 100%;
     margin: 0 0 35px;
+    width: 100%;
     line-height: 1.4;
   }
 }
 
 .about__title {
+  opacity: 0.5;
   margin: 0;
+  color: var(--color-l-grey);
   font: var(--font-m);
   font-weight: 700;
-  color: var(--color-l-grey);
-  letter-spacing: 0.22rem;
   line-height: 1.2;
+  letter-spacing: 0.22rem;
   text-transform: uppercase;
-  opacity: 0.5;
   white-space: nowrap;
 }
 
@@ -96,9 +96,9 @@
 }
 
 .about__text {
+  margin: 32px 0 0;
   font: var(--font-ml);
   font-size: 1.625rem;
-  margin: 32px 0 0;
   line-height: 1.4;
 }
 

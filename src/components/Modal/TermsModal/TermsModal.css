@@ -1,6 +1,6 @@
 .terms__text {
   padding: 50px 100px;
   overflow: scroll;
-  white-space: pre-wrap;
   text-transform: initial;
+  white-space: pre-wrap;
 }

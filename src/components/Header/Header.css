@@ -8,15 +8,15 @@
 @import url(../Modal/Modal.css);
 
 .header {
+  display: flex;
   position: fixed;
   top: 0;
-  width: 100%;
-  display: flex;
   z-index: 3;
-  font: var(--font-s);
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
   transition: top 0.5s ease-out;
+  width: 100%;
+  font: var(--font-s);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
   /* animation: header ease-out 1s; */
 }
 
@@ -36,14 +36,14 @@
 .header.header_light::before,
 .header.header_dark::before {
   position: absolute;
-  content: "";
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  opacity: 0;
   z-index: -1;
   transition: opacity 1s ease-out;
-  opacity: 0;
+  content: "";
 }
 
 .header.header_light::before {
@@ -78,11 +78,11 @@
 .header__wrapper {
   display: flex;
   justify-content: flex-end;
+  z-index: 3;
   margin: 20px auto;
   padding: 0 46px;
   width: 100%;
   max-width: 1990px;
-  z-index: 3;
 }
 
 @media screen and (max-width: 600px) {

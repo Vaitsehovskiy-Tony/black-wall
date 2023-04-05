@@ -5,12 +5,12 @@
 }
 .modal-prices__item-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin: 18px 0 0;
-  padding: 0 0 20px;
-  border-bottom: 1px solid var(--color-l-grey);
+  align-items: center;
   gap: 9px;
+  margin: 18px 0 0;
+  border-bottom: 1px solid var(--color-l-grey);
+  padding: 0 0 20px;
 }
 
 .modal-prices__item-container:first-of-type {
@@ -34,23 +34,23 @@
 } */
 .modal-price__item {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  width: 100%;
+  align-items: center;
   cursor: pointer;
+  width: 100%;
 }
 .modal-prices__title {
+  margin: 0;
   font: var(--font-h-s);
   font-size: 1.375rem;
   text-transform: capitalize;
-  margin: 0;
 }
 .modal-prices__number {
-  font: var(--font-h-m);
   margin: 0 0 0 auto;
+  font: var(--font-h-m);
 }
 .modal-prices__symbol {
   padding: 0 0 0 7px;
-  font: var(--font-xs);
   color: var(--color-grey);
+  font: var(--font-xs);
 }

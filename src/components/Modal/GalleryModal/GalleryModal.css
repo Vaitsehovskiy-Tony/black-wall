@@ -2,25 +2,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   padding: 0 50px;
+  width: 100%;
   overflow: hidden;
 }
 
 .gallery-modal__wrapper {
   display: flex;
   position: absolute;
-  /* justify-content: center; */
-  transition: all 0.5s ease-out;
 
   /* --index: 1; */
   left: calc(0vw + (var(--index) * -100vw));
+  /* justify-content: center; */
+  transition: all 0.5s ease-out;
 }
 
 .gallery-modal__img-container {
+  margin: 0 10vw;
   width: 80vw;
   height: 80vh;
-  margin: 0 10vw;
 }
 
 .gallery-modal__img {
@@ -30,10 +30,10 @@
 }
 
 .gallery-modal__icon {
+  z-index: 1;
+  cursor: pointer;
   height: 14px;
   object-fit: contain;
-  cursor: pointer;
-  z-index: 1;
 }
 
 @media screen and (max-width: 900px) {

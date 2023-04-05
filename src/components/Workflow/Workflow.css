@@ -9,24 +9,24 @@
 }
 
 .workflow__tile {
-  font: var(--font-h-l);
   margin: 125px auto 50px;
   width: fit-content;
+  font: var(--font-h-l);
 }
 
 @media screen and (max-width: 600px) {
   .workflow__tile {
-    font-size: 2.06rem;
     margin: 25px 0 15px;
+    font-size: 2.06rem;
   }
 }
 
 .workflow__item-container {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid var(--color-l-grey);
   padding: 20px 0;
   font: var(--font-ml);
-  border-bottom: 1px solid var(--color-l-grey);
 }
 
 @media screen and (max-width: 600px) {
@@ -38,18 +38,18 @@
 }
 
 .workflow__item-text {
-  width: 60%;
   box-sizing: border-box;
   padding: 2px 0 2px 40px;
+  width: 60%;
   text-transform: uppercase;
 }
 
 @media screen and (max-width: 600px) {
   .workflow__item-text {
-    width: 100%;
-    padding: 2px 0 2px 30px;
-    font: var(--font-m);
     margin: 0;
+    padding: 2px 0 2px 30px;
+    width: 100%;
+    font: var(--font-m);
     text-transform: capitalize;
   }
 }

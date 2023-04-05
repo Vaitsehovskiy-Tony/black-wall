@@ -1,43 +1,42 @@
 .carousel-projects {
-  position: relative;
   display: flex;
+  position: relative;
   flex-direction: column;
-  overflow: hidden;
   justify-content: flex-start;
   background: var(--color-black);
+  overflow: hidden;
   color: var(--color-white);
 }
 
 @media screen and (max-width: 600px) {
   .carousel-projects {
-    min-height: 600px;
     justify-content: space-between;
+    min-height: 600px;
   }
 }
 
 .carousel-projects__title {
-  max-width: 1440px;
-  width: 100%;
   margin: 120px auto 650px;
   padding: 0 46px;
+  width: 100%;
+  max-width: 1440px;
   font: var(--font-h-l);
 }
 
 @media screen and (max-width: 600px) {
   .carousel-projects__title {
-    font-size: 2.06rem;
     margin: 120px 0 600px;
+    font-size: 2.06rem;
   }
 }
 
 .carousel-projects__slides {
+  --index: 1;
+  display: flex;
   position: absolute;
   top: 260px;
-  display: flex;
-  transition: all 0.5s ease-out;
-
-  --index: 1;
   left: calc((96vw - 1440px) / 2 + (var(--index) * -48vw));
+  transition: all 0.5s ease-out;
 }
 
 @media screen and (max-width: 1440px) {
@@ -60,32 +59,32 @@
 }
 
 .carousel-projects__slide {
-  width: 44vw;
-  height: 543px;
   display: flex;
   flex-direction: column;
   margin: auto 0;
   padding: 0 2vw;
+  width: 44vw;
+  height: 543px;
 }
 
 @media screen and (max-width: 600px) {
   .carousel-projects__slide {
+    padding: 0 2vw;
     width: 96vw;
     height: 580px;
-    padding: 0 2vw;
   }
 }
 
 .carousel-projects__img-wrapper {
-  overflow: hidden;
   height: 75%;
+  overflow: hidden;
 }
 
 .carousel-projects__img {
+  transition: transform 0.4s ease-out;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease-out;
 }
 
 .carousel-projects__slide:hover .carousel-projects__img {
@@ -93,9 +92,9 @@
 }
 
 .carousel-projects__description-title {
+  transition: color 0.4s ease-out;
   margin: 24px 0 5px;
   font: var(--font-h-s);
-  transition: color 0.4s ease-out;
 }
 
 .carousel-projects__slide:hover .carousel-projects__description-title {
@@ -109,17 +108,17 @@
 }
 
 .carousel-projects__description {
-  font: var(--font-xs);
   color: var(--color-grey);
+  font: var(--font-xs);
 }
 
 .carousel-projects__bottom-wrapper {
-  max-width: 1440px;
-  width: 100%;
-  padding: 0 46px;
-  margin: auto;
   display: flex;
   align-items: center;
+  margin: auto;
+  padding: 0 46px;
+  width: 100%;
+  max-width: 1440px;
 }
 
 @media screen and (max-width: 600px) {
@@ -129,14 +128,14 @@
 }
 
 .carousel-projects .progress-bar {
-  width: 30%;
   margin: auto 0 auto auto;
+  width: 30%;
 }
 
 @media screen and (max-width: 600px) {
   .carousel-projects .progress-bar {
-    width: 100%;
     margin: auto 0 auto auto;
+    width: 100%;
   }
 }
 
@@ -147,14 +146,14 @@
 }
 
 .carousel-projects__arrow {
-  height: 14px;
-  object-fit: contain;
-  padding: 23px 27px;
+  transition: border 0.25s ease-out;
+  cursor: pointer;
   margin: 0 20px 0 0;
   border: 1px solid var(--color-grey);
-  transition: border 0.25s ease-out;
   border-radius: 50%;
-  cursor: pointer;
+  padding: 23px 27px;
+  height: 14px;
+  object-fit: contain;
 }
 
 .carousel-projects__arrow:hover {

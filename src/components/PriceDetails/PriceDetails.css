@@ -14,8 +14,8 @@
 
 .rates__rate {
   margin: auto;
-  font: var(--font-h-s);
   padding: 20px 20px;
+  font: var(--font-h-s);
 }
 
 .rates__option-container {
@@ -25,16 +25,16 @@
 }
 
 .rates__option-title {
-  width: 30%;
   margin: 00;
   padding: 20px 0;
+  width: 30%;
   font: var(--font-m);
 }
 
 .rates__option-position {
+  display: flex;
   width: 15%;
   text-align: center;
-  display: flex;
 }
 
 .rates__option-pic {

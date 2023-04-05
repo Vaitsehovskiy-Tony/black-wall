@@ -5,9 +5,9 @@
   background-color: var(--color-black);
 }
 .contacts__wrapper {
-  max-width: 1440px;
   margin: 0 auto;
   width: 100%;
+  max-width: 1440px;
 }
 
 .contacts-page.page__wrapper .wrapper {
@@ -45,8 +45,8 @@
 }
 
 .contacts-page .contacts__item {
-  margin: 0 0 13px 10px;
   flex-direction: column;
+  margin: 0 0 13px 10px;
 }
 
 @media screen and (max-width: 600px) {
@@ -93,9 +93,9 @@
 }
 
 .contacts-page__container {
-  margin: 136px auto 240px;
   display: flex;
   justify-content: space-between;
+  margin: 136px auto 240px;
   width: 100%;
 }
 

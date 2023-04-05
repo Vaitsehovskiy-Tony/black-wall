@@ -1,8 +1,8 @@
 .page-title__content {
-  margin: 168px auto 0;
-  text-align: center;
-  color: var(--color-black);
   z-index: 1;
+  margin: 168px auto 0;
+  color: var(--color-black);
+  text-align: center;
 }
 
 @media screen and (max-width: 600px) {
@@ -12,17 +12,17 @@
 }
 
 .page-title__content.fixed {
-  margin: 0 auto;
   transform: translate(-50%, -50%);
+  margin: 0 auto;
 }
 
 .hero .page-title__content {
   position: absolute;
-  max-width: 70%;
-  width: max-content;
-  color: var(--color-white);
   top: 50%;
   left: 50%;
+  width: max-content;
+  max-width: 70%;
+  color: var(--color-white);
 }
 
 @media screen and (max-width: 600px) {
@@ -32,10 +32,10 @@
 }
 
 .page-title__description {
+  margin: 0 0 10px;
   font: var(--font-h-s);
   letter-spacing: 1.4px;
   text-transform: uppercase;
-  margin: 0 0 10px;
 }
 
 @media screen and (max-width: 600px) {
@@ -46,8 +46,8 @@
 }
 
 .page-title__title {
-  font: var(--font-h-xl);
   margin: 0;
+  font: var(--font-h-xl);
 }
 
 @media screen and (max-width: 600px) {

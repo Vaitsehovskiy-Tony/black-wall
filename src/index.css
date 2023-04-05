@@ -93,11 +93,11 @@ a {
 
 .page {
   display: flex;
-  font-family: var(--primary-font-family);
   flex-direction: column;
   justify-content: center;
-  max-width: 100%;
   background: var(--color-black);
+  max-width: 100%;
+  font-family: var(--primary-font-family);
 }
 
 .page.page_light {
@@ -105,9 +105,9 @@ a {
 }
 
 .page__wrapper .wrapper {
-  max-width: 1440px;
   margin: 240px auto 0;
   padding: 0 46px;
+  max-width: 1440px;
 }
 
 @media screen and (max-width: 1000px) {

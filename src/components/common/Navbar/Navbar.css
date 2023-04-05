@@ -11,9 +11,9 @@
 }
 
 .header__navbar-item {
+  transition: all 0.3s ease-out;
   margin: auto;
   padding: 0 10px;
-  transition: all 0.3s ease-out;
 }
 
 .header__navbar-item:hover {
@@ -21,6 +21,6 @@
 }
 
 .header__navbar-item.current {
-  font: var(--font-s);
   color: var(--color-visited);
+  font: var(--font-s);
 }

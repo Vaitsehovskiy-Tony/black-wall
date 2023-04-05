@@ -5,14 +5,14 @@
 
 .prices {
   margin: 0 auto;
-  width: 100%;
   background-color: var(--color-white3);
+  width: 100%;
 }
 
 @media screen and (max-width: 600px) {
   .prices {
-    width: auto;
     margin: 0 15px;
+    width: auto;
   }
 }
 

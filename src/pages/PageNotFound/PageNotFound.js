@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import notFoundImg from "../../images/page-not-found.webp";
 
 export const PageNotFound = ({ notFound }) => {
-  console.log(notFound);
   return (
     <section className="not-found">
       <img className="not-found__img" alt="not found" src={notFoundImg} />

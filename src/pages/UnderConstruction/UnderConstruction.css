@@ -1,0 +1,19 @@
+.under-construction {
+  background: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  height: 100vh;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.under-construction__img {
+  width: 250px;
+  margin: 0 auto;
+}
+
+.under-construction__title {
+  color: var(--color-grey);
+}

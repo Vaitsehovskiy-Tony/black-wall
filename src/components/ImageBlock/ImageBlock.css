@@ -1,6 +1,6 @@
 .img-block {
-  width: 100%;
   margin: 40px auto 78px;
+  width: 100%;
 }
 
 @media screen and (max-width: 600px) {

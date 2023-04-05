@@ -19,15 +19,15 @@
 }
 
 .field__input {
-  margin: 0 0 24px;
-  line-height: 1.5;
-  font-size: 1.125rem;
-  background: transparent;
-  border: none;
-  color: var(--color-grey);
-  border-bottom: 1px solid var(--color-grey);
   position: relative;
   z-index: 2;
+  margin: 0 0 24px;
+  border: none;
+  border-bottom: 1px solid var(--color-grey);
+  background: transparent;
+  color: var(--color-grey);
+  font-size: 1.125rem;
+  line-height: 1.5;
 }
 
 @media screen and (min-width: 750px) {
@@ -53,28 +53,28 @@
 .field__input:-webkit-autofill:hover,
 .field__input:-webkit-autofill:focus,
 .field__input:-webkit-autofill:active {
-  transition: background-color 5000s ease-in-out 0s;
   -webkit-text-fill-color: var(--color-grey) !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .field__input:focus {
+  outline: 1px solid transparent;
   border: none;
   border-bottom: 1px solid var(--color-accent);
-  outline: 1px solid transparent;
 }
 
 .field__input::placeholder {
   opacity: 0.8;
-  color: transparent;
   cursor: text;
+  color: transparent;
 }
 
 .field__input:focus ~ .field__label,
 .field__input:not(:placeholder-shown) ~ .field__label {
   top: -20px;
   left: 0px;
-  font-size: 0.95rem;
   color: var(--color-grey);
+  font-size: 0.95rem;
 }
 
 .field__input:invalid {
@@ -82,11 +82,11 @@
 }
 
 .field__input:placeholder-shown {
+  opacity: 0.8;
+  transition: border-bottom 0.25s ease-out;
   border-bottom: 1px solid var(--color-grey);
   color: transparent;
-  opacity: 0.8;
   color: var(--color-grey);
-  transition: border-bottom 0.25s ease-out;
 }
 
 .field__input:hover:placeholder-shown {
@@ -97,11 +97,11 @@
   position: absolute;
   top: 4px;
   left: 4px;
-  font-size: 1.125rem;
-  color: var(--color-grey);
   opacity: 0.8;
   transition: all 0.25s ease-out;
   cursor: text;
+  color: var(--color-grey);
+  font-size: 1.125rem;
 }
 
 @media screen and (max-width: 600px) {

@@ -1,11 +1,11 @@
 .project-item {
-  max-width: 100%;
-  height: 100%;
-  scale: 0.8;
   display: flex;
   flex-direction: column;
-  letter-spacing: 0.1rem;
+  scale: 0.8;
   transition: scale 0.7s ease-out, color 0.3s ease-out;
+  max-width: 100%;
+  height: 100%;
+  letter-spacing: 0.1rem;
 }
 
 .project-item:hover {
@@ -33,14 +33,14 @@
 }
 
 .project-item__img {
+  position: relative;
+  transition: transform 0.5s ease-out;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
-  position: relative;
   overflow: hidden;
-  transition: transform 0.5s ease-out;
 }
 
 .project-item__img:hover {
@@ -54,15 +54,15 @@
 }
 
 .project-item__title {
-  font: var(--font-h-s);
   margin: 30px 0 0;
+  font: var(--font-h-s);
 }
 
 @media screen and (max-width: 600px) {
   .project-item__title {
-    font: var(--font-l);
     margin: 22px 0 0;
     width: 70%;
+    font: var(--font-l);
     line-height: 1.3;
   }
 }
@@ -80,9 +80,9 @@
 }
 
 .project-item__link {
-  text-transform: uppercase;
   font: var(--font-m);
   font-weight: 500;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 600px) {
@@ -92,6 +92,6 @@
 }
 
 .project-item__hr {
-  width: 40px;
   margin: auto 0 auto 15px;
+  width: 40px;
 }

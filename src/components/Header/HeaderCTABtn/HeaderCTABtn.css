@@ -1,17 +1,17 @@
 .header__contact {
   position: relative;
-  height: fit-content;
-  margin: auto 0 auto 30px;
-  font-weight: 600;
-  color: inherit;
   opacity: 0.85;
-  border: 0;
-  background: transparent;
-  text-transform: uppercase;
-  white-space: nowrap;
-  border-bottom: none;
   transition: all 0.3s ease-out;
   cursor: pointer;
+  margin: auto 0 auto 30px;
+  border: 0;
+  border-bottom: none;
+  background: transparent;
+  height: fit-content;
+  color: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .header__contact:hover {
@@ -24,45 +24,45 @@
 
 .header__contact::after {
   position: absolute;
-  background: var(--color-white);
+  right: 0;
   bottom: -3px;
   left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
   z-index: -1;
-  content: "";
+  transition: all 0.3s ease-out 0.3s;
+  margin-right: auto;
+  margin-left: auto;
+  background: var(--color-white);
   width: 100%;
   height: 1px;
-  transition: all 0.3s ease-out 0.3s;
+  content: "";
 }
 
 .header__contact:hover::after {
-  width: 0;
   transition: all 0.3s ease-out;
+  width: 0;
 }
 
 .header__contact::before {
   position: absolute;
-  background: var(--color-accent);
+  right: 0;
   bottom: -3px;
   left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
   z-index: -1;
-  content: "";
+  transition: all 0.3s ease-out;
+  margin-right: auto;
+  margin-left: auto;
+  background: var(--color-accent);
   width: 0;
   height: 1px;
-  transition: all 0.3s ease-out;
+  content: "";
 }
 
 .header__contact:hover::before {
-  width: 100%;
   transition: all 0.3s ease-out 0.3s;
+  width: 100%;
 }
 
 .header_dark .header__contact::after {
-  background: var(--color-black);
   border-bottom: 1px solid var(--color-black);
+  background: var(--color-black);
 }

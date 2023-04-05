@@ -24,8 +24,8 @@
 }
 
 .mobile-price .collapsing__title {
-  font: var(--font-h-s);
   margin: 17px 0;
+  font: var(--font-h-s);
 }
 
 @media screen and (max-width: 600px) {
@@ -35,25 +35,24 @@
 }
 
 .mobile-price .collapsing__text {
-  font: var(--font-xs);
-  margin: 8px 0 8px;
-
   position: relative;
+  margin: 8px 0 8px;
   padding: 0 0 0 20px;
+  font: var(--font-xs);
 }
 
 .mobile-price .collapsing__text:last-of-type {
-  font: var(--font-xs);
   margin: 8px 0 16px;
+  font: var(--font-xs);
 }
 
 .mobile-price .collapsing__text.collapsing__text_dots::before {
-  content: "";
   position: absolute;
-  left: 0;
   top: 6px;
+  left: 0;
   border: solid 3.5px var(--color-accent);
   border-radius: 50%;
+  content: "";
 }
 
 .mobile-price .collapsing__container {

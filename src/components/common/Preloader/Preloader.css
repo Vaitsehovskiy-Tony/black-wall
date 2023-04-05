@@ -9,10 +9,10 @@
 
 .preloader {
   position: relative;
-  width: 100vw;
-  height: 100vh;
   z-index: 2;
   background-color: var(--color-black);
+  width: 100vw;
+  height: 100vh;
 }
 
 .preloader__content {
@@ -24,12 +24,12 @@
 
 .preloader__overlay {
   position: absolute;
+  transform: translate(0, -100%);
+  z-index: 3;
+  animation: preloader 2s ease-out;
   background-color: var(--color-black);
   width: 100%;
   height: 100%;
-  z-index: 3;
-  transform: translate(0, -100%);
-  animation: preloader 2s ease-out;
 }
 
 .preloader__img {
