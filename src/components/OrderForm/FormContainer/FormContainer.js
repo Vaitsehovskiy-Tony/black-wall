@@ -2,6 +2,8 @@ import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
 import { PricesElement } from "../../Modal/PricesElement/PricesElement";
 import { InputTextField } from "../InputTextField/InputTextField";
+import { TextareaField } from "../TextareaField/TextareaField";
+
 export const FormContainer = ({ formParametrs, prices }) => {
   const {
     handleSubmit,
@@ -41,6 +43,15 @@ export const FormContainer = ({ formParametrs, prices }) => {
     register,
   };
 
+  const commentField = {
+    label: content.formData.commentText,
+    pattern: /^[\p{L}\s\p{M}'-]{0,50}$/,
+    cssName: "comment",
+    minLength: 2,
+    maxLength: 100,
+    register,
+  };
+
   return (
     <form
       ref={form}
@@ -51,11 +62,12 @@ export const FormContainer = ({ formParametrs, prices }) => {
       <InputTextField fieldData={nameField} />
       <InputTextField fieldData={emailField} />
       <InputTextField fieldData={countryField} />
+      <TextareaField fieldData={commentField} />
       <input
         className="field__input_surname"
         type="text"
         name="surname"
-        minlength="1"
+        minLength="1"
         maxLength="20"
         placeholder="surname"
         pattern="^[\p{L}\s\p{M}'-]{0,50}$"

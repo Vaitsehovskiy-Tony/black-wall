@@ -105,7 +105,7 @@ function App() {
             />
           }
         />
-        
+
         <Route
           exact
           path={`/project_:id`}
@@ -128,7 +128,7 @@ function App() {
           }
         />
         <Route
-          path="*"
+          path='*' exact={true}
           element={<PageNotFound notFound={content.notFound} />}
         />
       </Routes>

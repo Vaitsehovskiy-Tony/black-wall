@@ -1,5 +1,6 @@
 @import url("../common/Avatars/Avatars.css");
 @import url("./InputTextField/InputTextField.css");
+@import url("./TextareaField/TextareaField.css");
 
 @keyframes successForm {
   0% {
@@ -105,12 +106,13 @@
 }
 
 .form__container {
+  grid-gap: 0 20px;
   display: grid;
   grid-template-areas:
-    "name name"
-    "contact country"
-    "choose-type choose-type"
-    "types ."
+    "name contact"
+    "comment country"
+    "comment choose-type"
+    "comment types"
     "submit submit";
   grid-area: form;
   margin: 0 0 0 10px;
@@ -122,6 +124,7 @@
       "name"
       "contact"
       "country"
+      "comment"
       "choose-type"
       "types"
       "submit";
@@ -417,11 +420,25 @@
 .form__container.price__options {
   grid-template-areas:
     "price-options price-options"
-    "name    name     "
-    "contact   country  "
-    "choose-type choose-type"
-    "types     .      "
+    "name    contact     "
+    "country   comment  "
+    "choose-type comment"
+    "types     comment      "
     "submit    submit   ";
+}
+
+@media screen and (max-width: 600px) {
+  .form__container.price__options {
+    grid-template-areas:
+      "price-options"
+      "name        "
+      "contact     "
+      "country"
+      "comment"
+      "choose-type "
+      "types        "
+      "submit       ";
+  }
 }
 
 .modal-prices {

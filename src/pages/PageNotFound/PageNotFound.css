@@ -48,6 +48,7 @@
 .not-found__text {
   margin: 20px 0 0;
   font-size: var(--font-ml);
+  line-height: 1.5;
 }
 
 .not-found__link {

@@ -1,87 +1,74 @@
-.field {
+.textarea {
   position: relative;
+  grid-area: comment;
+  margin: 0 0 24px 20px;
   margin: 30px 0 0 0;
 }
 
-.field.name {
-  grid-area: name;
-}
-
-.field.email {
-  grid-area: contact;
-}
-
-@media screen and (min-width: 900px) {
-  .field.country {
-    grid-area: country;
-    margin: 30px 0 0 0px;
-  }
-}
-
-.field__input {
+.textarea__input {
   position: relative;
   z-index: 2;
-  margin: 0 0 24px;
+  margin: 0 0 8px;
   border: none;
   border-bottom: 1px solid var(--color-grey);
   background: transparent;
   color: var(--color-grey);
   font-size: 1.125rem;
   line-height: 1.5;
+  resize: none;
 }
 
 @media screen and (min-width: 750px) {
-  .modal__container .field__input {
+  .modal__container .textarea__input {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .field__input {
+  .textarea__input {
     width: 70%;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .field__input {
+  .textarea__input {
     margin: 0 0 18px;
     width: 95%;
   }
 }
 
-.field__input:-webkit-autofill,
-.field__input:-webkit-autofill:hover,
-.field__input:-webkit-autofill:focus,
-.field__input:-webkit-autofill:active {
+.textarea__input:-webkit-autofill,
+.textarea__input:-webkit-autofill:hover,
+.textarea__input:-webkit-autofill:focus,
+.textarea__input:-webkit-autofill:active {
   -webkit-text-fill-color: var(--color-grey) !important;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-.field__input:focus {
+.textarea__input:focus {
   outline: 1px solid transparent;
   border: none;
   border-bottom: 1px solid var(--color-accent);
 }
 
-.field__input::placeholder {
+.textarea__input::placeholder {
   opacity: 0.8;
   cursor: text;
   color: transparent;
 }
 
-.field__input:focus ~ .field__label,
-.field__input:not(:placeholder-shown) ~ .field__label {
+.textarea__input:focus ~ .field__label,
+.textarea__input:not(:placeholder-shown) ~ .field__label {
   top: -20px;
   left: 0px;
   color: var(--color-grey);
   font-size: 0.95rem;
 }
 
-.field__input:invalid {
+.textarea__input:invalid {
   border-bottom: 1px solid #d22f2f;
 }
-
-.field__input:placeholder-shown {
+.textarea__input:placeholder-shown {
   opacity: 0.8;
   transition: border-bottom 0.25s ease-out;
   border-bottom: 1px solid var(--color-grey);
@@ -89,23 +76,13 @@
   color: var(--color-grey);
 }
 
-.field__input:hover:placeholder-shown {
+.textarea__input:hover:placeholder-shown {
   border-bottom: 1px solid var(--color-l-grey);
 }
 
-.field__label {
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  opacity: 0.8;
-  transition: all 0.25s ease-out;
-  cursor: text;
+.textarea__count {
+  margin: 0 0 0 auto;
+  width: fit-content;
   color: var(--color-grey);
-  font-size: 1.125rem;
-}
-
-@media screen and (max-width: 600px) {
-  .field__label {
-    font-size: 1rem;
-  }
+  font: var(--font-xs);
 }
