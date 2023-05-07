@@ -1,4 +1,5 @@
 export const ContactUs = ({ content, extaClass = null }) => {
+
   return (
     <section className={`contacts wrapper ${extaClass}`}>
       <h2 className="contacts__title">{content.title}</h2>
@@ -21,7 +22,7 @@ export const ContactUs = ({ content, extaClass = null }) => {
                 className="contacts__link"
                 href={i.isLink ? i.details : "mailto:" + i.details}
               >
-                {i.details}
+                {i.linkText ? i.linkText : i.details}
               </a>
             </div>
           ))}

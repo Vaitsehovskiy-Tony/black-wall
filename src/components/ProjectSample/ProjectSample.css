@@ -82,7 +82,7 @@
 }
 
 .sample__subtitle {
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   display: block;
   display: -webkit-box;

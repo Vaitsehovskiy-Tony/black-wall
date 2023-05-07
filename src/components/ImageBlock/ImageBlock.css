@@ -14,6 +14,13 @@
   height: 600px;
   object-fit: cover;
 }
+
+.img-block__img.tall {
+  height: 900px;
+  width: 100%;
+  object-fit: cover;
+}
+
 @media screen and (max-width: 600px) {
   .img-block__img {
     margin: 40px auto 70px;

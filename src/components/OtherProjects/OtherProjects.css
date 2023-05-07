@@ -110,6 +110,11 @@
 .carousel-projects__description {
   color: var(--color-grey);
   font: var(--font-xs);
+
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
 }
 
 .carousel-projects__bottom-wrapper {

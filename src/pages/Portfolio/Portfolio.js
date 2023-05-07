@@ -34,7 +34,6 @@ export const Portfolio = ({ orderFormContent, projectsListContent }) => {
   const handleClick = (e) => {
     setFilter(e.target.textContent);
   };
-
   const seoData = {
     title: "Black Wall",
     description:
@@ -45,7 +44,7 @@ export const Portfolio = ({ orderFormContent, projectsListContent }) => {
 
   return (
     <main className="portfolio page__wrapper">
-      <SEO seoData={seoData} />
+      <SEO seoData={portfolio.content.seoInformation} />
       <PageTitle
         description={portfolio.content.portfolioDescription}
         title={portfolio.content.portfolioTitle}

@@ -3,8 +3,12 @@ import { useForm } from "react-hook-form";
 import { PricesElement } from "../../Modal/PricesElement/PricesElement";
 import { InputTextField } from "../InputTextField/InputTextField";
 import { TextareaField } from "../TextareaField/TextareaField";
+import { SimpleModal } from "../../Modal/SimpleModal/SimpleModal";
+import { useState } from "react";
 
 export const FormContainer = ({ formParametrs, prices }) => {
+
+  const [simpleModal, setSimpleModal] = useState(false);
   const {
     handleSubmit,
     content,
@@ -52,6 +56,20 @@ export const FormContainer = ({ formParametrs, prices }) => {
     register,
   };
 
+
+  const handleSimleModal = () => {
+    setSimpleModal(!simpleModal);
+  };
+
+  const modalProps = {
+    modalState: simpleModal,
+    type: "terms",
+    content: content.userAgreementContent,
+    handleSimleModal,
+  };
+
+  
+
   return (
     <form
       ref={form}
@@ -96,6 +114,12 @@ export const FormContainer = ({ formParametrs, prices }) => {
           </span>
         </label>
       </div>
+      <span className="form__agreement">
+        {content.userAgreementText}
+        <span className="form__agreement-button"  onClick={() => {
+            handleSimleModal();
+          }}>{content.userAgreementButtonText}</span>
+      </span>
       <div className="form__submit-wrapper">
         <div
           className="form__submit-container"
@@ -111,6 +135,7 @@ export const FormContainer = ({ formParametrs, prices }) => {
           <div className="form__submit-arrow" />
         </div>
       </div>
+      <SimpleModal modalProps={modalProps} />
     </form>
   );
 };

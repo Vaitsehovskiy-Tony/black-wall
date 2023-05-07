@@ -33,9 +33,15 @@ export const Footer = ({ content, terms }) => {
         </div>
         <div className="footer__links-container">
           {content.navbarSocial.map((i) => (
-            <Link to={i.link} className="footer__nav-item" key={i.id}>
+            <a
+              href={i.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer__nav-item"
+              key={i.id}
+            >
               {i.title}
-            </Link>
+            </a>
           ))}
         </div>
         <div className="footer__contacts-container">

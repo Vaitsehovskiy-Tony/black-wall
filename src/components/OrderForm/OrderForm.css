@@ -113,6 +113,7 @@
     "comment country"
     "comment choose-type"
     "comment types"
+    "agreement agreement"
     "submit submit";
   grid-area: form;
   margin: 0 0 0 10px;
@@ -127,6 +128,7 @@
       "comment"
       "choose-type"
       "types"
+      "agreement"
       "submit";
     margin: 5px 0 0;
   }
@@ -322,6 +324,22 @@
   }
 }
 
+.form__agreement {
+  grid-area: agreement;
+  font: var(--font-xs);
+  color: var(--color-grey);
+  margin: 20px 0 0 0;
+}
+
+.form__agreement-button {
+  color: var(--color-accent);
+  cursor: pointer;
+  transition: color .25s ease-out;
+}
+.form__agreement-button:hover {
+  color: var(--color-visited);
+}
+
 .form__submit-wrapper {
   grid-area: submit;
 }
@@ -335,7 +353,7 @@
   align-items: center;
   transition: all 0.25s ease-out;
   cursor: pointer;
-  margin: 60px 0 0 0;
+  margin: 30px 0 0 0;
   border-bottom: 1px solid var(--color-grey);
   padding: 0 0 9px;
   width: fit-content;
@@ -424,6 +442,7 @@
     "country   comment  "
     "choose-type comment"
     "types     comment      "
+    "agreement agreement"
     "submit    submit   ";
 }
 
@@ -437,6 +456,7 @@
       "comment"
       "choose-type "
       "types        "
+      "agreement "
       "submit       ";
   }
 }

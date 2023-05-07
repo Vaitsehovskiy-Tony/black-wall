@@ -50,7 +50,7 @@ const routes = (name, id = null, lang = "ru") => {
       break;
 
     case "portfolioPage":
-      url = baseUrl + "portfolio-pages" + locale;
+      url = baseUrl + "portfolio-pages" + locale + '&populate=seoInformation';
       break;
 
     case "contactsPage":

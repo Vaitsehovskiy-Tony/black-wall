@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { Header } from "./components/Header/Header";
 import { Main } from "./pages/Main/Main";
 import { Project } from "./pages/Project/Project";
@@ -29,10 +29,16 @@ function App() {
   const { header, page } = PageStyles();
   const { state, content } = useMultiFetch();
   const [heroState, setHeroState] = useState(false);
+  const { pathname } = useLocation();
   const handleHeroState = () => {
     setHeroState(!heroState);
   };
 
+  const paths = ["/", "/portfolio", "/prices", "/contacts"];
+  const routeMatches = paths.some(
+    (i) => pathname === i || pathname.includes("/project_")
+  );
+  
   createImage(
     "https://api.vaitstony.art/uploads/hero_Rubinshtejna_ffc22a16df.webp"
   )
@@ -54,6 +60,8 @@ function App() {
     return <Preloader />;
   } else if (state === "error") {
     return <UnderConstruction />;
+  } else if (!routeMatches) { 
+    <PageNotFound notFound={content.notFound} />
   }
 
   const seoData = {
@@ -128,7 +136,7 @@ function App() {
           }
         />
         <Route
-          path='*' exact={true}
+          path="*"
           element={<PageNotFound notFound={content.notFound} />}
         />
       </Routes>

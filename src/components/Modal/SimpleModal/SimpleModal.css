@@ -15,6 +15,10 @@
   font: var(--font-ml);
 }
 
+.modal__container .simple-modal  {
+  width: 100%;
+}
+
 .simple-modal.active {
   display: flex;
   flex-direction: column;
